@@ -1,34 +1,42 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-4950599f73bdfc797cc8.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
-  "ampDevFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
   "lowPriorityFiles": [
-    "static/ZlwFKCvaLJ8uJcz7I4fz5/_buildManifest.js",
-    "static/ZlwFKCvaLJ8uJcz7I4fz5/_ssgManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/main-1b7c1c76d3f2758e71f8.js",
-      "static/chunks/webpack-d7b2fb72fb7257504a38.js",
-      "static/chunks/framework.9116e7bff2bfccdffa19.js",
-      "static/chunks/71247caf95475e3ea7f9a0f8a30beb258b23d005.9168eee81ee5263c3570.js",
-      "static/chunks/pages/index-91fa9f699c46b45a72ff.js"
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/chunks/pages/index.js"
     ],
     "/_app": [
-      "static/chunks/main-1b7c1c76d3f2758e71f8.js",
-      "static/chunks/webpack-d7b2fb72fb7257504a38.js",
-      "static/chunks/framework.9116e7bff2bfccdffa19.js",
-      "static/chunks/f6078781a05fe1bcb0902d23dbbb2662c8d200b3.e7b4b087e8ea23d8e921.js",
-      "static/chunks/71247caf95475e3ea7f9a0f8a30beb258b23d005.9168eee81ee5263c3570.js",
-      "static/chunks/pages/_app-08e13292f463e3973004.js"
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/main-1b7c1c76d3f2758e71f8.js",
-      "static/chunks/webpack-d7b2fb72fb7257504a38.js",
-      "static/chunks/framework.9116e7bff2bfccdffa19.js",
-      "static/chunks/pages/_error-f961d13903670b98dc3d.js"
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/_error.js"
+    ],
+    "/next/dist/pages/_error": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/next/dist/pages/_error.js"
     ]
   },
   "ampFirstPages": []
