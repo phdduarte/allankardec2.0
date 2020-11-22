@@ -9,8 +9,13 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^10.0.2",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "less": "^3.12.2",
     "next": "10.0.2",
     "next-images": "^1.6.2",
+    "node-sass": "^5.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-components": "^5.2.1"
@@ -33,6 +38,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-standard": "^4.0.1",
+    "next-purgecss": "^4.0.0",
     "prettier": "^2.2.0",
     "react-is": "^17.0.1",
     "typescript": "^4.1.2",
