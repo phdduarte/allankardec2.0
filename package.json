@@ -20,6 +20,7 @@
     "next-images": "^1.6.2",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "reactstrap": "^8.7.1",
     "sass": "^1.29.0",
