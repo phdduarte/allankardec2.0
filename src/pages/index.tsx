@@ -27,7 +27,7 @@ const Home: React.FC = () => {
                                     htmlFor="inlineFormInputName"
                                     srOnly
                                 >
-                                    Name
+                                    Nome
                                 </Form.Label>
                                 <Form.Control
                                     id="inlineFormInputName"
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
                                 />
                             </Col>
                             <Col xs="auto" className="my-1">
-                                <Button type="submit">Submit</Button>
+                                <Button type="submit">Enviar</Button>
                             </Col>
                         </Form.Row>
                     </Form>
