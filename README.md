@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este projeto é uma aplicação web com o acervo de obras de [Allan Kardec](https://pt.wikipedia.org/wiki/Allan_Kardec).
 
-## Getting Started
+## :rocket: Tecnologias ##
+Este projeto é desenvolvido com as seguintes tecnoogias:
 
-First, run the development server:
+- [Next.js](https://nextjs.org/): [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+- [Typescript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [VSCode](https://code.visualstudio.com/) com [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) e [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+## :smiley: Começando ##
+
+Primeiro, rode o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) com o seu navegador para ver o resultado.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Você pode começar editando a página ao modificar `pages/index.js`. A página atualiza automáticamente conforme você vai editando.
 
-## Learn More
+## :books: Aprenda Mais ##
 
-To learn more about Next.js, take a look at the following resources:
+Para aprender mais sobre Next.js, de uma olhada nas seguintes fontes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Documentação Next.js](https://nextjs.org/docs) - Aprenda sobre características e API's de Next.js.
+- [Aprenda Next.js](https://nextjs.org/learn) - um tutorial interativo de Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Você pode verificar o [repositório no GitHub do Next.js](https://github.com/vercel/next.js/) - comentários e contribuições serão bem vindas!
 
-## Deploy on Vercel
+## Deploy na Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A forma mais simples de fazer o deploy de Next.js é utilizando a [Plataforma Vercel](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos mesmos criadores do Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Verifique nossa [documentação de deploy do Next.js](https://nextjs.org/docs/deployment) para mais detalhes.
 
-## Setup project
+> **Clique na imagem para ver o deploy atual**
+<p align="center">
+    <a href="https://allankardec2.vercel.app/" target="_blank"> 
+        <img alt="Allan Kardec" src="/public/assets/img/logos/logo.png" >
+    </a>
+</p>
 
-This project was configured based on the video:
+>
+
+## Setup do projeto
+
+Esse Projeto é baseado no video:
 
 - [Como inicio meus apps com ReactJS? Next.js, TypeScript, ESLint e Styled Components](https://www.youtube.com/watch?v=1nVUfZg2dSA)
+
+>
+
+Desenvolvido por [Pedro Duarte](https://github.com/phdduarte) e [Alifer Duarte](https://github.com/aliferds).
