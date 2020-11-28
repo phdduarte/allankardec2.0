@@ -1,18 +1,31 @@
 import React from 'react'
 import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from '../components/templates/header'
-import { Col, Container, Row, Button, FormControl, Form, InputGroup } from 'react-bootstrap'
+import Header from '../components/organisms/header'
+import {
+    Col,
+    Container,
+    Row,
+    Button,
+    FormControl,
+    Form,
+    InputGroup
+} from 'react-bootstrap'
 
 const Home: React.FC = () => {
     return (
         <Container>
             <Head>
-                <title>Homepage</title>
+                <meta charSet="utf-8" />
+                <title>HOME | AllanKardecOnline</title>
                 <link
                     rel="stylesheet"
                     href="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/4.8.0/reactstrap.min.js"
                 ></link>
+                <meta
+                    name="viewport"
+                    content="width=device-width,minimum-scale=1,initial-scale=1"
+                />
             </Head>
             <Header
                 urlLogo="/assets/img/logos/logo.svg"
