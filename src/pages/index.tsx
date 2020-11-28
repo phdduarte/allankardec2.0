@@ -31,7 +31,7 @@ const Home: React.FC = () => {
                                 </Form.Label>
                                 <Form.Control
                                     id="inlineFormInputName"
-                                    placeholder="Digite sua pesquisa"
+                                    placeholder="Digite aqui sua pesquisa"
                                 />
                             </Col>
                             <Col xs="auto" className="my-1">
