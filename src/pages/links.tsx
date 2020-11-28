@@ -4,7 +4,44 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from '../components/templates/header'
 import { Col, Container, Row, Button, Form, InputGroup } from 'react-bootstrap'
 
+// molecules
+import Links from '../components/molecules/links'
+
 const Home: React.FC = () => {
+    const listLinks = {
+        childrenListLinks: [
+            {
+                link: {
+                    label: 'TESTE',
+                    url: 'ALPHABET'
+                }
+            },
+            {
+                link: {
+                    label: 'CORRO',
+                    url: 'NETFLIX'
+                }
+            },
+            {
+                link: {
+                    label: 'SBUB34',
+                    url: 'STARBUCKS'
+                }
+            },
+            {
+                link: {
+                    label: 'TSLA34',
+                    url: 'TESLA INC'
+                }
+            },
+            {
+                link: {
+                    label: 'AMZO34',
+                    url: 'AMAZON'
+                }
+            }
+        ]
+    }
     return (
         <Container>
             <Head>
@@ -39,6 +76,11 @@ const Home: React.FC = () => {
                             </Col>
                         </Form.Row>
                     </Form>
+                </Row>
+            </Container>
+            <Container>
+                <Row>
+                    <Links listLinks={listLinks} />
                 </Row>
             </Container>
         </Container>
