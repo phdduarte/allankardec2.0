@@ -2,16 +2,26 @@ import React from 'react'
 import Image from 'next/image'
 import { Container, Row } from 'react-bootstrap'
 import Menu from '../../molecules/menu'
-import Slider from '../../molecules/slider'
 
 type Props = {
     urlLogo: string
     altLogo: string
     width?: string
     height?: string
+    listNavLinks: Record<string, any>
+    placeholder: string
+    buttonLabel: string
 }
 
-const Header = ({ urlLogo, altLogo, width = '', height = '' }: Props) => {
+const Header = ({
+    urlLogo,
+    altLogo,
+    width = '',
+    height = '',
+    placeholder,
+    buttonLabel,
+    listNavLinks
+}: Props) => {
     return (
         <Container fluid={true}>
             <Row className="d-flex justify-content-center">
@@ -22,8 +32,11 @@ const Header = ({ urlLogo, altLogo, width = '', height = '' }: Props) => {
                     height={height}
                 />
             </Row>
-            <Menu />
-            <Slider />
+            <Menu
+                listNavLinks={listNavLinks}
+                placeholder={placeholder}
+                buttonLabel={buttonLabel}
+            />
         </Container>
     )
 }
