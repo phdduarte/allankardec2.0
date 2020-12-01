@@ -8,42 +8,6 @@ import { Col, Container, Row, Button, Form, InputGroup } from 'react-bootstrap'
 import Links from '../components/molecules/links'
 
 const Home: React.FC = () => {
-
-    const listNavLinks = {
-        childrenListNavLinks: [
-            {
-                navLink: {
-                    href: '#HOME',
-                    label: 'HOME'
-                }
-            },
-            {
-                navLink: {
-                    href: '#ABOUT',
-                    label: 'ABOUT'
-                }
-            },
-            {
-                navLink: {
-                    href: '#CONTACT',
-                    label: 'CONTATO'
-                }
-            },
-            {
-                navLink: {
-                    href: '#GLOSSARIO',
-                    label: 'GLOSSARIO'
-                }
-            },
-            {
-                navLink: {
-                    href: '#TERMS',
-                    label: 'TERMOS E CONDICOES'
-                }
-            }
-        ]
-    }
-
     const listLinks = {
         childrenListLinks: [
             {
@@ -78,6 +42,40 @@ const Home: React.FC = () => {
             }
         ]
     }
+    const listNavLinks = {
+        childrenListNavLinks: [
+            {
+                navLink: {
+                    href: '#HOME',
+                    label: 'HOME'
+                }
+            },
+            {
+                navLink: {
+                    href: '#ABOUT',
+                    label: 'ABOUT'
+                }
+            },
+            {
+                navLink: {
+                    href: '#CONTACT',
+                    label: 'CONTATO'
+                }
+            },
+            {
+                navLink: {
+                    href: '#GLOSSARIO',
+                    label: 'GLOSSARIO'
+                }
+            },
+            {
+                navLink: {
+                    href: '#TERMS',
+                    label: 'TERMOS E CONDICOES'
+                }
+            }
+        ]
+    }
     return (
         <Container>
             <Head>
@@ -91,6 +89,8 @@ const Home: React.FC = () => {
                 urlLogo="/assets/img/logos/logo.svg"
                 altLogo="Logo Allan Kardec"
                 listNavLinks={listNavLinks}
+                placeholder="Digite sua pesquisa aqui"
+                buttonLabel="Enviar"
             />
             <Container>
                 <Row className="d-flex justify-content-center">
