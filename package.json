@@ -1,10 +1,6 @@
 {
   "name": "allankardec2.0",
-<<<<<<< HEAD
   "version": "0.7.0",
-=======
-  "version": "0.6.0",
->>>>>>> feature/links
   "private": true,
   "scripts": {
     "dev": "next dev",
