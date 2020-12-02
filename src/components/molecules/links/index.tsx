@@ -8,9 +8,9 @@ type Props = {
 const Links = ({ listLinks }: Props) => (
     <div>
         <ul className="list-unstyled">
-            {listLinks.childrenListLinks.map(linkItem => (
+            {listLinks.childrenListLinks.map((linkItem, index) => (
                 // eslint-disable-next-line react/jsx-key
-                <li>
+                <li key={index}>
                     <Link
                         label={linkItem.link.label}
                         url={linkItem.link.label}
