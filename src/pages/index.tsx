@@ -3,7 +3,15 @@ import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from '../components/templates/header'
 import Type from '../components/molecules/type'
-import { Col, Container, Row, Button, FormControl, Form, InputGroup } from 'react-bootstrap'
+import {
+    Col,
+    Container,
+    Row,
+    Button,
+    FormControl,
+    Form,
+    InputGroup
+} from 'react-bootstrap'
 import AllTypeContainer from '../styles/components/type'
 
 const Home: React.FC = () => {
