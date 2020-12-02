@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from '../components/templates/header'
+import Header from '../components/organisms/header'
 import Type from '../components/molecules/type'
 import { Col, Container, Row, Button, FormControl, Form, InputGroup } from 'react-bootstrap'
 import AllTypeContainer from '../styles/components/type'
@@ -95,15 +95,15 @@ const Home: React.FC = () => {
         ]
     }
     return (
-        <>
+        <div>
+            <Head>
+                <title>Homepage</title>
+                <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/4.8.0/reactstrap.min.js"
+                ></link>
+            </Head>
             <Container>
-                <Head>
-                    <title>Homepage</title>
-                    <link
-                        rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/4.8.0/reactstrap.min.js"
-                    ></link>
-                </Head>
                 <Header
                     urlLogo="/assets/img/logos/logo.svg"
                     altLogo="Logo Allan Kardec"
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
                     />
                 </AllTypeContainer>
             </Container>
-        </>
+        </div>
     )
 }
 
