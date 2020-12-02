@@ -32,27 +32,44 @@ const Home: React.FC = () => {
                 altLogo="Logo Allan Kardec"
             />
             <Container>
-                <Row className="d-flex justify-content-center">
-                    <Form>
-                        <Form.Row className="align-items-center">
-                            <Col sm={8} className="my-1">
-                                <Form.Label
-                                    htmlFor="inlineFormInputName"
-                                    srOnly
-                                >
-                                    Nome
-                                </Form.Label>
-                                <Form.Control
-                                    id="inlineFormInputName"
-                                    placeholder="Digite aqui sua pesquisa"
-                                />
-                            </Col>
-                            <Col xs="auto" className="my-1">
-                                <Button type="submit">Enviar</Button>
-                            </Col>
-                        </Form.Row>
-                    </Form>
-                </Row>
+                <AllTypeContainer>
+                    <Type
+                        src="/assets/img/type/books.jpg"
+                        alt="Livros"
+                        url="#books"
+                        label="Livros"
+                    />
+                    <Type
+                        src="/assets/img/type/letters.jpg"
+                        alt="Cartas"
+                        url="#letters"
+                        label="Cartas"
+                    />
+                    <Type
+                        src="/assets/img/type/journals.jpg"
+                        alt="Jornais"
+                        url="#journals"
+                        label="Jornais"
+                    />
+                    <Type
+                        src="/assets/img/type/manuscrito.jpg"
+                        alt="Manuscritos"
+                        url="#manuscript"
+                        label="Manuscritos"
+                    />
+                    <Type
+                        src="/assets/img/type/magazines.jpg"
+                        alt="Revistas"
+                        url="#magazines"
+                        label="Revistas"
+                    />
+                    <Type
+                        src="/assets/img/type/csi.jpg"
+                        alt="CSI Espirita"
+                        url="#csi"
+                        label="CSI do Espiritismo"
+                    />
+                </AllTypeContainer>
             </Container>
         </Container>
     )

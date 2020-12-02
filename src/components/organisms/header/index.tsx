@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { Container, Row } from 'react-bootstrap'
+import Menu from '../../molecules/menu'
+import Slider from '../../molecules/slider'
 
 type Props = {
     urlLogo: string
@@ -20,6 +22,8 @@ const Header = ({ urlLogo, altLogo, width = '', height = '' }: Props) => {
                     height={height}
                 />
             </Row>
+            <Menu />
+            <Slider />
         </Container>
     )
 }
