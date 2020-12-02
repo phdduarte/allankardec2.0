@@ -1,11 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from '../components/organisms/header'
+
 import { Col, Container, Row, Button, Form } from 'react-bootstrap'
 
 // molecules
 import Links from '../components/molecules/links'
+
+// organisms
+import Header from '../components/organisms/header'
+import Footer from '../components/organisms/footer'
 
 const PageLinks: React.FC = () => {
     const listLinks = {
@@ -148,6 +152,9 @@ const PageLinks: React.FC = () => {
                     </Col>
                 </Row>
             </Container>
+            <section className="bg-black">
+                <Footer text="©Copyright 2019 Allan Kardec.online / Designed by:" />
+            </section>
         </Container>
     )
 }

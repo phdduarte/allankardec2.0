@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { Container, Row } from 'react-bootstrap'
+
+// molecules
 import Menu from '../../molecules/menu'
 
 type Props = {
