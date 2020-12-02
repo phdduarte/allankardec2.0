@@ -77,7 +77,7 @@ const Home: React.FC = () => {
         ]
     }
     return (
-        <Container>
+        <div>
             <Head>
                 <meta charSet="utf-8" />
                 <title>Links | AllanKardecOnline</title>
@@ -90,42 +90,19 @@ const Home: React.FC = () => {
                     content="width=device-width,minimum-scale=1,initial-scale=1"
                 />
             </Head>
-            <Header
-                urlLogo="/assets/img/logos/logo.svg"
-                altLogo="Logo Allan Kardec"
-                listNavLinks={listNavLinks}
-                placeholder="Digite sua pesquisa aqui"
-                buttonLabel="Enviar"
-            />
             <Container>
-                <Row className="d-flex justify-content-center">
-                    <Form>
-                        <Form.Row className="align-items-center">
-                            <Col sm={8} className="my-1">
-                                <Form.Label
-                                    htmlFor="inlineFormInputName"
-                                    srOnly
-                                >
-                                    Nome
-                                </Form.Label>
-                                <Form.Control
-                                    id="inlineFormInputName"
-                                    placeholder="Digite aqui sua pesquisa"
-                                />
-                            </Col>
-                            <Col xs="auto" className="my-1">
-                                <Button type="submit">Enviar</Button>
-                            </Col>
-                        </Form.Row>
-                    </Form>
-                </Row>
+                <Header
+                    urlLogo="/assets/img/logos/logo.svg"
+                    altLogo="Logo Allan Kardec"
+                    listNavLinks={listNavLinks}
+                />
             </Container>
             <Container>
                 <Row>
                     <Links listLinks={listLinks} />
                 </Row>
             </Container>
-        </Container>
+        </div>
     )
 }
 

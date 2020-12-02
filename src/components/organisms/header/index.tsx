@@ -18,8 +18,8 @@ const Header = ({
     altLogo,
     width = '',
     height = '',
-    placeholder,
-    buttonLabel,
+    placeholder = 'Digite aqui sua pesquisa',
+    buttonLabel = 'Pesquisar',
     listNavLinks
 }: Props) => {
     return (
