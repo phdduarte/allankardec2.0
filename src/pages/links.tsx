@@ -135,36 +135,11 @@ const PageLinks: React.FC = () => {
             </Container>
             <Container>
                 <Row className="d-flex justify-content-center">
-                    <Form>
-                        <Form.Row className="align-items-center">
-                            <Col sm={8} className="my-1">
-                                <Form.Label
-                                    htmlFor="inlineFormInputName"
-                                    srOnly
-                                >
-                                    Nome
-                                </Form.Label>
-                                <Form.Control
-                                    id="inlineFormInputName"
-                                    placeholder="Digite aqui sua pesquisa"
-                                />
-                            </Col>
-                            <Col xs="auto" className="my-1">
-                                <Button type="submit">Enviar</Button>
-                            </Col>
-                        </Form.Row>
-                    </Form>
-                </Row>
-            </Container>
-            <br></br>
-            <Container>
-                <Row className="d-flex justify-content-center">
                     <Col xs="auto" className="my-1">
                         <h3>
                             LINKS DE INTERESSE PARA OS PESQUISADORES DE
                             ESPIRITISMO:
                         </h3>
-                        <br></br>
                     </Col>
                 </Row>
                 <Row>
