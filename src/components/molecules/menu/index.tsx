@@ -11,15 +11,18 @@ type Props = {
 
 const Menu = ({ listNavLinks, placeholder, buttonLabel }: Props) => (
     <>
-        <Navbar>
-            <Nav className="mr-auto">
-                {listNavLinks.childrenListNavLinks.map((navLinkItem, index) => (
-                    // eslint-disable-next-line react/jsx-key
-                    <Nav.Link href={navLinkItem.navLink.href} key={index}>
-                        {navLinkItem.navLink.label}
-                    </Nav.Link>
-                ))}
-            </Nav>
+        <Navbar expand="lg">
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                    {listNavLinks.childrenListNavLinks.map((navLinkItem, index) => (
+                        // eslint-disable-next-line react/jsx-key
+                        <Nav.Link href={navLinkItem.navLink.href} key={index}>
+                            {navLinkItem.navLink.label}
+                        </Nav.Link>
+                    ))}
+                </Nav>
+            </Navbar.Collapse>
             <Search placeholder={placeholder} buttonLabel={buttonLabel} />
         </Navbar>
     </>
