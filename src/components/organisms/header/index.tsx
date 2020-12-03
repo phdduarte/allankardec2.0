@@ -9,8 +9,8 @@ type Props = {
     width?: string
     height?: string
     listNavLinks: Record<string, any>
-    placeholder: string
-    buttonLabel: string
+    placeholder?: string
+    buttonLabel?: string
 }
 
 const Header = ({
