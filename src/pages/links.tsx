@@ -152,8 +152,12 @@ const PageLinks: React.FC = () => {
                     </Col>
                 </Row>
             </Container>
-            <section className="bg-black">
-                <Footer text="©Copyright 2019 Allan Kardec.online / Designed by:" />
+            <section className="bg-grey">
+                <Footer
+                    text="©Copyright 2019 Allan Kardec.online / Designed by: "
+                    linkText= "PDWebdesign"
+                    url= "www.pdwebdesign.com.br"
+                />
             </section>
         </Container>
     )
