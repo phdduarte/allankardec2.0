@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import { Col, Container, Row, Button, Form } from 'react-bootstrap'
+import { Col, Container, Row, Button, Form, } from 'react-bootstrap'
 
 // molecules
 import Links from '../components/molecules/links'
@@ -144,6 +144,19 @@ const PageLinks: React.FC = () => {
                             LINKS DE INTERESSE PARA OS PESQUISADORES DE
                             ESPIRITISMO:
                         </h3>
+                        <style jsx>{`
+                         .d-flex justify-content-center {
+                        margin: 50px;
+        }
+        p {
+          color: blue;
+        }
+      `}</style>
+                        <style jsx global>{`
+        p {
+          font-size: 20px;
+        }
+      `}</style>
                     </Col>
                 </Row>
                 <Row>
@@ -152,11 +165,11 @@ const PageLinks: React.FC = () => {
                     </Col>
                 </Row>
             </Container>
-            <section className="bg-grey">
+            <section className="bg-black">
                 <Footer
                     text="©Copyright 2019 Allan Kardec.online / Designed by: "
-                    linkText= "PDWebdesign"
-                    url= "www.pdwebdesign.com.br"
+                    linkText="PDWebdesign"
+                    url="www.pdwebdesign.com.br"
                 />
             </section>
         </Container>
