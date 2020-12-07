@@ -144,19 +144,6 @@ const PageLinks: React.FC = () => {
                             LINKS DE INTERESSE PARA OS PESQUISADORES DE
                             ESPIRITISMO:
                         </h3>
-                        <style jsx>{`
-                         .d-flex justify-content-center {
-                        margin: 50px;
-        }
-        p {
-          color: blue;
-        }
-      `}</style>
-                        <style jsx global>{`
-        p {
-          font-size: 20px;
-        }
-      `}</style>
                     </Col>
                 </Row>
                 <Row>
