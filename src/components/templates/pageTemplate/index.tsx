@@ -1,12 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
-import { Container } from 'react-bootstrap'
 
+import Link from '../../atoms/link'
 import Header from '../../organisms/header'
 import Slider from '../../molecules/slider'
+import Search from '../../molecules/search'
+import Menu from '../../molecules/menu'
 import Footer from '../../organisms/footer'
-
-import FooterContainer from '../../../styles/components/footer'
 
 type Props = {
     titlePage: string
@@ -66,7 +66,7 @@ const PageTemplate = ({
         ]
     }
     return (
-        <Container fluid={true}>
+        <>
             <Head>
                 <meta charSet="utf-8" />
                 <title>{titlePage}</title>
@@ -87,14 +87,13 @@ const PageTemplate = ({
                     href="https://fonts.googleapis.com/icon?family=Material+Icons"
                 />
             </Head>
-            <Container>
-                <section>
+            <>
+                <section id="header">
                     <Header
                         urlLogo={urlLogo}
                         altLogo={altLogo}
                         width={widthLogo}
                         height={heightLogo}
-                        listNavLinks={listNavLinks}
                     />
                     {/* eslint-disable-next-line multiline-ternary */}
                     {hero ? (
@@ -102,21 +101,37 @@ const PageTemplate = ({
                     ) : (
                         <></>
                     )}
+                    <div id="search-bar">
+                        <Search
+                            placeholder="Digite aqui sua pesquisa"
+                            buttonLabel="Pesquisar"
+                        />
+                        <Link url="/jobs" label="Veja nosso acervo" />
+                    </div>
                 </section>
-            </Container>
+            </>
             <section>
                 <main>{children}</main>
             </section>
-            <FooterContainer>
-                <section>
-                    <Footer
-                        text="©Copyright 2019 Allan Kardec.online / Designed by: "
-                        linkText="PDWebdesign"
-                        url="www.pdwebdesign.com.br"
+            <section id="links">
+                <div>
+                    <Link
+                        label="LINKS DE INTERESSE PARA PESQUISADORES E ESTUDIOSOS DO ESPIRITISMO"
+                        url="/links"
                     />
-                </section>
-            </FooterContainer>
-        </Container>
+                </div>
+            </section>
+            <section>
+                <Menu listNavLinks={listNavLinks} />
+            </section>
+            <section id="footer">
+                <Footer
+                    text="©Copyright 2019 Allan Kardec.online / Designed by: "
+                    linkText="PDWebdesign"
+                    url="www.pdwebdesign.com.br"
+                />
+            </section>
+        </>
     )
 }
 

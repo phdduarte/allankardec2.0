@@ -4,12 +4,10 @@ import { Nav } from 'react-bootstrap'
 import Search from '../search'
 
 type Props = {
-    placeholder: string
-    buttonLabel: string
     listNavLinks: Record<string, any>
 }
 
-const Menu = ({ listNavLinks, placeholder, buttonLabel }: Props) => (
+const Menu = ({ listNavLinks }: Props) => (
     <div>
         <Navbar expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,7 +22,6 @@ const Menu = ({ listNavLinks, placeholder, buttonLabel }: Props) => (
                         )
                     )}
                 </Nav>
-                <Search placeholder={placeholder} buttonLabel={buttonLabel} />
             </Navbar.Collapse>
         </Navbar>
     </div>
