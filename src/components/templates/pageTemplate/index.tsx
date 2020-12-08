@@ -13,6 +13,7 @@ type Props = {
     heightLogo?: string
     children: unknown
     hero?: boolean
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     listSliderImages?: Record<string, any>
 }
 
@@ -23,7 +24,7 @@ const PageTemplate = ({
     widthLogo,
     heightLogo,
     children,
-    hero=false,
+    hero = false,
     listSliderImages
 }: Props) => {
     const listNavLinks = {
