@@ -8,7 +8,7 @@ import Links from '../components/molecules/links'
 
 import PageTemplate from '../components/templates/pageTemplate'
 // css links
-import AllLinksContainer from '../styles/components/list_links'
+import AllLinksContainer from '../styles/pages/links'
 
 const PageLinks: React.FC = () => {
     const listLinks = {

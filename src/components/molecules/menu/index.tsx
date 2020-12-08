@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import { Nav } from 'react-bootstrap'
-import Search from '../search'
 
 type Props = {
     listNavLinks: Record<string, any>

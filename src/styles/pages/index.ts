@@ -1,6 +1,6 @@
 import style from 'styled-components'
 
-const TypeContainer = style.div`
+export const TypeContainer = style.div`
     * {
         display: block;
         position: relative;
@@ -34,12 +34,10 @@ const TypeContainer = style.div`
 
 export const AllTypeContainer = style.div`
     * {
-        width: 100vw:
         display: flex;
+        flex-direction: row;
         justify-content: center;
         text-align: center;
-        position: absolute;
+        position: relative;
     }
 `
-
-export default TypeContainer
