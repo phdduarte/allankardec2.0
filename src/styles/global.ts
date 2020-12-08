@@ -56,14 +56,58 @@ export default createGlobalStyle`
     text-decoration: underline;
   }
 
-  #header nav {
-    background: #333;    
+  #header #search-bar {
+    height: 10vh;
+    background: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  #header nav a {
+  #header a {
     color: white;
     transition: all .5s;
   }
-  #header nav a:hover {
+  #header a:hover {
     text-decoration: underline;
+  }
+
+  #menu {
+    height: 15vh;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: ${props => props.theme.colors.primary};
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  #menu a {
+    color: white;
+  }
+  #menu a:hover {
+    text-decoration: underline;
+  }
+
+  a.carousel-control-prev, a.carousel-control-next, ol.carousel-indicators {
+    visibility: hidden;
+  }
+  div .carousel-caption {
+    left: 0%;
+    bottom 0px;
+    width: 100vw;
+    height: 1.3em;
+    background: ${props => props.theme.colors.primary};
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `

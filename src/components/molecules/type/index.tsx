@@ -8,7 +8,7 @@ type Props = {
 }
 
 const Type = ({ src, alt, url, label }: Props) => (
-    <div>
+    <div className="type">
         <a href={url}>
             <img src={src} alt={alt} />
             {label}

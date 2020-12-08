@@ -6,9 +6,14 @@ const TypeContainer = style.div`
         position: relative;
         width: content-width;
     }
-    div {
+    #type {
         position: relative;
         padding: 20px 10px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     a {
         text-decoration: none;

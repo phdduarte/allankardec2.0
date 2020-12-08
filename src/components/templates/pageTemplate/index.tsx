@@ -102,11 +102,15 @@ const PageTemplate = ({
                         <></>
                     )}
                     <div id="search-bar">
-                        <Search
-                            placeholder="Digite aqui sua pesquisa"
-                            buttonLabel="Pesquisar"
-                        />
-                        <Link url="/jobs" label="Veja nosso acervo" />
+                        <div className="col-12 col-md-8 col-xl-8">
+                            <Search
+                                placeholder="Digite aqui sua pesquisa"
+                                buttonLabel="Pesquisar"
+                            />
+                        </div>
+                        <div className="col-12 col-md-4 col-xl-4">
+                            <Link url="/jobs" label="Veja nosso acervo" />
+                        </div>
                     </div>
                 </section>
             </>
@@ -121,7 +125,7 @@ const PageTemplate = ({
                     />
                 </div>
             </section>
-            <section>
+            <section id="menu">
                 <Menu listNavLinks={listNavLinks} />
             </section>
             <section id="footer">

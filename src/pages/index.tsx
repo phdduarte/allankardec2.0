@@ -69,46 +69,44 @@ const Home: React.FC = () => {
                 hero={true}
                 listSliderImages={listSliderImages}
             >
-                <Container>
-                    <AllTypeContainer>
-                        <Type
-                            src="/assets/img/type/books.jpg"
-                            alt="Livros"
-                            url="#books"
-                            label="Livros"
-                        />
-                        <Type
-                            src="/assets/img/type/letters.jpg"
-                            alt="Cartas"
-                            url="#letters"
-                            label="Cartas"
-                        />
-                        <Type
-                            src="/assets/img/type/journals.jpg"
-                            alt="Jornais"
-                            url="#journals"
-                            label="Jornais"
-                        />
-                        <Type
-                            src="/assets/img/type/manuscrito.jpg"
-                            alt="Manuscritos"
-                            url="#manuscript"
-                            label="Manuscritos"
-                        />
-                        <Type
-                            src="/assets/img/type/magazines.jpg"
-                            alt="Revistas"
-                            url="#magazines"
-                            label="Revistas"
-                        />
-                        <Type
-                            src="/assets/img/type/csi.jpg"
-                            alt="CSI Espirita"
-                            url="#csi"
-                            label="CSI do Espiritismo"
-                        />
-                    </AllTypeContainer>
-                </Container>
+                <AllTypeContainer>
+                    <Type
+                        src="/assets/img/type/books.jpg"
+                        alt="Livros"
+                        url="#books"
+                        label="Livros"
+                    />
+                    <Type
+                        src="/assets/img/type/letters.jpg"
+                        alt="Cartas"
+                        url="#letters"
+                        label="Cartas"
+                    />
+                    <Type
+                        src="/assets/img/type/journals.jpg"
+                        alt="Jornais"
+                        url="#journals"
+                        label="Jornais"
+                    />
+                    <Type
+                        src="/assets/img/type/manuscrito.jpg"
+                        alt="Manuscritos"
+                        url="#manuscript"
+                        label="Manuscritos"
+                    />
+                    <Type
+                        src="/assets/img/type/magazines.jpg"
+                        alt="Revistas"
+                        url="#magazines"
+                        label="Revistas"
+                    />
+                    <Type
+                        src="/assets/img/type/csi.jpg"
+                        alt="CSI Espirita"
+                        url="#csi"
+                        label="CSI do Espiritismo"
+                    />
+                </AllTypeContainer>
             </PageTemplate>
         </div>
     )
