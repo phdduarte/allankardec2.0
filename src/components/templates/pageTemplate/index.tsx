@@ -1,14 +1,18 @@
 import React from 'react'
 import Head from 'next/head'
 import { Container } from 'react-bootstrap'
+
 import Header from '../../organisms/header'
 import Slider from '../../molecules/slider'
+import Footer from '../../organisms/footer'
+
+import FooterContainer from '../../../styles/components/footer'
 
 type Props = {
     titlePage: string
     // logo
-    urlLogo: string
-    altLogo: string
+    urlLogo?: string
+    altLogo?: string
     widthLogo?: string
     heightLogo?: string
     children: unknown
@@ -19,10 +23,10 @@ type Props = {
 
 const PageTemplate = ({
     titlePage,
-    urlLogo,
-    altLogo,
-    widthLogo,
-    heightLogo,
+    urlLogo = '/assets/img/logos/logo.svg',
+    altLogo = 'Logo Allan Kardec',
+    widthLogo = '',
+    heightLogo = '',
     children,
     hero = false,
     listSliderImages
@@ -84,16 +88,34 @@ const PageTemplate = ({
                 />
             </Head>
             <Container>
-                <Header
-                    urlLogo={urlLogo}
-                    altLogo={altLogo}
-                    width={widthLogo}
-                    height={heightLogo}
-                    listNavLinks={listNavLinks}
-                />
-                {hero ? <Slider listSliderImages={listSliderImages} /> : <></>}
+                <section>
+                    <Header
+                        urlLogo={urlLogo}
+                        altLogo={altLogo}
+                        width={widthLogo}
+                        height={heightLogo}
+                        listNavLinks={listNavLinks}
+                    />
+                    {/* eslint-disable-next-line multiline-ternary */}
+                    {hero ? (
+                        <Slider listSliderImages={listSliderImages} />
+                    ) : (
+                        <></>
+                    )}
+                </section>
             </Container>
-            {children}
+            <section>
+                <main>{children}</main>
+            </section>
+            <FooterContainer>
+                <section>
+                    <Footer
+                        text="©Copyright 2019 Allan Kardec.online / Designed by: "
+                        linkText="PDWebdesign"
+                        url="www.pdwebdesign.com.br"
+                    />
+                </section>
+            </FooterContainer>
         </Container>
     )
 }

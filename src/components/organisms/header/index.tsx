@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { Container, Row } from 'react-bootstrap'
+
+// molecules
 import Menu from '../../molecules/menu'
 
 type Props = {
@@ -8,7 +10,8 @@ type Props = {
     altLogo: string
     width?: string
     height?: string
-    listNavLinks: Record<string, any>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    listNavLinks?: Record<string, any>
     placeholder?: string
     buttonLabel?: string
 }
