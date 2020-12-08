@@ -10,6 +10,10 @@ import Links from '../components/molecules/links'
 // organisms
 import Header from '../components/organisms/header'
 import Footer from '../components/organisms/footer'
+// css links 
+import AllLinksContainer from '../styles/components/list_links'
+import FooterContainer from '../styles/components/footer'
+
 
 const PageLinks: React.FC = () => {
     const listLinks = {
@@ -116,6 +120,7 @@ const PageLinks: React.FC = () => {
     }
     return (
         <Container>
+            <Container>
             <Head>
                 <meta charSet="utf-8" />
                 <title>Links | AllanKardecOnline</title>
@@ -128,6 +133,7 @@ const PageLinks: React.FC = () => {
                     content="width=device-width,minimum-scale=1,initial-scale=1"
                 />
             </Head>
+            </Container>
             <Container>
                 <Header
                     urlLogo="/assets/img/logos/logo.svg"
@@ -136,30 +142,40 @@ const PageLinks: React.FC = () => {
                     placeholder="Digite aqui sua pesquisa"
                     buttonLabel="Pesquisar"
                 />
+            
             </Container>
-            <Container>
+            <AllLinksContainer>
+                <Container>
                 <Row className="d-flex justify-content-center">
-                    <Col xs="auto" className="my-1">
+                    <Col>
                         <h3>
                             LINKS DE INTERESSE PARA OS PESQUISADORES DE
                             ESPIRITISMO:
                         </h3>
                     </Col>
                 </Row>
-                <Row>
-                    <Col xs="auto" className="center">
+                <Row className="d-flex justify-content-center"> 
+                    <Col>
                         <Links listLinks={listLinks} />
                     </Col>
                 </Row>
-            </Container>
-            <section className="bg-black">
+              </Container> 
+            </AllLinksContainer>
+            <FooterContainer>
+            <section>
                 <Footer
                     text="©Copyright 2019 Allan Kardec.online / Designed by: "
                     linkText="PDWebdesign"
                     url="www.pdwebdesign.com.br"
                 />
             </section>
-        </Container>
+            </FooterContainer>
+            
+
+            
+            
+            </Container>
+       
     )
 }
 
