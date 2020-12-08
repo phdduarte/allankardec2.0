@@ -69,54 +69,54 @@ const Home: React.FC = () => {
                 listSliderImages={listSliderImages}
             >
                 <AllTypeContainer>
-                    <TypeContainer>
+                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <Type
                             src="/assets/img/type/books.jpg"
                             alt="Livros"
                             url="#books"
                             label="Livros"
                         />
-                    </TypeContainer>
-                    <TypeContainer>
+                    </div>
+                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <Type
                             src="/assets/img/type/letters.jpg"
                             alt="Cartas"
                             url="#letters"
                             label="Cartas"
                         />
-                    </TypeContainer>
-                    <TypeContainer>
+                    </div>
+                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <Type
                             src="/assets/img/type/journals.jpg"
                             alt="Jornais"
                             url="#journals"
                             label="Jornais"
                         />
-                    </TypeContainer>
-                    <TypeContainer>
+                    </div>
+                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <Type
                             src="/assets/img/type/manuscrito.jpg"
                             alt="Manuscritos"
                             url="#manuscript"
                             label="Manuscritos"
                         />
-                    </TypeContainer>
-                    <TypeContainer>
+                    </div>
+                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <Type
                             src="/assets/img/type/magazines.jpg"
                             alt="Revistas"
                             url="#magazines"
                             label="Revistas"
                         />
-                    </TypeContainer>
-                    <TypeContainer>
+                    </div>
+                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <Type
                             src="/assets/img/type/csi.jpg"
                             alt="CSI Espirita"
                             url="#csi"
                             label="CSI do Espiritismo"
                         />
-                    </TypeContainer>
+                    </div>
                 </AllTypeContainer>
             </PageTemplate>
         </div>

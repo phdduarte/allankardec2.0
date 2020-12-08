@@ -62,8 +62,6 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: row;
     align-items: center;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }

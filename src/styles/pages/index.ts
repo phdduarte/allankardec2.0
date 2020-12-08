@@ -1,19 +1,10 @@
 import style from 'styled-components'
 
-export const TypeContainer = style.div`
+export const AllTypeContainer = style.div`
     * {
-        display: block;
+        text-align: center;
         position: relative;
-        width: content-width;
-    }
-    #type {
-        position: relative;
-        padding: 20px 10px;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        margin-top: 10px;
     }
     a {
         text-decoration: none;
@@ -29,15 +20,7 @@ export const TypeContainer = style.div`
         max-height: 300px;
         margin-bottom: 10px;
     }
-
-`
-
-export const AllTypeContainer = style.div`
-    * {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        text-align: center;
-        position: relative;
+    a div {
+        display: block;
     }
 `
