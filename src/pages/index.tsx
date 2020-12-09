@@ -1,8 +1,11 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Type from '../components/molecules/type'
-import { AllTypeContainer, TypeContainer } from '../styles/pages/index'
 import PageTemplate from '../components/templates/pageTemplate'
+import Title from '../components/atoms/title'
+import { Container, Row } from 'react-bootstrap'
+
+import HomeContainer from '../styles/pages/home'
 
 const Home: React.FC = () => {
     const listSliderImages = {
@@ -68,56 +71,66 @@ const Home: React.FC = () => {
                 hero={true}
                 listSliderImages={listSliderImages}
             >
-                <AllTypeContainer>
-                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <Type
-                            src="/assets/img/type/books.jpg"
-                            alt="Livros"
-                            url="#books"
-                            label="Livros"
-                        />
-                    </div>
-                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <Type
-                            src="/assets/img/type/letters.jpg"
-                            alt="Cartas"
-                            url="#letters"
-                            label="Cartas"
-                        />
-                    </div>
-                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <Type
-                            src="/assets/img/type/journals.jpg"
-                            alt="Jornais"
-                            url="#journals"
-                            label="Jornais"
-                        />
-                    </div>
-                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <Type
-                            src="/assets/img/type/manuscrito.jpg"
-                            alt="Manuscritos"
-                            url="#manuscript"
-                            label="Manuscritos"
-                        />
-                    </div>
-                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <Type
-                            src="/assets/img/type/magazines.jpg"
-                            alt="Revistas"
-                            url="#magazines"
-                            label="Revistas"
-                        />
-                    </div>
-                    <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <Type
-                            src="/assets/img/type/csi.jpg"
-                            alt="CSI Espirita"
-                            url="#csi"
-                            label="CSI do Espiritismo"
-                        />
-                    </div>
-                </AllTypeContainer>
+                <HomeContainer>
+                    <Container>
+                        <Title label="O Museu" />
+
+                        <Row>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/books.jpg"
+                                    alt="Livros"
+                                    url="#books"
+                                    label="Livros"
+                                />
+                            </div>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/letters.jpg"
+                                    alt="Cartas"
+                                    url="#letters"
+                                    label="Cartas"
+                                />
+                            </div>
+                        </Row>
+                        <Row>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/journals.jpg"
+                                    alt="Jornais"
+                                    url="#journals"
+                                    label="Jornais"
+                                />
+                            </div>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/manuscrito.jpg"
+                                    alt="Manuscritos"
+                                    url="#manuscript"
+                                    label="Manuscritos"
+                                />
+                            </div>
+                        </Row>
+                        <Row>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/magazines.jpg"
+                                    alt="Revistas"
+                                    url="#magazines"
+                                    label="Revistas"
+                                />
+                            </div>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/csi.jpg"
+                                    alt="CSI Espirita"
+                                    url="#csi"
+                                    label="CSI do Espiritismo"
+                                />
+                            </div>
+                        </Row>
+                    </Container>
+                </HomeContainer>
             </PageTemplate>
         </div>
     )
