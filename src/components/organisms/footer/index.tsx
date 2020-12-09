@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container} from 'react-bootstrap'
 
 type Props = {
     text?: string
@@ -9,9 +8,14 @@ type Props = {
 
 const Footer = ({ text, linkText, url }: Props) => {
     return (
-        <Container fluid={true}>
-            <p>{text}<a href={url}>{linkText}</a></p>
-        </Container>
+        <>
+            <footer>
+                <p>
+                    {text}
+                    <a href={url}>{linkText}</a>
+                </p>
+            </footer>
+        </>
     )
 }
 

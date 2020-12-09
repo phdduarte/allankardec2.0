@@ -8,12 +8,12 @@ type Props = {
 }
 
 const Type = ({ src, alt, url, label }: Props) => (
-    <div>
-        <a href={url}>
+    <a href={url}>
+        <div className="image-type">
             <img src={src} alt={alt} />
-            {label}
-        </a>
-    </div>
+        </div>
+        <div className="text-type">{label}</div>
+    </a>
 )
 
 export default Type

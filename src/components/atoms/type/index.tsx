@@ -1,5 +1,4 @@
 import React from 'react'
-import TypeContainer from '../../../styles/components/type'
 
 type Props = {
     src: string
