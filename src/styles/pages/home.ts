@@ -12,7 +12,7 @@ const HomeContainer = style.div`
     }
     a div {
         text-align: center;
-    }
+    }git status
     a .image-type{
         margin: 0;
         justify-content: center;
