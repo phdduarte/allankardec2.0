@@ -1,7 +1,6 @@
 import style from 'styled-components'
 
 const LinksContainer = style.div`
-
     h3 {
         font-size: 25 px;
         color: ${props => props.theme.colors.text}; 
