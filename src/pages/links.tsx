@@ -1,19 +1,14 @@
 import React from 'react'
-import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import { Col, Container, Row, Button, Form, } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 
 // molecules
 import Links from '../components/molecules/links'
 
-// organisms
-import Header from '../components/organisms/header'
-import Footer from '../components/organisms/footer'
-// css links 
-import AllLinksContainer from '../styles/components/list_links'
-import FooterContainer from '../styles/components/footer'
-
+import PageTemplate from '../components/templates/pageTemplate'
+// css links
+import AllLinksContainer from '../styles/pages/links'
 
 const PageLinks: React.FC = () => {
     const listLinks = {
@@ -84,98 +79,26 @@ const PageLinks: React.FC = () => {
             }
         ]
     }
-    const listNavLinks = {
-        childrenListNavLinks: [
-            {
-                navLink: {
-                    href: '#HOME',
-                    label: 'HOME'
-                }
-            },
-            {
-                navLink: {
-                    href: '#ABOUT',
-                    label: 'ABOUT'
-                }
-            },
-            {
-                navLink: {
-                    href: '#CONTACT',
-                    label: 'CONTATO'
-                }
-            },
-            {
-                navLink: {
-                    href: '#GLOSSARIO',
-                    label: 'GLOSSARIO'
-                }
-            },
-            {
-                navLink: {
-                    href: '#TERMS',
-                    label: 'TERMOS E CONDICOES'
-                }
-            }
-        ]
-    }
     return (
-        <Container>
-            <Container>
-            <Head>
-                <meta charSet="utf-8" />
-                <title>Links | AllanKardecOnline</title>
-                <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/4.8.0/reactstrap.min.js"
-                ></link>
-                <meta
-                    name="viewport"
-                    content="width=device-width,minimum-scale=1,initial-scale=1"
-                />
-            </Head>
-            </Container>
-            <Container>
-                <Header
-                    urlLogo="/assets/img/logos/logo.svg"
-                    altLogo="Logo Allan Kardec"
-                    listNavLinks={listNavLinks}
-                    placeholder="Digite aqui sua pesquisa"
-                    buttonLabel="Pesquisar"
-                />
-            
-            </Container>
+        <PageTemplate titlePage="Links">
             <AllLinksContainer>
                 <Container>
-                <Row className="d-flex justify-content-center">
-                    <Col>
-                        <h3>
-                            LINKS DE INTERESSE PARA OS PESQUISADORES DE
-                            ESPIRITISMO:
-                        </h3>
-                    </Col>
-                </Row>
-                <Row className="d-flex justify-content-center"> 
-                    <Col>
-                        <Links listLinks={listLinks} />
-                    </Col>
-                </Row>
-              </Container> 
+                    <Row className="d-flex justify-content-center">
+                        <Col>
+                            <h3>
+                                LINKS DE INTERESSE PARA OS PESQUISADORES DE
+                                ESPIRITISMO:
+                            </h3>
+                        </Col>
+                    </Row>
+                    <Row className="d-flex justify-content-center">
+                        <Col>
+                            <Links listLinks={listLinks} />
+                        </Col>
+                    </Row>
+                </Container>
             </AllLinksContainer>
-            <FooterContainer>
-            <section>
-                <Footer
-                    text="©Copyright 2019 Allan Kardec.online / Designed by: "
-                    linkText="PDWebdesign"
-                    url="www.pdwebdesign.com.br"
-                />
-            </section>
-            </FooterContainer>
-            
-
-            
-            
-            </Container>
-       
+        </PageTemplate>
     )
 }
 

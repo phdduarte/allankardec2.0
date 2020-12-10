@@ -1,55 +1,13 @@
 import React from 'react'
-import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from '../components/organisms/header'
 import Type from '../components/molecules/type'
-import {
-    Col,
-    Container,
-    Row,
-    Button,
-    FormControl,
-    Form,
-    InputGroup
-} from 'react-bootstrap'
-import AllTypeContainer from '../styles/components/type'
-import Slider from '../components/molecules/slider'
+import PageTemplate from '../components/templates/pageTemplate'
+import Title from '../components/atoms/title'
+import { Container, Row } from 'react-bootstrap'
+
+import HomeContainer from '../styles/pages/home'
 
 const Home: React.FC = () => {
-    const listNavLinks = {
-        childrenListNavLinks: [
-            {
-                navLink: {
-                    href: '#HOME',
-                    label: 'HOME'
-                }
-            },
-            {
-                navLink: {
-                    href: '#ABOUT',
-                    label: 'ABOUT'
-                }
-            },
-            {
-                navLink: {
-                    href: '#CONTACT',
-                    label: 'CONTATO'
-                }
-            },
-            {
-                navLink: {
-                    href: '#GLOSSARIO',
-                    label: 'GLOSSARIO'
-                }
-            },
-            {
-                navLink: {
-                    href: '#TERMS',
-                    label: 'TERMOS E CONDICOES'
-                }
-            }
-        ]
-    }
     const listSliderImages = {
         childrenListSliderImages: [
             {
@@ -104,63 +62,76 @@ const Home: React.FC = () => {
     }
     return (
         <div>
-            <Head>
-                <title>Homepage</title>
-                <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/4.8.0/reactstrap.min.js"
-                ></link>
-            </Head>
-            <Container>
-                <Header
-                    urlLogo="/assets/img/logos/logo.svg"
-                    altLogo="Logo Allan Kardec"
-                    listNavLinks={listNavLinks}
-                    placeholder="Digite aqui sua pesquisa"
-                    buttonLabel="Pesquisar"
-                />
-                <Slider listSliderImages={listSliderImages} />
-            </Container>
-            <Container>
-                <AllTypeContainer>
-                    <Type
-                        src="/assets/img/type/books.jpg"
-                        alt="Livros"
-                        url="#books"
-                        label="Livros"
-                    />
-                    <Type
-                        src="/assets/img/type/letters.jpg"
-                        alt="Cartas"
-                        url="#letters"
-                        label="Cartas"
-                    />
-                    <Type
-                        src="/assets/img/type/journals.jpg"
-                        alt="Jornais"
-                        url="#journals"
-                        label="Jornais"
-                    />
-                    <Type
-                        src="/assets/img/type/manuscrito.jpg"
-                        alt="Manuscritos"
-                        url="#manuscript"
-                        label="Manuscritos"
-                    />
-                    <Type
-                        src="/assets/img/type/magazines.jpg"
-                        alt="Revistas"
-                        url="#magazines"
-                        label="Revistas"
-                    />
-                    <Type
-                        src="/assets/img/type/csi.jpg"
-                        alt="CSI Espirita"
-                        url="#csi"
-                        label="CSI do Espiritismo"
-                    />
-                </AllTypeContainer>
-            </Container>
+            <PageTemplate
+                titlePage="HomePage"
+                urlLogo="/assets/img/logos/logo.svg"
+                altLogo="Logo Allan Kardec"
+                heightLogo=""
+                widthLogo=""
+                hero={true}
+                listSliderImages={listSliderImages}
+            >
+                <HomeContainer>
+                    <Container>
+                        <Title label="O Museu" />
+
+                        <Row>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/books.jpg"
+                                    alt="Livros"
+                                    url="#books"
+                                    label="Livros"
+                                />
+                            </div>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/letters.jpg"
+                                    alt="Cartas"
+                                    url="#letters"
+                                    label="Cartas"
+                                />
+                            </div>
+                        </Row>
+                        <Row>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/journals.jpg"
+                                    alt="Jornais"
+                                    url="#journals"
+                                    label="Jornais"
+                                />
+                            </div>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/manuscrito.jpg"
+                                    alt="Manuscritos"
+                                    url="#manuscript"
+                                    label="Manuscritos"
+                                />
+                            </div>
+                        </Row>
+                        <Row>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/magazines.jpg"
+                                    alt="Revistas"
+                                    url="#magazines"
+                                    label="Revistas"
+                                />
+                            </div>
+                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <Type
+                                    src="/assets/img/type/csi.jpg"
+                                    alt="CSI Espirita"
+                                    url="#csi"
+                                    label="CSI do Espiritismo"
+                                />
+                            </div>
+                        </Row>
+                    </Container>
+                </HomeContainer>
+            </PageTemplate>
         </div>
     )
 }
