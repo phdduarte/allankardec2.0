@@ -15,7 +15,7 @@ h3 {
 div {
     
     
-    position: relative;
+   
     display: block;
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
