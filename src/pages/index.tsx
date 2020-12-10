@@ -1,5 +1,5 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 import Type from '../components/molecules/type'
 import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
