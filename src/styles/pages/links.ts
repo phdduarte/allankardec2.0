@@ -1,10 +1,7 @@
 import style from 'styled-components'
 
 const LinksContainer = style.div`
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
 }
 h3 {
 
@@ -15,19 +12,25 @@ h3 {
 div {
     
     
-   
+    border-style: solid;
     display: block;
-    padding: 0.5rem 0.75rem;
-    margin-left: -1px;
-    line-height: 1.5;
+    padding: 0.5rem 0.5rem;
     background-color: #fff;
-    font-family: 'Open Sans', sans-serif;
-    font-size : 20 px;
-    color: black;
-    justify-content: center;
+    font-size : 30 px;
     text-align: center;
+    font-family: "Gill Sans", sans-serif;
+    line-height: 2.0em;
+    
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
     
 }
+a:hover {
+	
+        color: dark;
+      
+	}
 
 
 
@@ -36,11 +39,11 @@ div {
 `
 export const AllLinksContainer = style.div`
     * {
-        width: 100%:
-        display: flex;
+        
+        display: block;
         justify-content: center;
         text-align: center;
-        position: absolute;
+        position: relative;
     }
 `
 
