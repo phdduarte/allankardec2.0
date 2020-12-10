@@ -1,21 +1,29 @@
 import React from 'react'
-import TypeContainer from '../../../styles/components/type'
+import Image from 'next/image'
 
 type Props = {
     src: string
     alt: string
     label: string
     url: string
+    width?: string
+    height?: string
 }
 
-const Type = ({ src, alt, url, label }: Props) => (
-    <TypeContainer>
-
+const Type = ({
+    src,
+    alt,
+    url,
+    label,
+    height = '310',
+    width = '230'
+}: Props) => (
     <a href={url}>
-        <img src={src} alt={alt} />
-        {label}
+        <div className="image-type">
+            <Image src={src} alt={alt} width={width} height={height} />
+        </div>
+        <div className="text-type">{label}</div>
     </a>
-    </TypeContainer>
 )
 
 export default Type

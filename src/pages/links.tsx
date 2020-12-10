@@ -1,90 +1,105 @@
 import React from 'react'
-import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from '../components/templates/header'
-import { Col, Container, Row, Button, Form, InputGroup } from 'react-bootstrap'
+
+import { Col, Container, Row } from 'react-bootstrap'
 
 // molecules
 import Links from '../components/molecules/links'
 
-const Home: React.FC = () => {
+import PageTemplate from '../components/templates/pageTemplate'
+// css links
+import AllLinksContainer from '../styles/pages/links'
+
+const PageLinks: React.FC = () => {
     const listLinks = {
         childrenListLinks: [
             {
                 link: {
-                    label: 'TESTE',
-                    url: 'ALPHABET'
+                    label: '- AUTORES ESPÍRITAS CLÁSSICOS – BIBLIOTECA VIRTUAL',
+                    url: 'http://www.autoresespiritasclassicos.com/'
                 }
             },
             {
                 link: {
-                    label: 'CORRO',
-                    url: 'NETFLIX'
+                    label:
+                        '- CSI IMAGENS E REGISTROS HISTÓRICOS DO ESPIRITISMO',
+                    url: 'https://www.facebook.com/HistoriaDoEspiritismo/'
                 }
             },
             {
                 link: {
-                    label: 'SBUB34',
-                    url: 'STARBUCKS'
+                    label: '- ECK – ESPIRITISMO COM KARDEC',
+                    url:
+                        'https://www.facebook.com/groups/Espiritismo.COM.Kardec/'
                 }
             },
             {
                 link: {
-                    label: 'TSLA34',
-                    url: 'TESLA INC'
+                    label: '- GEAE - GRUPO DE ESTUDOS AVANÇADOS ESPÍRITAS',
+                    url: 'https://www.comkardec.net/'
                 }
             },
             {
                 link: {
-                    label: 'AMZO34',
-                    url: 'AMAZON'
+                    label: '- GRUPO ESPÍRITA AMÉLIE BOUDET',
+                    url: 'https://www.facebook.com/groups/189791881774515/'
+                }
+            },
+            {
+                link: {
+                    label:
+                        '- IPEAK – INSTITUTO DE PESQUISAS ESPÍRITAS ALLAN KARDEC',
+                    url: 'http://www.ipeak.net/site/index.php'
+                }
+            },
+            {
+                link: {
+                    label: '- JORNAL DE ESTUDOS ESPÍRITAS',
+                    url: 'https://sites.google.com/site/jeespiritas/'
+                }
+            },
+            {
+                link: {
+                    label: '- KARDECPEDIA',
+                    url: 'https://kardecpedia.com/'
+                }
+            },
+            {
+                link: {
+                    label: '- LIGA DE PESQUISADORES DO ESPIRITISMO',
+                    url: 'http://www.lihpe.net/wordpress/'
+                }
+            },
+            {
+                link: {
+                    label:
+                        '- NUPES – NÚCLEO DE PESQUISA E ESPIRITUALIDADE EM SAÚDE',
+                    url: 'https://www.ufjf.br/nupes/'
                 }
             }
         ]
     }
     return (
-        <Container>
-            <Head>
-                <title>Links</title>
-                <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/4.8.0/reactstrap.min.js"
-                ></link>
-            </Head>
-            <Header
-                urlLogo="/assets/img/logos/logo.svg"
-                altLogo="Logo Allan Kardec"
-            />
-            <Container>
-                <Row className="d-flex justify-content-center">
-                    <Form>
-                        <Form.Row className="align-items-center">
-                            <Col sm={8} className="my-1">
-                                <Form.Label
-                                    htmlFor="inlineFormInputName"
-                                    srOnly
-                                >
-                                    Nome
-                                </Form.Label>
-                                <Form.Control
-                                    id="inlineFormInputName"
-                                    placeholder="Digite aqui sua pesquisa"
-                                />
-                            </Col>
-                            <Col xs="auto" className="my-1">
-                                <Button type="submit">Enviar</Button>
-                            </Col>
-                        </Form.Row>
-                    </Form>
-                </Row>
-            </Container>
-            <Container>
-                <Row>
-                    <Links listLinks={listLinks} />
-                </Row>
-            </Container>
-        </Container>
+        <PageTemplate titlePage="Links">
+            <AllLinksContainer>
+                <Container>
+                    <Row className="d-flex justify-content-center">
+                        <Col>
+                            <h3>
+                                LINKS DE INTERESSE PARA OS PESQUISADORES DE
+                                ESPIRITISMO:
+                            </h3>
+                        </Col>
+                    </Row>
+                    <Row className="d-flex justify-content-center">
+                        <Col>
+                            <Links listLinks={listLinks} />
+                        </Col>
+                    </Row>
+                </Container>
+            </AllLinksContainer>
+        </PageTemplate>
     )
 }
 
-export default Home
+export default PageLinks
