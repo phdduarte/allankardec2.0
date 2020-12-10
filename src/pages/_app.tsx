@@ -1,5 +1,5 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import './global.scss'
 
 export default createGlobalStyle`
   * {
@@ -43,7 +44,7 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;    
+    justify-content: center;
     background: ${props => props.theme.colors.primary};
   }
 
