@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import { Container, Row } from 'react-bootstrap'
 
 import Link from '../../atoms/link'
 import Header from '../../organisms/header'
@@ -89,12 +90,14 @@ const PageTemplate = ({
             </Head>
             <>
                 <section id="header">
-                    <Header
-                        urlLogo={urlLogo}
-                        altLogo={altLogo}
-                        width={widthLogo}
-                        height={heightLogo}
-                    />
+                    <a href="/" target="_self">
+                        <Header
+                            urlLogo={urlLogo}
+                            altLogo={altLogo}
+                            width={widthLogo}
+                            height={heightLogo}
+                        />
+                    </a>
                     {/* eslint-disable-next-line multiline-ternary */}
                     {hero ? (
                         <Slider listSliderImages={listSliderImages} />
@@ -102,15 +105,22 @@ const PageTemplate = ({
                         <></>
                     )}
                     <div id="search-bar">
-                        <div className="col-12 col-md-8 col-xl-8">
-                            <Search
-                                placeholder="Digite aqui sua pesquisa"
-                                buttonLabel="Pesquisar"
-                            />
-                        </div>
-                        <div className="col-12 col-md-4 col-xl-4">
-                            <Link url="/jobs" label="Veja nosso acervo" />
-                        </div>
+                        <Container>
+                            <Row>
+                                <div className="col-12 col-md-8 col-xl-8">
+                                    <Search
+                                        placeholder="Digite aqui sua pesquisa"
+                                        buttonLabel="Pesquisar"
+                                    />
+                                </div>
+                                <div className="col-12 col-md-4 col-xl-4">
+                                    <Link
+                                        url="/jobs"
+                                        label="Veja nosso acervo"
+                                    />
+                                </div>
+                            </Row>
+                        </Container>
                     </div>
                 </section>
             </>

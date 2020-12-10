@@ -17,9 +17,8 @@ export default createGlobalStyle`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    height: 10vh;
     border: 0;
-    padding: 0;
+    padding: 40px 0px;
     margin: 0;
     text-align: center;
     color: white;
@@ -39,12 +38,12 @@ export default createGlobalStyle`
   }
 
   #links{
+    padding: 20px;
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;    
-    height: 10vh;
     background: ${props => props.theme.colors.primary};
   }
 
@@ -57,7 +56,7 @@ export default createGlobalStyle`
   }
 
   #header #search-bar {
-    height: 10vh;
+    padding: 10px;
     background: #333;
     display: flex;
     flex-direction: row;
@@ -74,7 +73,7 @@ export default createGlobalStyle`
   }
 
   #menu {
-    height: 15vh;
+    padding: 20px;
     position: relative;
     align-items: center;
     display: flex;
@@ -107,5 +106,9 @@ export default createGlobalStyle`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  div .image-type {
+    width: 300px;
+    heigth: 300px;
   }
 `
