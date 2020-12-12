@@ -8,7 +8,7 @@ type Props = {
 
 const Menu = ({ listNavLinks }: Props) => (
     <div>
-        <Navbar>
+        <Navbar variant="dark">
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     {listNavLinks.childrenListNavLinks.map(
