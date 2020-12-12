@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Type from '../components/molecules/type'
+import Card from '../components/molecules/card'
 import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
 import { Container, Row } from 'react-bootstrap'
@@ -77,55 +77,55 @@ const Home: React.FC = () => {
 
                         <Row>
                             <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Type
+                                <Card
                                     src="/assets/img/type/books.jpg"
                                     alt="Livros"
-                                    url="#books"
-                                    label="Livros"
+                                    url="/books"
+                                    title="Livros"
                                 />
                             </div>
                             <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Type
+                                <Card
                                     src="/assets/img/type/letters.jpg"
                                     alt="Cartas"
-                                    url="#letters"
-                                    label="Cartas"
+                                    url="/letters"
+                                    title="Cartas"
                                 />
                             </div>
                         </Row>
                         <Row>
                             <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Type
+                                <Card
                                     src="/assets/img/type/journals.jpg"
                                     alt="Jornais"
-                                    url="#journals"
-                                    label="Jornais"
+                                    url="/journals"
+                                    title="Jornais"
                                 />
                             </div>
                             <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Type
+                                <Card
                                     src="/assets/img/type/manuscrito.jpg"
                                     alt="Manuscritos"
-                                    url="#manuscript"
-                                    label="Manuscritos"
+                                    url="/manuscript"
+                                    title="Manuscritos"
                                 />
                             </div>
                         </Row>
                         <Row>
                             <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Type
+                                <Card
                                     src="/assets/img/type/magazines.jpg"
                                     alt="Revistas"
-                                    url="#magazines"
-                                    label="Revistas"
+                                    url="/magazines"
+                                    title="Revistas"
                                 />
                             </div>
                             <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Type
+                                <Card
                                     src="/assets/img/type/csi.jpg"
                                     alt="CSI Espirita"
-                                    url="#csi"
-                                    label="CSI do Espiritismo"
+                                    url="/csi"
+                                    title="CSI do Espiritismo"
                                 />
                             </div>
                         </Row>
