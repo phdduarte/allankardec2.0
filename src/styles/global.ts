@@ -140,7 +140,7 @@ export default createGlobalStyle`
     padding: 10px;
     text-align: center;
   }
-  .content-text p {
+  .content-text .justify-text {
     text-align: justify;
     margin: 20px 25px;
   }

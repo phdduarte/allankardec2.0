@@ -12,7 +12,7 @@ const TermsAndConditions: React.FC = () => {
                 <div className="content-text">
                     <h2>LICENÇA DO USUÁRIO DO ALLANKARDEC.ONLINE</h2>
                     <h3>SOBRE ESTA LICENÇA</h3>
-                    <p>
+                    <p className="justify-text">
                         Esta licença de usuário define os termos em que você
                         pode usar o conteúdo no AllanKardec.online Museu, a
                         menos que seja indicado de outra forma nos termos de
@@ -24,20 +24,20 @@ const TermsAndConditions: React.FC = () => {
                         você confirma que aceita as condições desta licença de
                         usuário.
                     </p>
-                    <p>
+                    <p className="justify-text">
                         Esta licença de usuário não concede nenhum direito de
                         usar os nomes, logotipos ou marcas registradas pelo
                         AllanKardec.online Museu , a menos que expressamente
                         declarado em contrário.
                     </p>
                     <h3>USO PERMITIDO DO CONTEÚDO</h3>
-                    <p>
+                    <p className="justify-text">
                         Você pode imprimir ou baixar qualquer conteúdo apenas
                         para fins não comerciais, incluindo, mas não limitado a
                         estudo particular, pesquisa ou ensino e instrução, sob
                         os seguintes termos:
                     </p>
-                    <p>
+                    <p className="justify-text">
                         Se o uso permitido do conteúdo envolver qualquer
                         distribuição, disseminação ou comunicação do conteúdo
                         (por qualquer meio ou processo) a outra pessoa, você
@@ -48,12 +48,12 @@ const TermsAndConditions: React.FC = () => {
                         Museu, vinculando, sempre que possível, o site
                         AllanKardec.online como a fonte do conteúdo.
                     </p>
-                    <p>
+                    <p className="justify-text">
                         Outras leis de direitos autorais, proteção de dados e
                         privacidade podem ainda se aplicar ao conteúdo.
                     </p>
                     <h3>USO PROIBIDO DO CONTEÚDO</h3>
-                    <p>
+                    <p className="justify-text">
                         Você não deve usar nenhuma parte do conteúdo para fins
                         comerciais, exceto se obtiver autorização por escrito.
                         Para os propósitos desta licença de usuário, fins
@@ -64,14 +64,14 @@ const TermsAndConditions: React.FC = () => {
                         relacionado com algo que é cobrado ou se destina a gerar
                         lucro.
                     </p>
-                    <p>
+                    <p className="justify-text">
                         Para mais informações ou dúvidas sobre essa licença de
                         usuário, consulte-nos através do email:
                         allankardec.online@gmail.com
                     </p>
                     <h2>ALLANKARDEC.ONLINE USER LICENCE</h2>
                     <h3>ABOUT THIS LICENCE</h3>
-                    <p>
+                    <p className="justify-text">
                         This user licence sets out the terms on which you may
                         use the content on AllanKardec.online Museum, unless
                         otherwise stated in the content's individual terms of
@@ -83,19 +83,19 @@ const TermsAndConditions: React.FC = () => {
                         content, you confirm that you accept the conditions of
                         this user licence.
                     </p>
-                    <p>
+                    <p className="justify-text">
                         This user licence does not grant any rights to use the
                         names, logos or trademarks of either the
                         AllanKardec.online, unless expressly stated otherwise.
                     </p>
                     <h3>PERMITTED USE OF THE CONTENT</h3>
-                    <p>
+                    <p className="justify-text">
                         You may print off or download any content only for
                         non-commercial purposes, including but not limited to
                         private study, research, or teaching and instruction,
                         under the following terms:
                     </p>
-                    <p>
+                    <p className="justify-text">
                         If the permitted use of the content involves any
                         distribution, dissemination or communication of the
                         content (by any means or process) to another person, you
@@ -106,13 +106,13 @@ const TermsAndConditions: React.FC = () => {
                         AllanKardec.online Museum, linking where possible to the
                         AllanKardec.online site as the source of the content.
                     </p>
-                    <p>
+                    <p className="justify-text">
                         You may not remove any copyright, trademark or other
                         proprietary notices including attribution metadata,
                         credits and notices, that are placed in or near the
                         text, images or data.
                     </p>
-                    <p>
+                    <p className="justify-text">
                         Further copyright, data protection and privacy laws may
                         still apply to content. You must comply with all terms
                         or restrictions other than copyright (such as trademark,
@@ -124,7 +124,7 @@ const TermsAndConditions: React.FC = () => {
                         that might apply to your use.
                     </p>
                     <h3>PROHIBITED USE OF THE CONTENT</h3>
-                    <p>
+                    <p className="justify-text">
                         You must not use any part of the content for commercial
                         purposes, except as permitted by statutory exceptions
                         and limitations to copyright. For the purposes of this
@@ -135,7 +135,7 @@ const TermsAndConditions: React.FC = () => {
                         charged for, is connected with something that is charged
                         for or is intended to make a profit.
                     </p>
-                    <p>
+                    <p className="justify-text">
                         For further information or If you have any comments or
                         questions about this user licence, please contact:
                         allankardec.online@gmail.com
