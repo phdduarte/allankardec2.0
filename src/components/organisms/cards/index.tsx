@@ -10,19 +10,21 @@ const Cards = ({ listCardItems }: Props) => (
     <div>
         {listCardItems.childrenListCardItems.map((cardItem, index) => (
             <Card
+                src={cardItem.cardItem.src}
+                alt={cardItem.cardItem.alt}
+                url={cardItem.cardItem.url}
+                title={cardItem.cardItem.cardTitle}
+                width={cardItem.cardItem.width}
+                height={cardItem.cardItem.height}
                 key={index}
-                src={cardItem.src}
-                alt={cardItem.alt}
-                url={cardItem.url}
-                title={cardItem.cardTitle}
-                width={listCardItems.width}
-                height={listCardItems.height}
             >
-                <span>ID: {cardItem.id}</span>
-                <span>Título: {cardItem.documentTitle}</span>
-                <span>Descrição: {cardItem.description}</span>
-                <span>Data: {cardItem.date}</span>
-                <span>Páginas: {cardItem.pages}</span>
+                <ul>
+                    <li>ID: {cardItem.cardItem.id}</li>
+                    <li>Título: {cardItem.cardItem.documentTitle}</li>
+                    <li>Descrição: {cardItem.cardItem.description}</li>
+                    <li>Data: {cardItem.cardItem.date}</li>
+                    <li>Páginas: {cardItem.cardItem.pages}</li>
+                </ul>
             </Card>
         ))}
     </div>
