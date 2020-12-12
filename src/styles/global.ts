@@ -40,6 +40,8 @@ export default createGlobalStyle`
 
   .link-linkPage{
     padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -85,7 +87,6 @@ export default createGlobalStyle`
     flex-wrap: wrap;
     justify-content: center;
     background: ${props => props.theme.colors.primary};
-    margin-top: 10px;
   }
   .menu .navbar-nav .nav-link {
     color: white;
@@ -123,5 +124,14 @@ export default createGlobalStyle`
     font-family: Roboto;
     text-align: center;
     color: ${props => props.theme.colors.primary}
+  }
+  .red-main{
+    background: ${props => props.theme.colors.primary};
+    border: 3px solid ${props => props.theme.colors.primary};
+  }
+  main .content{
+    margin: 10px 30px;
+    background: ${props => props.theme.colors.background};
+    border-radius: 1%;
   }
 `

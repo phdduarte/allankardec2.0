@@ -60,7 +60,7 @@ const Home: React.FC = () => {
     }
 
     const listCardItems = {
-        className: 'col-6 col-lg-4 cards',
+        className: 'col-12 col-sm-6 col-lg-4 cards',
         childrenListCardItems: [
             {
                 cardItem: {
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
                 cardItem: {
                     src: '/assets/img/type/csi.jpg',
                     alt: 'CSI Espirita',
-                    url: '/fotos',
+                    url: '/photos',
                     imgLabel: 'CSI Espirita'
                 }
             }

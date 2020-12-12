@@ -4,7 +4,7 @@ import PageTemplate from '../components/templates/pageTemplate'
 import Cards from '../components/organisms/cards'
 import Title from '../components/atoms/title'
 
-const Manuscript: React.FC = () => {
+const Letters: React.FC = () => {
     const listCardItems = {
         className: 'col-6 col-lg-4',
         width: '480',
@@ -94,12 +94,12 @@ const Manuscript: React.FC = () => {
     }
     return (
         <div>
-            <PageTemplate titlePage="Manuscritos" mainModel="red-main">
-                <Title label="Manuscritos" />
+            <PageTemplate titlePage="Cartas" mainModel="red-main">
+                <Title label="Cartas" />
                 <Cards listCardItems={listCardItems} />
             </PageTemplate>
         </div>
     )
 }
 
-export default Manuscript
+export default Letters

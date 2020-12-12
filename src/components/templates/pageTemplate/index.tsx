@@ -17,6 +17,7 @@ type Props = {
     widthLogo?: string
     heightLogo?: string
     children: unknown
+    mainModel?: string
     hero?: boolean
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     listSliderImages?: Record<string, any>
@@ -28,6 +29,7 @@ const PageTemplate = ({
     altLogo = 'Logo Allan Kardec',
     widthLogo = '',
     heightLogo = '',
+    mainModel = '',
     children,
     hero = false,
     listSliderImages
@@ -124,8 +126,10 @@ const PageTemplate = ({
                     </div>
                 </header>
             </div>
-            <section className="content">
-                <main>{children}</main>
+            <section>
+                <main className={mainModel}>
+                    <div className="content">{children}</div>
+                </main>
             </section>
             <section className="link-linkPage">
                 <div>
