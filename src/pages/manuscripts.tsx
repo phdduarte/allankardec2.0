@@ -7,11 +7,14 @@ import Title from '../components/atoms/title'
 const Manuscript: React.FC = () => {
     const listCardItems = {
         className: 'col-6 col-lg-4',
+        width: '480',
+        height: '280',
         childrenListCardItems: [
             {
                 cardItem: {
                     width: '300',
-                    src: '/assets/img/type/journals.jpg',
+                    src:
+                        '/assets/img/uploads/12147886445f16d2afb14295.01782621.jpg',
                     height: '300',
                     alt: 'teste',
                     url: '/',
@@ -26,7 +29,56 @@ const Manuscript: React.FC = () => {
             {
                 cardItem: {
                     width: '300',
-                    src: '/assets/img/type/journals.jpg',
+                    src:
+                        '/assets/img/uploads/12147886445f16d2afb14295.01782621.jpg',
+                    height: '300',
+                    alt: 'teste',
+                    url: '/',
+                    id: '9**',
+                    documentTitle: 'Titulo do documento',
+                    description: 'loren ipsun loren ipsun',
+                    date: '12/12/20',
+                    pages: '9',
+                    download: ''
+                }
+            },
+            {
+                cardItem: {
+                    width: '300',
+                    src:
+                        '/assets/img/uploads/12147886445f16d2afb14295.01782621.jpg',
+                    height: '300',
+                    alt: 'teste',
+                    url: '/',
+                    id: '9**',
+                    documentTitle: 'Titulo do documento',
+                    description: 'loren ipsun loren ipsun',
+                    date: '12/12/20',
+                    pages: '9',
+                    download: ''
+                }
+            },
+            {
+                cardItem: {
+                    width: '300',
+                    src:
+                        '/assets/img/uploads/12147886445f16d2afb14295.01782621.jpg',
+                    height: '300',
+                    alt: 'teste',
+                    url: '/',
+                    id: '9**',
+                    documentTitle: 'Titulo do documento',
+                    description: 'loren ipsun loren ipsun',
+                    date: '12/12/20',
+                    pages: '9',
+                    download: ''
+                }
+            },
+            {
+                cardItem: {
+                    width: '300',
+                    src:
+                        '/assets/img/uploads/12147886445f16d2afb14295.01782621.jpg',
                     height: '300',
                     alt: 'teste',
                     url: '/',

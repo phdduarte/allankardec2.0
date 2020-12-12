@@ -5,8 +5,6 @@ import Cards from '../components/organisms/cards'
 import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
 
-import HomeContainer from '../styles/pages/home'
-
 const Home: React.FC = () => {
     const listSliderImages = {
         childrenListSliderImages: [
@@ -62,7 +60,7 @@ const Home: React.FC = () => {
     }
 
     const listCardItems = {
-        className: 'col-6',
+        className: 'col-6 col-lg-4 cards',
         childrenListCardItems: [
             {
                 cardItem: {
@@ -126,8 +124,8 @@ const Home: React.FC = () => {
                 hero={true}
                 listSliderImages={listSliderImages}
             >
-                <HomeContainer>
-                    <Title label="O Museu" />
+                <Title label="O Museu" />
+                <div className="align-items-center">
                     <Cards listCardItems={listCardItems} />
                     {/*
                     <Row>
@@ -185,7 +183,7 @@ const Home: React.FC = () => {
                         </div>
                     </Row>
                     */}
-                </HomeContainer>
+                </div>
             </PageTemplate>
         </div>
     )

@@ -88,8 +88,8 @@ const PageTemplate = ({
                     href="https://fonts.googleapis.com/icon?family=Material+Icons"
                 />
             </Head>
-            <>
-                <section id="header">
+            <div className="page">
+                <header>
                     <a href="/" target="_self">
                         <Header
                             urlLogo={urlLogo}
@@ -104,7 +104,7 @@ const PageTemplate = ({
                     ) : (
                         <></>
                     )}
-                    <div id="search-bar">
+                    <div className="search-bar">
                         <Container>
                             <Row>
                                 <div className="col-12 col-md-8 col-xl-8">
@@ -122,12 +122,12 @@ const PageTemplate = ({
                             </Row>
                         </Container>
                     </div>
-                </section>
-            </>
-            <section>
+                </header>
+            </div>
+            <section className="content">
                 <main>{children}</main>
             </section>
-            <section id="links">
+            <section className="link-linkPage">
                 <div>
                     <Link
                         label="LINKS DE INTERESSE PARA PESQUISADORES E ESTUDIOSOS DO ESPIRITISMO"
@@ -135,16 +135,16 @@ const PageTemplate = ({
                     />
                 </div>
             </section>
-            <section id="menu">
+            <section className="menu">
                 <Menu listNavLinks={listNavLinks} />
             </section>
-            <section id="footer">
+            <footer>
                 <Footer
                     text="©Copyright 2019 Allan Kardec.online / Designed by: "
                     linkText="PDWebdesign"
                     url="www.pdwebdesign.com.br"
                 />
-            </section>
+            </footer>
         </>
     )
 }

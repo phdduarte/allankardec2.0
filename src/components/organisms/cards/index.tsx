@@ -7,7 +7,7 @@ type Props = {
     listCardItems: Record<string, any>
 }
 const Cards = ({ listCardItems }: Props) => (
-    <div className="container">
+    <div className="container cards">
         <div className="row">
             {listCardItems.childrenListCardItems.map((cardItem, index) => (
                 <Card
