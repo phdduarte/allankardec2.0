@@ -14,12 +14,13 @@ const Manuscript: React.FC = () => {
                     height: '300',
                     alt: 'teste',
                     url: '/',
-                    cardTitle: '',
+                    imgLabel: '',
                     id: '9**',
                     documentTitle: 'Titulo do documento',
                     description: 'loren ipsun loren ipsun',
                     date: '12/12/20',
-                    pages: '9'
+                    pages: '9',
+                    download: ''
                 }
             },
             {
@@ -29,12 +30,13 @@ const Manuscript: React.FC = () => {
                     height: '300',
                     alt: 'teste',
                     url: '/',
-                    cardTitle: '',
+                    imgLabel: '',
                     id: '9**',
                     documentTitle: 'Titulo do documento',
                     description: 'loren ipsun loren ipsun',
                     date: '12/12/20',
-                    pages: '9'
+                    pages: '9',
+                    download: ''
                 }
             }
         ]
