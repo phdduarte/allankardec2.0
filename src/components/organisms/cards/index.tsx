@@ -15,9 +15,9 @@ const Cards = ({ listCardItems }: Props) => (
                     alt={cardItem.cardItem.alt}
                     url={cardItem.cardItem.url}
                     imgLabel={cardItem.cardItem.imgLabel}
-                    width={cardItem.cardItem.width}
-                    height={cardItem.cardItem.height}
-                    className={cardItem.cardItem.className}
+                    width={listCardItems.width}
+                    height={listCardItems.height}
+                    className={listCardItems.className}
                     key={index}
                 >
                     {/* eslint-disable-next-line multiline-ternary */}

@@ -113,7 +113,7 @@ const PageTemplate = ({
                                         buttonLabel="Pesquisar"
                                     />
                                 </div>
-                                <div className="col-12 col-md-4 col-xl-4">
+                                <div className="col-12 col-md-4 col-xl-4 align-items-center">
                                     <Link
                                         url="/jobs"
                                         label="Veja nosso acervo"

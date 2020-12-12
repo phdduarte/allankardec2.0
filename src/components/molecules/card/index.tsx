@@ -25,11 +25,11 @@ const Card = ({
 }: Props) => (
     <div className={className}>
         <a href={url}>
-            <div className="image-card">
+            <div className="img-card">
                 <Image src={src} alt={alt} width={width} height={height} />
             </div>
         </a>
-        <div className="text-card">{imgLabel}</div>
+        <div className="img-text-card">{imgLabel}</div>
         <div className="description-card">{children}</div>
     </div>
 )

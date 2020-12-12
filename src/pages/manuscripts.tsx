@@ -6,6 +6,7 @@ import Title from '../components/atoms/title'
 
 const Manuscript: React.FC = () => {
     const listCardItems = {
+        className: 'col-6 col-lg-4',
         childrenListCardItems: [
             {
                 cardItem: {
@@ -14,7 +15,6 @@ const Manuscript: React.FC = () => {
                     height: '300',
                     alt: 'teste',
                     url: '/',
-                    imgLabel: '',
                     id: '9**',
                     documentTitle: 'Titulo do documento',
                     description: 'loren ipsun loren ipsun',
@@ -30,7 +30,6 @@ const Manuscript: React.FC = () => {
                     height: '300',
                     alt: 'teste',
                     url: '/',
-                    imgLabel: '',
                     id: '9**',
                     documentTitle: 'Titulo do documento',
                     description: 'loren ipsun loren ipsun',

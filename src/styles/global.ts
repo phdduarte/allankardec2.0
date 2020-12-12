@@ -56,14 +56,17 @@ export default createGlobalStyle`
     text-decoration: underline;
   }
 
-  #header #search-bar {
-    padding: 10px;
-    background: #333;
+  .align-items-center {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  #header #search-bar {
+    padding: 10px;
+    background: #333;
   }
   #header a {
     color: white;
@@ -96,20 +99,14 @@ export default createGlobalStyle`
     visibility: hidden;
   }
   div .carousel-caption {
+    padding: 20px;
     left: 0%;
     bottom 0px;
     width: 100vw;
-    height: 1.3em;
-    background: ${props => props.theme.colors.primary};
-    position: relative;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: 3.5em;
+    background: ${props => props.theme.colors.transparentPrimary};
   }
-  div .image-type {
-    width: 300px;
-    heigth: 300px;
+  .img-text-card {
+    text-align: center;
   }
 `

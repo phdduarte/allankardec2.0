@@ -4,7 +4,6 @@ import React from 'react'
 import Cards from '../components/organisms/cards'
 import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
-import { Container, Row } from 'react-bootstrap'
 
 import HomeContainer from '../styles/pages/home'
 
@@ -63,14 +62,14 @@ const Home: React.FC = () => {
     }
 
     const listCardItems = {
+        className: 'col-6',
         childrenListCardItems: [
             {
                 cardItem: {
                     src: '/assets/img/type/books.jpg',
                     alt: 'Livros',
                     url: '/books',
-                    imgLabel: 'Livros',
-                    className: 'col-6'
+                    imgLabel: 'Livros'
                 }
             },
             {
@@ -87,8 +86,7 @@ const Home: React.FC = () => {
                     src: '/assets/img/type/journals.jpg',
                     alt: 'Jornais',
                     url: '/journals',
-                    imgLabel: 'Jornais',
-                    className: 'col-6'
+                    imgLabel: 'Jornais'
                 }
             },
             {
@@ -96,8 +94,7 @@ const Home: React.FC = () => {
                     src: '/assets/img/type/manuscripts.jpg',
                     alt: 'Manuscritos',
                     url: '/manuscripts',
-                    imgLabel: 'Manuscritos',
-                    className: 'col-6'
+                    imgLabel: 'Manuscritos'
                 }
             },
             {
@@ -105,8 +102,7 @@ const Home: React.FC = () => {
                     src: '/assets/img/type/magazines.jpg',
                     alt: 'Revistas',
                     url: '/magazines',
-                    imgLabel: 'Revistas',
-                    className: 'col-6'
+                    imgLabel: 'Revistas'
                 }
             },
             {
@@ -114,8 +110,7 @@ const Home: React.FC = () => {
                     src: '/assets/img/type/csi.jpg',
                     alt: 'CSI Espirita',
                     url: '/fotos',
-                    imgLabel: 'CSI Espirita',
-                    className: 'col-6'
+                    imgLabel: 'CSI Espirita'
                 }
             }
         ]
@@ -132,66 +127,64 @@ const Home: React.FC = () => {
                 listSliderImages={listSliderImages}
             >
                 <HomeContainer>
-                    <Container>
-                        <Title label="O Museu" />
-                        <Cards listCardItems={listCardItems} />
-                        {/*
-                        <Row>
-                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Card
-                                    src="/assets/img/type/books.jpg"
-                                    alt="Livros"
-                                    url="/books"
-                                    imgLabel="Livros"
-                                />
-                            </div>
-                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Card
-                                    src="/assets/img/type/letters.jpg"
-                                    alt="Cartas"
-                                    url="/letters"
-                                    imgLabel="Cartas"
-                                />
-                            </div>
-                        </Row>
-                        <Row>
-                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Card
-                                    src="/assets/img/type/journals.jpg"
-                                    alt="Jornais"
-                                    url="/journals"
-                                    imgLabel="Jornais"
-                                />
-                            </div>
-                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Card
-                                    src="/assets/img/type/manuscrito.jpg"
-                                    alt="Manuscritos"
-                                    url="/manuscript"
-                                    imgLabel="Manuscritos"
-                                />
-                            </div>
-                        </Row>
-                        <Row>
-                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Card
-                                    src="/assets/img/type/magazines.jpg"
-                                    alt="Revistas"
-                                    url="/magazines"
-                                    imgLabel="Revistas"
-                                />
-                            </div>
-                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Card
-                                    src="/assets/img/type/csi.jpg"
-                                    alt="CSI Espirita"
-                                    url="/csi"
-                                    imgLabel="CSI do Espiritismo"
-                                />
-                            </div>
-                        </Row>
-                        */}
-                    </Container>
+                    <Title label="O Museu" />
+                    <Cards listCardItems={listCardItems} />
+                    {/*
+                    <Row>
+                        <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <Card
+                                src="/assets/img/type/books.jpg"
+                                alt="Livros"
+                                url="/books"
+                                imgLabel="Livros"
+                            />
+                        </div>
+                        <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <Card
+                                src="/assets/img/type/letters.jpg"
+                                alt="Cartas"
+                                url="/letters"
+                                imgLabel="Cartas"
+                            />
+                        </div>
+                    </Row>
+                    <Row>
+                        <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <Card
+                                src="/assets/img/type/journals.jpg"
+                                alt="Jornais"
+                                url="/journals"
+                                imgLabel="Jornais"
+                            />
+                        </div>
+                        <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <Card
+                                src="/assets/img/type/manuscrito.jpg"
+                                alt="Manuscritos"
+                                url="/manuscript"
+                                imgLabel="Manuscritos"
+                            />
+                        </div>
+                    </Row>
+                    <Row>
+                        <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <Card
+                                src="/assets/img/type/magazines.jpg"
+                                alt="Revistas"
+                                url="/magazines"
+                                imgLabel="Revistas"
+                            />
+                        </div>
+                        <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <Card
+                                src="/assets/img/type/csi.jpg"
+                                alt="CSI Espirita"
+                                url="/csi"
+                                imgLabel="CSI do Espiritismo"
+                            />
+                        </div>
+                    </Row>
+                    */}
                 </HomeContainer>
             </PageTemplate>
         </div>
