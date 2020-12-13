@@ -13,8 +13,6 @@ Este projeto é desenvolvido com as seguintes tecnoogias:
 Primeiro, rode o servidor de desenvolvimento:
 
 ```bash
-npm run dev
-# ou
 yarn dev
 ```
 
@@ -54,4 +52,39 @@ Esse Projeto é baseado no video:
 
 >
 
-Desenvolvido por [Pedro Duarte](https://github.com/phdduarte) e [Alifer Duarte](https://github.com/aliferds).
+## *Checklist para subir o código*
+
+1. Ir na master pois é preciso verficar se tem código novo e baixa-los para deixar tudo compátivel.
+```
+$git checkout master`
+$git pull
+```
+2. Voltar para a feature que estava trabalhando
+```
+$git checkout nome_da_feature
+```
+3. É necessário dar um merge para juntar o código da master com a sua feature. e caso ocorra algum problema resolver os conflitos.
+```
+$git merge master
+```
+4. Agora a feature esta pronta para subir, então é necessário abrir uma release olhando o x.y.z.
+```
+$git checkout -b release/x.y.z
+```
+5. Atualizar no package.json para a versão da release.
+6. Fazer um commit para subir essa alteração
+```
+$git add .
+$git commit -m "release x.y.z"
+```
+7. Enviar essa branche
+```
+$git push --set-upstream origin release/x.y.z
+```
+8. Para fazer o Pull Request entra no site do github e clica em: compare && pull request
+9. Coloca alguém para dar review, coloca quem participou das alterações como assigners, coloca a label e o projeto. Coloca algum commentário dizendo o que foi feito e clica em create pull request.
+10. Caso seja aceita, edita a tag da branch master para ficar de acordo com a release. A tag agora deve ser **x.y.z**.
+
+>
+
+Desenvolvido por [Pedro Duarte](https://github.com/phdduarte), [Alifer Duarte](https://github.com/aliferds), [Pedro Carvalho](https://github.com/pedropas21) e [Marcus Lamounier](https://github.com/marcuslamounier).
