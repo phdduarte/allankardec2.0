@@ -50,7 +50,7 @@ const PageTemplate = ({
             },
             {
                 navLink: {
-                    href: '/contact',
+                    href: '/contacts',
                     label: 'CONTATO'
                 }
             },

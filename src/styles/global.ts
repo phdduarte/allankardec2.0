@@ -132,6 +132,16 @@ export default createGlobalStyle`
   main .content{
     margin: 10px 30px;
     background: ${props => props.theme.colors.background};
-    border-radius: 1%;
+    border-radius: 5px;
+  }
+  .content-text {
+    display: block;
+    color: ${props => props.theme.colors.text};
+    padding: 10px;
+    text-align: center;
+  }
+  .content-text .justify-text {
+    text-align: justify;
+    margin: 20px 25px;
   }
 `
