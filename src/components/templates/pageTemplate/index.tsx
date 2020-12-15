@@ -144,9 +144,9 @@ const PageTemplate = ({
             </section>
             <footer>
                 <Footer
-                    text="©Copyright 2019 Allan Kardec.online / Designed by: "
-                    linkText="PDWebdesign"
-                    url="www.pdwebdesign.com.br"
+                    text={"©Copyright " + (new Date()).getFullYear() + " Allan Kardec.online / Designed by: "}
+                    linkText="NeXTIME"
+                    url="https://www.nextime.com.br/"
                 />
             </footer>
         </>
