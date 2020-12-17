@@ -14,66 +14,72 @@ const PageLinks: React.FC = () => {
         childrenListLinks: [
             {
                 link: {
-                    label: '- AUTORES ESPÍRITAS CLÁSSICOS – BIBLIOTECA VIRTUAL',
+                    label: 'Autores Espíritas Clássicos - Biblioteca Virtual',
                     url: 'http://www.autoresespiritasclassicos.com/'
                 }
             },
             {
                 link: {
                     label:
-                        '- CSI IMAGENS E REGISTROS HISTÓRICOS DO ESPIRITISMO',
+                        'CSI Imagens e Registros Históricos do Espiritismo',
                     url: 'https://www.facebook.com/HistoriaDoEspiritismo/'
                 }
             },
             {
                 link: {
-                    label: '- ECK – ESPIRITISMO COM KARDEC',
-                    url:
-                        'https://www.facebook.com/groups/Espiritismo.COM.Kardec/'
+                    label: 'ECK – Espiritismo com Kardec',
+                    url: 'https://www.facebook.com/groups/Espiritismo.COM.Kardec/'
                 }
             },
             {
                 link: {
-                    label: '- GEAE - GRUPO DE ESTUDOS AVANÇADOS ESPÍRITAS',
+                    label: 'GEAE - Grupo de Estudos Avançados Espíritas',
                     url: 'https://www.comkardec.net/'
                 }
             },
             {
                 link: {
-                    label: '- GRUPO ESPÍRITA AMÉLIE BOUDET',
+                    label: 'Grupo Espírita Amélie Boudet',
                     url: 'https://www.facebook.com/groups/189791881774515/'
                 }
             },
             {
                 link: {
                     label:
-                        '- IPEAK – INSTITUTO DE PESQUISAS ESPÍRITAS ALLAN KARDEC',
+                        'IPEAK – Instituto de Pesquisas Espíritas Allan Kardec',
                     url: 'http://www.ipeak.net/site/index.php'
                 }
             },
             {
                 link: {
-                    label: '- JORNAL DE ESTUDOS ESPÍRITAS',
+                    label: 'Jornal de Estudos Espíritas',
                     url: 'https://sites.google.com/site/jeespiritas/'
                 }
             },
             {
                 link: {
-                    label: '- KARDECPEDIA',
+                    label: 'Kardecpedia',
                     url: 'https://kardecpedia.com/'
                 }
             },
             {
                 link: {
-                    label: '- LIGA DE PESQUISADORES DO ESPIRITISMO',
+                    label: 'Liga de Pesquisadores do Espiritismo',
                     url: 'http://www.lihpe.net/wordpress/'
                 }
             },
             {
                 link: {
                     label:
-                        '- NUPES – NÚCLEO DE PESQUISA E ESPIRITUALIDADE EM SAÚDE',
+                        'NUPES – Núcleo de Pesquisa e Espiritualidade em Saúde',
                     url: 'https://www.ufjf.br/nupes/'
+                }
+            },
+            {
+                link: {
+                    label:
+                        'Projeto Allan Kardec - Universidade Federal de Juiz de Fora',
+                    url: 'https://projetokardec.ufjf.br'
                 }
             }
         ]
@@ -82,15 +88,14 @@ const PageLinks: React.FC = () => {
         <PageTemplate titlePage="Links">
             <AllLinksContainer>
                 <Container>
-                    <Row className="d-flex justify-content-center">
+                    <Row className="d-flex justify-content-center text-uppercase">
                         <Col>
                             <h3>
-                                LINKS DE INTERESSE PARA OS PESQUISADORES DE
-                                ESPIRITISMO:
+                                Links de Interesse para os Pesquisadores de Espiritismo:
                             </h3>
                         </Col>
                     </Row>
-                    <Row className="d-flex justify-content-center">
+                    <Row className="d-flex text-uppercase">
                         <Col>
                             <Links listLinks={listLinks} />
                         </Col>

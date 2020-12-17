@@ -13,7 +13,7 @@ const Home: React.FC = () => {
                     interval: 1500,
                     src: '/assets/img/slider/slider1.jpg',
                     alt: 'Imagem Slider 1',
-                    text: 'ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
+                    text: 'allankardec.online - Museu Online do Espiritismo'
                 }
             },
             {
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
                     interval: 1500,
                     src: '/assets/img/slider/slider2.jpg',
                     alt: 'Imagem Slider 2',
-                    text: 'ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
+                    text: 'allankardec.online - Museu Online do Espiritismo'
                 }
             },
             {
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
                     interval: 1500,
                     src: '/assets/img/slider/slider3.jpg',
                     alt: 'Imagem Slider 3',
-                    text: 'ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
+                    text: 'allankardec.online - Museu Online do Espiritismo'
                 }
             },
             {
@@ -37,7 +37,7 @@ const Home: React.FC = () => {
                     interval: 1500,
                     src: '/assets/img/slider/slider4.jpg',
                     alt: 'Imagem Slider 4',
-                    text: 'ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
+                    text: 'allankardec.online - Museu Online do Espiritismo'
                 }
             },
             {
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
                     interval: 1500,
                     src: '/assets/img/slider/slider5.jpg',
                     alt: 'Imagem Slider 5',
-                    text: 'ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
+                    text: 'allankardec.online - Museu Online do Espiritismo'
                 }
             },
             {
@@ -53,7 +53,7 @@ const Home: React.FC = () => {
                     interval: 1500,
                     src: '/assets/img/slider/slider6.jpg',
                     alt: 'Imagem Slider 6',
-                    text: 'ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
+                    text: 'allankardec.online - Museu Online do Espiritismo'
                 }
             }
         ]
