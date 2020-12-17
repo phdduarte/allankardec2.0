@@ -39,31 +39,31 @@ const PageTemplate = ({
             {
                 navLink: {
                     href: '/',
-                    label: 'HOME'
+                    label: 'Home'
                 }
             },
             {
                 navLink: {
-                    href: '/about',
-                    label: 'ABOUT'
+                    href: '/sobre',
+                    label: 'Sobre'
                 }
             },
             {
                 navLink: {
                     href: '/contacts',
-                    label: 'CONTATO'
+                    label: 'Contato'
                 }
             },
             {
                 navLink: {
-                    href: '/glossary',
-                    label: 'GLOSSARIO'
+                    href: '/glossario',
+                    label: 'Glossário'
                 }
             },
             {
                 navLink: {
                     href: '/termsAndConditions',
-                    label: 'TERMOS E CONDIÇÕES'
+                    label: 'Termos e Condições'
                 }
             }
         ]
@@ -132,14 +132,14 @@ const PageTemplate = ({
                 </main>
             </section>
             <section className="link-linkPage">
-                <div>
+                <div className="text-uppercase">
                     <Link
-                        label="LINKS DE INTERESSE PARA PESQUISADORES E ESTUDIOSOS DO ESPIRITISMO"
+                        label="Links de interesse para pesquisadores e estudiosos do Espiritismo"
                         url="/links"
                     />
                 </div>
             </section>
-            <section className="menu">
+            <section className="menu text-uppercase">
                 <Menu listNavLinks={listNavLinks} />
             </section>
             <footer>
