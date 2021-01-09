@@ -120,10 +120,11 @@ export default createGlobalStyle`
   .description-card ul {
     list-style-type: none;
   }
-  .h1 {
+  .title {
     font-family: Roboto;
     text-align: center;
-    color: ${props => props.theme.colors.primary}
+    color: ${props => props.theme.colors.primary};
+    padding-bottom: 20px;
   }
   .red-main{
     background: ${props => props.theme.colors.primary};
@@ -131,6 +132,7 @@ export default createGlobalStyle`
   }
   main .content{
     margin: 10px 30px;
+    padding: 20px;
     background: ${props => props.theme.colors.background};
     border-radius: 5px;
   }
@@ -139,6 +141,8 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.text};
     padding: 10px;
     text-align: center;
+    margin-top: -20px;
+    font-size: 1.2em;
   }
   .content-text .justify-text {
     text-align: justify;

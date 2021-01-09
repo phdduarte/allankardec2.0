@@ -50,7 +50,7 @@ const PageTemplate = ({
             },
             {
                 navLink: {
-                    href: '/contacts',
+                    href: '/contato',
                     label: 'Contato'
                 }
             },
@@ -62,7 +62,7 @@ const PageTemplate = ({
             },
             {
                 navLink: {
-                    href: '/termsAndConditions',
+                    href: '/termos_e_condicoes',
                     label: 'Termos e Condições'
                 }
             }
@@ -144,7 +144,7 @@ const PageTemplate = ({
             </section>
             <footer>
                 <Footer
-                    text={"©Copyright " + (new Date()).getFullYear() + " Allan Kardec.online / Designed by: "}
+                    text={"©Copyright " + (new Date()).getFullYear() + " AllanKardec.online / Designed by: "}
                     linkText="NeXTIME"
                     url="https://www.nextime.com.br/"
                 />
