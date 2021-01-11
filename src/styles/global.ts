@@ -142,7 +142,6 @@ export default createGlobalStyle`
     padding: 10px;
     text-align: center;
     margin-top: -20px;
-    font-size: 1.2em;
   }
   .content-text .justify-text {
     text-align: justify;
