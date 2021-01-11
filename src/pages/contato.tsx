@@ -7,8 +7,8 @@ import Title from '../components/atoms/title'
 const Contacts: React.FC = () => {
     return (
         <div>
-            <PageTemplate titlePage="CONTATOS" mainModel="red-main">
-                <Title label="Contatos" />
+            <PageTemplate titlePage="CONTATO" mainModel="red-main">
+                <Title label="Contato" />
                 <div className="content-text">
                     <p>
                         Para sugestões e, em caso de dúvidas, entre em contato
