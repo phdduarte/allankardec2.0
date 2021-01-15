@@ -3,6 +3,7 @@ import React from 'react'
 import PageTemplate from '../components/templates/pageTemplate'
 import Cards from '../components/organisms/cards'
 import Title from '../components/atoms/title'
+import { documentService } from '../services/document.service'
 
 const Photos: React.FC = () => {
     const listCardItems = {
@@ -103,3 +104,12 @@ const Photos: React.FC = () => {
 }
 
 export default Photos
+
+
+export async function getServerSideProps(context) {
+    const photos = await documentService.getPhotos({ page: context.query.page });
+
+    return {
+        props: { photos }
+    }
+}

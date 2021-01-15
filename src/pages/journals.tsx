@@ -3,6 +3,7 @@ import React from 'react'
 import PageTemplate from '../components/templates/pageTemplate'
 import Cards from '../components/organisms/cards'
 import Title from '../components/atoms/title'
+import { documentService } from '../services/document.service'
 
 const Journals: React.FC = () => {
     const listCardItems = {
@@ -103,3 +104,12 @@ const Journals: React.FC = () => {
 }
 
 export default Journals
+
+
+export async function getServerSideProps(context) {
+    const newspapers = await documentService.getNewspapers({ page: context.query.page });
+
+    return {
+        props: { newspapers }
+    }
+}

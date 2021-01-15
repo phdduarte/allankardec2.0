@@ -3,8 +3,9 @@ import React from 'react'
 import PageTemplate from '../components/templates/pageTemplate'
 import Cards from '../components/organisms/cards'
 import Title from '../components/atoms/title'
+import { documentService } from '../services/document.service'
 
-const Books: React.FC = () => {
+const Books: React.FC<any> = ({ books }) => {
     const listCardItems = {
         className: 'col-6 col-lg-4',
         width: '480',
@@ -102,4 +103,12 @@ const Books: React.FC = () => {
     )
 }
 
-export default Books
+export default Books;
+
+export async function getServerSideProps(context) {
+    const books = await documentService.getBooks({ page: context.query.page });
+
+    return {
+        props: { books }
+    }
+}

@@ -3,6 +3,7 @@ import React from 'react'
 import PageTemplate from '../components/templates/pageTemplate'
 import Cards from '../components/organisms/cards'
 import Title from '../components/atoms/title'
+import { documentService } from '../services/document.service'
 
 const Manuscript: React.FC = () => {
     const listCardItems = {
@@ -103,3 +104,11 @@ const Manuscript: React.FC = () => {
 }
 
 export default Manuscript
+
+export async function getServerSideProps(context) {
+    const manuscripts = await documentService.getManuscripts({ page: context.query.page });
+
+    return {
+        props: { manuscripts }
+    }
+}

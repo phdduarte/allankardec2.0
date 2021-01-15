@@ -3,6 +3,7 @@ import React from 'react'
 import PageTemplate from '../components/templates/pageTemplate'
 import Cards from '../components/organisms/cards'
 import Title from '../components/atoms/title'
+import { documentService } from '../services/document.service'
 
 const Letters: React.FC = () => {
     const listCardItems = {
@@ -103,3 +104,11 @@ const Letters: React.FC = () => {
 }
 
 export default Letters
+
+export async function getServerSideProps(context) {
+    const letters = await documentService.getLetters({ page: context.query.page });
+
+    return {
+        props: { letters }
+    }
+}

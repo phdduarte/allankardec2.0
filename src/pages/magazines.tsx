@@ -3,6 +3,7 @@ import React from 'react'
 import PageTemplate from '../components/templates/pageTemplate'
 import Cards from '../components/organisms/cards'
 import Title from '../components/atoms/title'
+import { documentService } from '../services/document.service'
 
 const Magazines: React.FC = () => {
     const listCardItems = {
@@ -103,3 +104,12 @@ const Magazines: React.FC = () => {
 }
 
 export default Magazines
+
+export async function getServerSideProps(context) {
+    const magazines = await documentService.getMagazines({ page: context.query.page });
+
+    return {
+        props: { magazines }
+    }
+}
+
