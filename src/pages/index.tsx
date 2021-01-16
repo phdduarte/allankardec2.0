@@ -61,55 +61,55 @@ const Home: React.FC = () => {
 
     const listCardItems = {
         className: 'col-12 col-sm-6 col-lg-4 cards',
+        stdSrc: '/assets/img/type/books.jpg',
         childrenListCardItems: [
             {
-                cardItem: {
-                    src: '/assets/img/type/books.jpg',
-                    alt: 'Livros',
-                    url: '/books',
-                    imgLabel: 'Livros'
-                }
+                cover: {
+                    alternativeText: 'Livros',
+                    url: '/categories/livros',
+                    caption: 'Livros'
+                },
+                src: '/assets/img/type/books.jpg'
             },
             {
-                cardItem: {
-                    src: '/assets/img/type/letters.jpg',
-                    alt: 'Cartas',
-                    url: '/letters',
-                    imgLabel: 'Cartas',
-                    className: 'col-6'
-                }
+                cover: {
+                    alternativeText: 'Cartas',
+                    url: '/categories/cartas',
+                    caption: 'Cartas'
+                },
+                src: '/assets/img/type/letters.jpg'
             },
             {
-                cardItem: {
-                    src: '/assets/img/type/journals.jpg',
-                    alt: 'Jornais',
-                    url: '/journals',
-                    imgLabel: 'Jornais'
-                }
+                cover: {
+                    alternativeText: 'Jornais',
+                    url: '/categories/jornais',
+                    caption: 'Jornais'
+                },
+                src: '/assets/img/type/journals.jpg'
             },
             {
-                cardItem: {
-                    src: '/assets/img/type/manuscripts.jpg',
-                    alt: 'Manuscritos',
-                    url: '/manuscripts',
-                    imgLabel: 'Manuscritos'
-                }
+                cover: {
+                    alternativeText: 'Manuscritos',
+                    url: '/categories/manuscritos',
+                    caption: 'Manuscritos'
+                },
+                src: '/assets/img/type/manuscripts.jpg'
             },
             {
-                cardItem: {
-                    src: '/assets/img/type/magazines.jpg',
-                    alt: 'Revistas',
-                    url: '/magazines',
-                    imgLabel: 'Revistas'
-                }
+                cover: {
+                    alternativeText: 'Revistas',
+                    url: '/categories/revistas',
+                    caption: 'Revistas'
+                },
+                src: '/assets/img/type/magazines.jpg'
             },
             {
-                cardItem: {
-                    src: '/assets/img/type/csi.jpg',
-                    alt: 'CSI Espirita',
-                    url: '/photos',
-                    imgLabel: 'CSI Espirita'
-                }
+                cover: {
+                    alternativeText: 'CSI Espirita',
+                    url: '/categories/csi',
+                    caption: 'CSI Espirita'
+                },
+                src: '/assets/img/type/csi.jpg'
             }
         ]
     }

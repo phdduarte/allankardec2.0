@@ -1,6 +1,6 @@
 {
   "name": "allankardec2.0",
-  "version": "0.12.2",
+  "version": "0.13.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,6 +14,7 @@
     "@next/bundle-analyzer": "^10.0.2",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "html-webpack-include-assets-plugin": "^2.0.0",
     "jquery": "3.5.0",

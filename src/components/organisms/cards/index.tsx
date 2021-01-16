@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from '../../atoms/link'
 
 import Card from '../../molecules/card'
 
@@ -9,25 +10,25 @@ type Props = {
 const Cards = ({ listCardItems }: Props) => (
     <div className="container cards">
         <div className="row">
-            {listCardItems.childrenListCardItems.map((cardItem, index) => (
+            {listCardItems.childrenListCardItems.map(cardItem => (
                 <Card
-                    src={cardItem.cardItem.src}
-                    alt={cardItem.cardItem.alt}
-                    url={cardItem.cardItem.url}
-                    imgLabel={cardItem.cardItem.imgLabel}
+                    src={listCardItems.stdSrc}
+                    alt={cardItem.cover.alternativeText}
+                    url={cardItem.cover.url}
+                    imgLabel={cardItem.cover.caption}
                     width={listCardItems.width}
                     height={listCardItems.height}
                     className={listCardItems.className}
-                    key={index}
+                    key={cardItem.id}
                 >
                     {/* eslint-disable-next-line multiline-ternary */}
-                    {cardItem.cardItem.id ? (
+                    {cardItem.id ? (
                         <ul>
-                            <li>ID: {cardItem.cardItem.id}</li>
-                            <li>Título: {cardItem.cardItem.documentTitle}</li>
-                            <li>Descrição: {cardItem.cardItem.description}</li>
-                            <li>Data: {cardItem.cardItem.date}</li>
-                            <li>Páginas: {cardItem.cardItem.pages}</li>
+                            <li>ID: {cardItem.id}</li>
+                            <li>Título: {cardItem.title}</li>
+                            <li>Descrição: {cardItem.description}</li>
+                            <li>Data: {cardItem.updatedAt}</li>
+                            <li>Páginas: {cardItem.pageCount}</li>
                             <li>
                                 {' '}
                                 <a href="#">abrir</a> | <a href="#">download</a>
