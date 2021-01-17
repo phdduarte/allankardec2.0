@@ -116,7 +116,7 @@ const Home: React.FC = () => {
     return (
         <div>
             <PageTemplate
-                titlePage="HomePage"
+                titlePage="ALLAN KARDEC Online"
                 urlLogo="/assets/img/logos/logo.svg"
                 altLogo="Logo Allan Kardec"
                 heightLogo=""

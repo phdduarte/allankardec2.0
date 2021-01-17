@@ -1,4 +1,5 @@
 import React from 'react'
+// import Link from 'react/link'
 import Link from '../../atoms/link'
 
 type Props = {
@@ -11,10 +12,11 @@ const Links = ({ listLinks }: Props) => (
             {listLinks.childrenListLinks.map((linkItem, index) => (
                 // eslint-disable-next-line react/jsx-key
                 <li key={index}>
-                    <Link
+                    {/* <Link
                         label={linkItem.link.label}
                         url={linkItem.link.label}
-                    />
+                    /> */}
+                    <a href={linkItem.link.url}>{linkItem.link.label}</a>
                 </li>
             ))}
         </ul>
