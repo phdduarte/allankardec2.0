@@ -6,6 +6,8 @@ import Grid from '../../components/organisms/grid'
 import DocumentCard from '../../components/organisms/document-card'
 import ReactPaginate from 'react-paginate'
 
+import { useDocumentPageCount } from '../../hooks/useDocumentPageCount'
+
 import { DOCUMENT_TYPE, documentService, API_BASE_URL } from '../../services/document.service'
 
 const prepareDocument = (document) => ({
@@ -15,7 +17,8 @@ const prepareDocument = (document) => ({
 
 })
 
-const Category = ({ documents, categoryName, page }) => {
+const Category = ({ documents, categoryName, page, category }) => {
+    const pageCount = useDocumentPageCount(category, 12);
 
     const handlePageChange = ({ selected }) => {
         if (selected === page) return;
@@ -36,7 +39,7 @@ const Category = ({ documents, categoryName, page }) => {
                 </Grid>
                 <ReactPaginate 
                     initialPage={page} 
-                    pageCount={3} 
+                    pageCount={pageCount} 
                     onPageChange={handlePageChange} 
                     previousLabel="Anterior"
                     nextLabel="Próximo"

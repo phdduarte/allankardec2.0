@@ -10,11 +10,12 @@ export enum DOCUMENT_TYPE {
     CSI = 6
 }
 
-interface IRequestDocumentsParams {
+export interface IRequestDocumentsParams {
     _limit?: number;
     _start?: number;
     type?: DOCUMENT_TYPE;
     page?: number;
+    title_contains?: string;
 }
 
 export const API_BASE_URL = 'http://134.209.174.64'
@@ -46,5 +47,10 @@ export const documentService = {
         return api.get(`/documents/${documentId}`)
             .then(({ data }) => data)
     },
+
+    search({ title }) {
+        return documentService.getDocuments({ title_contains: title })
+            .then(({ data }) => data)
+    }
 
 }
