@@ -3,10 +3,8 @@ import React from 'react'
 import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
 import Link from '../components/atoms/link'
-<<<<<<< HEAD
 import PDFViewer from '../components/PDFViewer/PDFViewer'
-=======
->>>>>>> origin
+
 
 const Glossario: React.FC = () => {
 
@@ -16,10 +14,6 @@ const Glossario: React.FC = () => {
         return arrList.map(l => {
             i++
             if (i === listSize) {
-<<<<<<< HEAD
-=======
-                console.log("aaa")
->>>>>>> origin
                 return (
                     <React.Fragment>
                         {" "}<Link key={l.url} label={l.label} url={`/${l.url}`}/>

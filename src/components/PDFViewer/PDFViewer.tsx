@@ -1,6 +1,9 @@
 import React from 'react';
 
-export default class PDFViewer extends React.Component {
+export default class PDFViewer extends React.Component<any> {
+  viewerRef: any;
+  backend: any;
+
   constructor(props) {
     super(props);
     this.viewerRef = React.createRef()
