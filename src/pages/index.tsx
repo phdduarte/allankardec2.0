@@ -93,7 +93,7 @@ const museumEntries = [
     {
         image: '/assets/img/type/csi.jpg',
         alt: 'CSI Espirita',
-        url: '/categories/csi',
+        url: '/categories/fotos',
         imageLabel: 'CSI do Espiritismo'
     }
 ]

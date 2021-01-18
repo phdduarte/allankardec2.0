@@ -18,7 +18,7 @@ const prepareDocument = (document) => ({
 })
 
 const Category = ({ documents, categoryName, page, category }) => {
-    const pageCount = useDocumentPageCount(category, 12);
+    const pageCount = useDocumentPageCount({ type: category }, 12);
 
     const handlePageChange = ({ selected }) => {
         if (selected === page) return;

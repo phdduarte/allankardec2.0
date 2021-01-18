@@ -2,9 +2,6 @@ import React from 'react'
 
 import PageTemplate from '../../components/templates/pageTemplate'
 import Title from '../../components/atoms/title'
-import Grid from '../../components/organisms/grid'
-import DocumentCard from '../../components/organisms/document-card'
-import ReactPaginate from 'react-paginate'
 import PdfViewer from '../../components/organisms/pdf-viewer'
 
 import { documentService, API_BASE_URL } from '../../services/document.service'
