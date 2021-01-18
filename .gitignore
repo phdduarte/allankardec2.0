@@ -1,10 +1,7 @@
 node_modules
 .DS_Store
 
-<<<<<<< HEAD
-.next
-=======
->>>>>>> c3a77deb5999a7be64ebcf7619be206059012570
+
 .next/
 # dotenv environment variables file (build for Zeit Now)
 .env
