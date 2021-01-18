@@ -3,11 +3,9 @@ import React from 'react'
 import PageTemplate from '../../components/templates/pageTemplate'
 import Cards from '../../components/organisms/cards'
 import Title from '../../components/atoms/title'
+import { DOCUMENT_TYPE, documentService } from '../../services/document.service'
 
-import { getDocuments, getDocumentsByCategory } from '../../actions/index'
-
-const Category = (props) => {
-    const documents = props.documents
+const Category = ({ documents, category, categoryName }) => {
     const listCardItems = {
         className: 'col-6 col-lg-4',
         width: '480',
@@ -32,8 +30,8 @@ const Category = (props) => {
     }
     return (
         <div>
-            <PageTemplate titlePage={props.category} mainModel="red-main">
-                <Title label={props.category} />
+            <PageTemplate titlePage={categoryName} mainModel="red-main">
+                <Title label={categoryName} />
                 <Cards listCardItems={listCardItems} />
             </PageTemplate>
         </div>
@@ -41,36 +39,23 @@ const Category = (props) => {
 }
 
 Category.getInitialProps = async ({ query }) => {
+    const { categoryName } = query || {};
 
-    let category = query.category
-
-    let idCategory
-    switch (category) {
-        case "manuscritos":
-            idCategory = 0;
-            break;
-        case "csi":
-            idCategory = 2;
-            category = "CSI do Espiritismo";
-            break;
-        case "jornais":
-            idCategory = 3;
-            break;
-        case "livros":
-            idCategory = 4;
-            break;
-        case "revistas":
-            idCategory = 5;
-            break;
-        default:
-            idCategory = 99;
-            break;
-        
+    const categoryNameMap = {
+        manuscritos: DOCUMENT_TYPE.MANUSCRIPT,
+        jornais: DOCUMENT_TYPE.NEWSPAPER,
+        revistas: DOCUMENT_TYPE.MAGAZINE,
+        cartas: DOCUMENT_TYPE.LETTER,
+        livros: DOCUMENT_TYPE.BOOK,
+        fotos: DOCUMENT_TYPE.PHOTO,
     }
 
-    const documents = await getDocumentsByCategory(idCategory)
+    const category = categoryNameMap[categoryName];
+    const documents = await documentService.getDocuments({ type: category })
+
     return {
         documents,
+        categoryName,
         category
     }
 }
