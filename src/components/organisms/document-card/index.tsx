@@ -13,13 +13,13 @@ const DocumentCard = ({ document }) => (
         key={document.id}
     >
         <ul>
-            <li>ID: {document.id}</li>
+            {/* <li>ID: {document.id}</li> */}
             <li>Título: {document.title}</li>
             <li>Descrição: {document.description}</li>
             <li>Data: {document.updatedAt}</li>
             <li>Páginas: {document.pageCount}</li>
             <li>
-                <a href="#">abrir</a> | <a href="#">download</a>
+                <a href="#">abrir</a> | <a target="_blank" href={document.file.url}>download</a>
             </li>
         </ul>
     </Card>

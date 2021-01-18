@@ -6,7 +6,8 @@ export enum DOCUMENT_TYPE {
     PHOTO = 2,
     NEWSPAPER = 3,
     BOOK = 4,
-    MAGAZINE = 5
+    MAGAZINE = 5,
+    CSI = 6
 }
 
 interface IRequestDocumentsParams {
