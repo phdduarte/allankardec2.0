@@ -15,8 +15,6 @@ const prepareDocument = (document) => ({
 
 })
 
-
-
 const Category = ({ documents, categoryName, page }) => {
 
     const handlePageChange = ({ selected }) => {

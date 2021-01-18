@@ -118,6 +118,7 @@ const Home: React.FC = () => {
                         {museumEntries.map((entry) => (
                             <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                 <Card
+                                    key={entry.url}
                                     src={entry.image}
                                     alt={entry.alt}
                                     url={entry.url}

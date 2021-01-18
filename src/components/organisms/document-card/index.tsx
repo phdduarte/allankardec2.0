@@ -19,7 +19,7 @@ const DocumentCard = ({ document }) => (
             <li>Data: {document.updatedAt}</li>
             <li>Páginas: {document.pageCount}</li>
             <li>
-                <a href="#">abrir</a> | <a target="_blank" href={document.file.url}>download</a>
+                <a href={`/document-reader/${document.id}`}>abrir</a> | <a target="_blank" href={document.file.url}>download</a>
             </li>
         </ul>
     </Card>
