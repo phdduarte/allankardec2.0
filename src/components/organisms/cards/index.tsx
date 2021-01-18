@@ -12,7 +12,7 @@ const Cards = ({ listCardItems }: Props) => (
         <div className="row">
             {listCardItems.childrenListCardItems.map(cardItem => (
                 <Card
-                    src={listCardItems.stdSrc}
+                    src={cardItem.cover.url}
                     alt={cardItem.cover.alternativeText}
                     url={cardItem.cover.url}
                     imgLabel={cardItem.cover.caption}

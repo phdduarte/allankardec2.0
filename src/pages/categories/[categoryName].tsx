@@ -1,45 +1,29 @@
 import React from 'react'
 
 import PageTemplate from '../../components/templates/pageTemplate'
-import Cards from '../../components/organisms/cards'
 import Title from '../../components/atoms/title'
-import { DOCUMENT_TYPE, documentService } from '../../services/document.service'
+import Grid from '../../components/organisms/grid'
+import DocumentCard from '../../components/organisms/document-card'
+
+import { DOCUMENT_TYPE, documentService, API_BASE_URL } from '../../services/document.service'
 
 const Category = ({ documents, category, categoryName }) => {
-    const listCardItems = {
-        className: 'col-6 col-lg-4',
-        width: '480',
-        height: '280',
-        stdSrc: '/assets/img/uploads/12147886445f16d2afb14295.01782621.jpg',
-        childrenListCardItems: documents
-
-        // cardItem: {
-        //     width: '300',
-        //     src:
-        //         '/assets/img/uploads/12147886445f16d2afb14295.01782621.jpg',
-        //     height: '300',
-        //     alt: 'teste',
-        //     url: '/',
-        //     id: '9**',
-        //     documentTitle: 'Titulo do documento',
-        //     description: 'loren ipsun loren ipsun',
-        //     date: '12/12/20',
-        //     pages: '9',
-        //     download: ''
-        // }
-    }
     return (
         <div>
             <PageTemplate titlePage={categoryName} mainModel="red-main">
                 <Title label={categoryName} />
-                <Cards listCardItems={listCardItems} />
+                <Grid>
+                    {documents.map(document => (
+                        <DocumentCard key={document.id} document={{ ...document, cover: { url: `${API_BASE_URL}${document.cover.url}` } }}/>   
+                    ))}
+                </Grid>
             </PageTemplate>
         </div>
     )
 }
 
 Category.getInitialProps = async ({ query }) => {
-    const { categoryName } = query || {};
+    const { categoryName, page } = query || {};
 
     const categoryNameMap = {
         manuscritos: DOCUMENT_TYPE.MANUSCRIPT,
@@ -51,7 +35,7 @@ Category.getInitialProps = async ({ query }) => {
     }
 
     const category = categoryNameMap[categoryName];
-    const documents = await documentService.getDocuments({ type: category })
+    const documents = await documentService.getDocuments({ type: category, page })
 
     return {
         documents,

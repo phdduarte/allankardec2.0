@@ -16,8 +16,10 @@ interface IRequestDocumentsParams {
     page?: number;
 }
 
+export const API_BASE_URL = 'http://134.209.174.64'
+
 const api = axios.create({
-    baseURL: 'http://134.209.174.64'
+    baseURL: API_BASE_URL
 });
 
 export const documentService = {
@@ -31,6 +33,7 @@ export const documentService = {
                 ...queryParams
             }
         }).then(({ data }) => data)
+        
     },
 
     getCount(params: IRequestDocumentsParams = {}) {
@@ -40,6 +43,7 @@ export const documentService = {
 
     getDocument(documentId: string) {
         return api.get(`/documents/${documentId}`)
+            .then(({ data }) => data)
     },
 
 }
