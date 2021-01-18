@@ -3,7 +3,6 @@ import React from 'react'
 import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
 import Link from '../components/atoms/link'
-import PDFViewer from '../components/PDFViewer/PDFViewer'
 
 
 const Glossario: React.FC = () => {

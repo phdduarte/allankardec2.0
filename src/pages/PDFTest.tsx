@@ -2,7 +2,6 @@ import React from 'react'
 
 import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
-import PDFViewer from '../components/PDFViewer/PDFViewer'
 import PDFJs from '../backends/pdfjs';
 
 const PDFTest: React.FC = () => {
@@ -19,7 +18,7 @@ const PDFTest: React.FC = () => {
                     </p>
 
                     <h1>Opção 1 - Mozilla Git Extension</h1>
-                    <PDFViewer
+                    {/* <PDFViewer
                         backend={PDFJs}
                         src="compressed.tracemonkey-pldi-09.pdf"
                         // src="pdf-test.pdf"
@@ -30,7 +29,7 @@ const PDFTest: React.FC = () => {
                         backend={PDFJs}
                         src="compressed.tracemonkey-pldi-09.pdf"
                         // src="pdf-test.pdf"
-                    />
+                    /> */}
 
                     <h1>Opção 3 - Google API</h1>
                     <iframe height="1000" src="http://www.orimi.com/pdf-test.pdf" style={{border: 'none'}} width="100%"></iframe> OPÇÃO 1 - API GOOGLE
