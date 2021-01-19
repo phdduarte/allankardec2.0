@@ -41,11 +41,8 @@ const Jobs = (props) => {
     )
 }
 
-
-
 Jobs.getInitialProps = async () => {
     const documents = await documentService.getDocuments({ _limit: -1 })
-    
     return {documents}
 }
 

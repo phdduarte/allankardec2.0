@@ -115,8 +115,8 @@ const Home: React.FC = () => {
                 <div className="align-items-center">
                     
                     <Grid>
-                        {museumEntries.map((entry) => (
-                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        {museumEntries.map((entry, index) => (
+                            <div key={index} className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                 <Card
                                     key={entry.url}
                                     src={entry.image}
