@@ -34,13 +34,15 @@ export const documentService = {
                 _start: Math.max(((page || 0) * 12) - 12, 0),
                 ...queryParams
             }
-        }).then(({ data }) => data)
+        })
+        .then(({ data }) => data)
         
     },
 
     getCount(params: IRequestDocumentsParams = {}) {
         return api.get('/documents/count', { params })
             .then(({ data }) => data)
+            .catch(err => console.log("AQUI! Bug que não aparece no Chrome: " + err))
     },
 
     getDocument(documentId: string) {
@@ -50,6 +52,11 @@ export const documentService = {
 
     search({ title }) {
         return documentService.getDocuments({ title_contains: title })
+            .then(({ data }) => data)
+    },
+
+    getAllDocuments() {
+        return documentService.getDocuments({ _limit: -1 })
             .then(({ data }) => data)
     }
 

@@ -5,7 +5,8 @@ const DocumentCard = ({ document }) => (
     <Card
         src={document.cover.url}
         alt={document.cover.alternativeText}
-        url={document.cover.url}
+        url={document.file.url}
+        target="_blank"
         imgLabel={document.cover.caption}
         width="480"
         height="280"
@@ -18,9 +19,6 @@ const DocumentCard = ({ document }) => (
             <li>Descrição: {document.description}</li>
             <li>Data: {document.updatedAt}</li>
             <li>Páginas: {document.pageCount}</li>
-            <li>
-                <a href={`/document-reader/${document.id}`}>abrir</a> | <a target="_blank" href={document.file.url}>download</a>
-            </li>
         </ul>
     </Card>
 );

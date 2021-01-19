@@ -42,7 +42,7 @@ const Category = ({ documents, categoryName, page, category }) => {
                     pageCount={pageCount} 
                     onPageChange={handlePageChange} 
                     previousLabel="Anterior"
-                    nextLabel="Próximo"
+                    nextLabel="Próxima"
                     breakLabel="..." />
             </PageTemplate>
         </div>

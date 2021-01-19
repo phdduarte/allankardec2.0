@@ -6,6 +6,7 @@ type Props = {
     alt: string
     imgLabel?: string
     url: string
+    target: string
     width?: string
     height?: string
     className?: string
@@ -17,6 +18,7 @@ const Card = ({
     src,
     alt,
     url,
+    target,
     imgLabel = '',
     className = '',
     height = '310',
@@ -24,7 +26,7 @@ const Card = ({
     children
 }: Props) => (
     <div className={className}>
-        <a href={url}>
+        <a href={url} target={target}>
             <div className="img-card">
                 <Image src={src} alt={alt} width={width} height={height} />
             </div>

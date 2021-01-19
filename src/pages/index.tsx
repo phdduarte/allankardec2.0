@@ -122,6 +122,7 @@ const Home: React.FC = () => {
                                     src={entry.image}
                                     alt={entry.alt}
                                     url={entry.url}
+                                    target=""
                                     imgLabel={entry.imageLabel}
                                 />
                             </div>
