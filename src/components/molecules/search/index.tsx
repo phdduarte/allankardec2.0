@@ -8,11 +8,12 @@ type Props = {
 const Search = ({ placeholder, buttonLabel }: Props) => (
     <div>
         <Row className="d-flex justify-content-center">
-            <Form>
+            <Form method="GET" action="/search">
                 <Form.Row className="align-items-center">
                     <Col sm={8} className="my-1">
                         <Form.Control
                             id="inlineFormSearch"
+                            name="title"
                             placeholder={placeholder}
                         />
                     </Col>

@@ -4,6 +4,7 @@ import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
 import Link from '../components/atoms/link'
 
+
 const Glossario: React.FC = () => {
 
     const listInText = (arrList) => {
@@ -12,7 +13,6 @@ const Glossario: React.FC = () => {
         return arrList.map(l => {
             i++
             if (i === listSize) {
-                console.log("aaa")
                 return (
                     <React.Fragment>
                         {" "}<Link key={l.url} label={l.label} url={`/${l.url}`}/>
