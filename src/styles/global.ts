@@ -111,6 +111,8 @@ export default createGlobalStyle`
     background: ${props => props.theme.colors.transparentPrimary};
   }
   .carousel-caption carousel-text{
+    font-size: 2.5em;
+    font-weight: 800;
     text-align: center;
   }
   .img-card, .img-text-card {

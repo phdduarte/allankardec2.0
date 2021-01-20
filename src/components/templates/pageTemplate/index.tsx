@@ -25,10 +25,10 @@ type Props = {
 
 const PageTemplate = ({
     titlePage,
-    urlLogo = '/assets/img/logos/logo.svg',
+    urlLogo = '/assets/img/logos/logo.jpg',
     altLogo = 'Logo Allan Kardec',
-    widthLogo = '',
-    heightLogo = '',
+    widthLogo = '266',
+    heightLogo = '400',
     mainModel = '',
     children,
     hero = false,
@@ -109,7 +109,7 @@ const PageTemplate = ({
                     <div className="search-bar">
                         <Container>
                             <Row>
-                                <div className="col-12 col-md-8 col-xl-8">
+                                <div className="col-12 col-md-8 col-xl-8 align-items-center">
                                     <Search
                                         placeholder="Digite aqui sua pesquisa"
                                         buttonLabel="Pesquisar"

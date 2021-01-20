@@ -104,10 +104,6 @@ const Home: React.FC = () => {
         <div>
             <PageTemplate
                 titlePage="ALLAN KARDEC Online"
-                urlLogo="/assets/img/logos/logo.svg"
-                altLogo="Logo Allan Kardec"
-                heightLogo=""
-                widthLogo=""
                 hero={true}
                 listSliderImages={listSliderImages}
             >
@@ -116,7 +112,7 @@ const Home: React.FC = () => {
                     
                     <Grid>
                         {museumEntries.map((entry) => (
-                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                 <Card
                                     key={entry.url}
                                     src={entry.image}
