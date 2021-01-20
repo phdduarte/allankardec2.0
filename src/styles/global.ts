@@ -11,6 +11,8 @@ export default createGlobalStyle`
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
     font: 400 16px Roboto, sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
   }
   footer {
     align-items: center;
@@ -99,12 +101,17 @@ export default createGlobalStyle`
     visibility: hidden;
   }
   div .carousel-caption {
-    padding: 20px;
-    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom 0px;
-    width: 100vw;
-    height: 3.5em;
+    left: 0%;
+    width: 100%;
+    height: 15%;
     background: ${props => props.theme.colors.transparentPrimary};
+  }
+  .carousel-caption carousel-text{
+    text-align: center;
   }
   .img-card, .img-text-card {
     text-align: center;
