@@ -78,6 +78,10 @@ export default createGlobalStyle`
     text-decoration: underline;
   }
 
+  .btn {
+    background: ${props => props.theme.colors.primary};
+  }
+
   .menu {
     padding: 20px;
     position: relative;

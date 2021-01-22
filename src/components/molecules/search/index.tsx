@@ -18,7 +18,7 @@ const Search = ({ placeholder, buttonLabel }: Props) => (
                         />
                     </Col>
                     <Col xs="auto" className="my-1">
-                        <Button type="submit">{buttonLabel}</Button>
+                        <Button className="btn" type="submit">{buttonLabel}</Button>
                     </Col>
                 </Form.Row>
             </Form>
