@@ -87,15 +87,15 @@ const PageLinks: React.FC = () => {
     return (
         <PageTemplate titlePage="Links">
             <AllLinksContainer>
-                <Container>
-                    <Row className="d-flex justify-content-center text-uppercase">
+                <Container className="py-4">
+                    <Row className="text-center">
                         <Col>
                             <h3>
                                 Links de Interesse para os Pesquisadores de Espiritismo:
                             </h3>
                         </Col>
                     </Row>
-                    <Row className="d-flex text-uppercase">
+                    <Row>
                         <Col>
                             <Links listLinks={listLinks} />
                         </Col>

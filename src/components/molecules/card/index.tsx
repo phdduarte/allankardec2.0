@@ -28,7 +28,13 @@ const Card = ({
     <div className={className}>
         <a href={url} target={target}>
             <div className="img-card">
-                <Image src={src} alt={alt} width={width} height={height} />
+                <Image
+                    className="img-document-card"
+                    src={src}
+                    alt={alt}
+                    width={width}
+                    height={height}
+                />
             </div>
         </a>
         <div className="img-text-card">{imgLabel}</div>

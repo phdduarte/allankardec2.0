@@ -114,6 +114,14 @@ export default createGlobalStyle`
     text-align: center;
     padding: 5px;
   }
+  .img-document-card {
+    transition: transform .2s;
+  }
+  .img-document-card:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+  }
   .cards {
     margin-top: 20px;
     margin-bottom: 20px;
