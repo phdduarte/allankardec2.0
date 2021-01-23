@@ -13,15 +13,15 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider1.jpg',
                 alt: 'Imagem Slider 1',
-                text: 'allankardec.online - Museu Online do Espiritismo'
-            },
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
+            }
         },
         {
             sliderItem: {
                 interval: 1500,
                 src: '/assets/img/slider/slider2.jpg',
                 alt: 'Imagem Slider 2',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         },
         {
@@ -29,7 +29,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider3.jpg',
                 alt: 'Imagem Slider 3',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         },
         {
@@ -37,7 +37,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider4.jpg',
                 alt: 'Imagem Slider 4',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         },
         {
@@ -45,7 +45,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider5.jpg',
                 alt: 'Imagem Slider 5',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         },
         {
@@ -53,7 +53,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider6.jpg',
                 alt: 'Imagem Slider 6',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         }
     ]
@@ -99,7 +99,6 @@ const museumEntries = [
 ]
 
 const Home: React.FC = () => {
-
     return (
         <div>
             <PageTemplate
@@ -109,7 +108,6 @@ const Home: React.FC = () => {
             >
                 <Title label="O Museu" />
                 <div className="align-items-center">
-                    
                     <Grid>
                         {museumEntries.map((entry) => (
                             <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
@@ -123,7 +121,6 @@ const Home: React.FC = () => {
                             </div>
                         ))}
                     </Grid>
-                   
                 </div>
             </PageTemplate>
         </div>
