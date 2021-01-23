@@ -227,4 +227,11 @@ export default createGlobalStyle`
     text-align: justify;
     margin: 20px 25px;
   }
+
+  h2, h3, span.email {
+    word-wrap: break-word;
+  }
+  span.email {
+    margin-left: 4px;
+  }
 `
