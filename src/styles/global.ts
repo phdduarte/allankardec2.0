@@ -80,6 +80,14 @@ export default createGlobalStyle`
   .search-bar a:hover {
     text-decoration: underline;
   }
+  .btn-primary {
+    background-color: ${props => props.theme.colors.primary};
+    border-color: ${props => props.theme.colors.primary};
+  }
+  .btn-primary:hover {
+    background-color: ${props => props.theme.colors.primaryLighter};
+    border-color: ${props => props.theme.colors.primaryLighter};
+  }
 
   .menu {
     padding: 20px;
