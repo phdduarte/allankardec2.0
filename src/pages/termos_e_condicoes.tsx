@@ -67,7 +67,9 @@ const TermsAndConditions: React.FC = () => {
                     <p className="justify-text">
                         Para mais informações ou dúvidas sobre essa licença de
                         usuário, consulte-nos através do email:
-                        allankardec.online@gmail.com
+                        <span className="email">
+                            allankardec.online@gmail.com
+                        </span>
                     </p>
                     <h2>ALLANKARDEC.ONLINE USER LICENCE</h2>
                     <h3>ABOUT THIS LICENCE</h3>
@@ -138,7 +140,9 @@ const TermsAndConditions: React.FC = () => {
                     <p className="justify-text">
                         For further information or If you have any comments or
                         questions about this user licence, please contact:
-                        allankardec.online@gmail.com
+                        <span className="email">
+                            allankardec.online@gmail.com
+                        </span>
                     </p>
                 </div>
             </PageTemplate>

@@ -9,11 +9,10 @@ import { documentService, API_BASE_URL } from '../services/document.service'
 import { dynamicSort } from '../../public/util/index'
 import DocumentCard from '../components/organisms/document-card'
 
-const prepareDocument = (document) => ({
+const prepareDocument = document => ({
     ...document,
     file: { url: `${API_BASE_URL}${document.file.url}` },
-    cover: { url: `${API_BASE_URL}${document.cover.url}` },
-
+    cover: { url: `${API_BASE_URL}${document.cover.url}` }
 })
 
 const listSliderImages = {
@@ -23,15 +22,15 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider1.jpg',
                 alt: 'Imagem Slider 1',
-                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
-            },
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
+            }
         },
         {
             sliderItem: {
                 interval: 1500,
                 src: '/assets/img/slider/slider2.jpg',
                 alt: 'Imagem Slider 2',
-                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         },
         {
@@ -39,7 +38,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider3.jpg',
                 alt: 'Imagem Slider 3',
-                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         },
         {
@@ -47,7 +46,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider4.jpg',
                 alt: 'Imagem Slider 4',
-                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         },
         {
@@ -55,7 +54,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider5.jpg',
                 alt: 'Imagem Slider 5',
-                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         },
         {
@@ -63,7 +62,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider6.jpg',
                 alt: 'Imagem Slider 6',
-                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - ALLANKARDEC.ONLINE - MUSEU ONLINE DO ESPIRITISMO'
             }
         }
     ]
@@ -108,27 +107,24 @@ const museumEntries = [
     }
 ]
 
-const Home = (props) => {
-
+const Home = props => {
     const lastUpdated = props.lastUpdated
 
     return (
         <div>
             <PageTemplate
                 titlePage="ALLAN KARDEC Online"
-                urlLogo="/assets/img/logos/logo.svg"
-                altLogo="Logo Allan Kardec"
-                heightLogo=""
-                widthLogo=""
                 hero={true}
                 listSliderImages={listSliderImages}
             >
                 <Title label="O Museu" />
                 <div className="align-items-center">
-                    
                     <Grid>
-                        {museumEntries.map((entry, index) => (
-                            <div key={index} className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        {museumEntries.map(entry => (
+                            <div
+                                className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4"
+                                key={entry.url}
+                            >
                                 <Card
                                     key={entry.url}
                                     src={entry.image}
@@ -140,29 +136,29 @@ const Home = (props) => {
                             </div>
                         ))}
                     </Grid>
-                   
                 </div>
                 <Title label="Últimos Adicionados" />
-                <div className="align-items-center">
-                    
-                <Grid>
-                    {lastUpdated.map(document => (
-                        <DocumentCard key={document.id} document={prepareDocument(document)}/>   
-                    ))}
-                </Grid>
-                   
+                <div>
+                    <Grid>
+                        {lastUpdated.map(document => (
+                            <DocumentCard
+                                key={document.id}
+                                document={prepareDocument(document)}
+                                className="align-items-center col-12 col-md-6 col-lg-4"
+                            />
+                        ))}
+                    </Grid>
                 </div>
             </PageTemplate>
         </div>
     )
 }
 
-
-
 Home.getInitialProps = async () => {
     const documents = await documentService.getDocuments({ _limit: -1 })
-    let lastUpdated = documents.sort(dynamicSort('-createdAt')).slice(0,3)
-    return {lastUpdated}
+    // eslint-disable-next-line prefer-const
+    let lastUpdated = documents.sort(dynamicSort('-createdAt')).slice(0, 3)
+    return { lastUpdated }
 }
 
 export default Home

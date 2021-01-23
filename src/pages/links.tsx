@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { Col, Container, Row } from 'react-bootstrap'
-
 // molecules
 import Links from '../components/molecules/links'
 
@@ -20,15 +18,15 @@ const PageLinks: React.FC = () => {
             },
             {
                 link: {
-                    label:
-                        'CSI Imagens e Registros Históricos do Espiritismo',
+                    label: 'CSI Imagens e Registros Históricos do Espiritismo',
                     url: 'https://www.facebook.com/HistoriaDoEspiritismo/'
                 }
             },
             {
                 link: {
                     label: 'ECK – Espiritismo com Kardec',
-                    url: 'https://www.facebook.com/groups/Espiritismo.COM.Kardec/'
+                    url:
+                        'https://www.facebook.com/groups/Espiritismo.COM.Kardec/'
                 }
             },
             {
@@ -85,22 +83,16 @@ const PageLinks: React.FC = () => {
         ]
     }
     return (
-        <PageTemplate titlePage="Links">
+        <PageTemplate titlePage="Links" mainModel="red-main">
             <AllLinksContainer>
-                <Container className="py-4">
-                    <Row className="text-center">
-                        <Col>
-                            <h3>
-                                Links de Interesse para os Pesquisadores de Espiritismo:
-                            </h3>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <Links listLinks={listLinks} />
-                        </Col>
-                    </Row>
-                </Container>
+                <div className="d-flex justify-content-center text-uppercase">
+                    <h3>
+                        Links de Interesse para os Pesquisadores de Espiritismo:
+                    </h3>
+                </div>
+                <div className="d-flex text-uppercase">
+                    <Links listLinks={listLinks} />
+                </div>
             </AllLinksContainer>
         </PageTemplate>
     )

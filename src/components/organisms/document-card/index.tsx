@@ -1,13 +1,17 @@
-import React from 'react';
+import React from 'react'
 import Card from '../../molecules/card'
 
-const DocumentCard = ({ document }) => {
-    
+type Props = {
+    className?: string
+}
+
+const DocumentCard = (
+    { document },
+    { className = 'col-12 col-sm-6 col-lg-4' }: Props
+) => {
     const formattedDate = new Date(document.updatedAt).toLocaleDateString("pt-Br")
 
     return (
-
-
         <Card
             src={document.cover.url}
             alt={document.cover.alternativeText}
@@ -16,7 +20,7 @@ const DocumentCard = ({ document }) => {
             imgLabel={document.cover.caption}
             width="480"
             height="280"
-            className="col-6 col-lg-4"
+            className={className}
             key={document.id}
         >
             <ul>
@@ -32,7 +36,6 @@ const DocumentCard = ({ document }) => {
             </ul>
         </Card>
     )
-    
 }
 
-export default DocumentCard;
+export default DocumentCard

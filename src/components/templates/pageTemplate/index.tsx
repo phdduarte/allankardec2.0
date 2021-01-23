@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import { Container, Row } from 'react-bootstrap'
 
 import Link from '../../atoms/link'
 import Header from '../../organisms/header'
@@ -25,10 +24,10 @@ type Props = {
 
 const PageTemplate = ({
     titlePage,
-    urlLogo = '/assets/img/logos/logo.svg',
+    urlLogo = '/assets/img/logos/logo-akol.png',
     altLogo = 'Logo Allan Kardec',
-    widthLogo = '',
-    heightLogo = '',
+    widthLogo = '266',
+    heightLogo = '400',
     mainModel = '',
     children,
     hero = false,
@@ -107,9 +106,9 @@ const PageTemplate = ({
                         <></>
                     )}
                     <div className="search-bar">
-                        <Container>
-                            <Row>
-                                <div className="col-12 col-md-8 col-xl-8">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-md-8 col-xl-8 align-items-center">
                                     <Search
                                         placeholder="Digite aqui sua pesquisa"
                                         buttonLabel="Pesquisar"
@@ -121,8 +120,8 @@ const PageTemplate = ({
                                         label="Veja nosso acervo"
                                     />
                                 </div>
-                            </Row>
-                        </Container>
+                            </div>
+                        </div>
                     </div>
                 </header>
             </div>
@@ -144,7 +143,11 @@ const PageTemplate = ({
             </section>
             <footer>
                 <Footer
-                    text={"©Copyright " + (new Date()).getFullYear() + " AllanKardec.online / Designed by: "}
+                    text={
+                        '©Copyright ' +
+                        new Date().getFullYear() +
+                        ' AllanKardec.online / Designed by: '
+                    }
                     linkText="NeXTIME"
                     url="https://www.nextime.com.br/"
                 />
