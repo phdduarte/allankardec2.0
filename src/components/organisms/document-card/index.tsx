@@ -1,14 +1,7 @@
 import React from 'react'
 import Card from '../../molecules/card'
 
-type Props = {
-    className?: string
-}
-
-const DocumentCard = (
-    { document },
-    { className = 'col-12 col-sm-6 col-lg-4' }: Props
-) => {
+const DocumentCard = ({ document }) => {
     const formattedDate = new Date(document.updatedAt).toLocaleDateString("pt-Br")
 
     return (
@@ -20,7 +13,7 @@ const DocumentCard = (
             imgLabel={document.cover.caption}
             width="480"
             height="280"
-            className={className}
+            className="col-12 col-sm-6 col-lg-4"
             key={document.id}
         >
             <ul>

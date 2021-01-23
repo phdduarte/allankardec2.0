@@ -144,7 +144,6 @@ const Home = props => {
                             <DocumentCard
                                 key={document.id}
                                 document={prepareDocument(document)}
-                                className="align-items-center col-12 col-md-6 col-lg-4"
                             />
                         ))}
                     </Grid>
