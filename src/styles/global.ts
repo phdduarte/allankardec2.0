@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import './global.scss'
 
 export default createGlobalStyle`
+  {/* --------- Configuracoes padroes --------- */}
   * {
     margin: 0;
     padding: 0;
@@ -14,6 +15,8 @@ export default createGlobalStyle`
     width: 100vw;
     overflow-x: hidden;
   }
+
+  {/* ------------------ footer ------------------ */}
   footer {
     align-items: center;
     display: flex;
@@ -40,6 +43,7 @@ export default createGlobalStyle`
     text-decoration: underline;
   }
 
+  {/* --------- Pagina de links --------- */}
   .link-linkPage{
     padding: 20px;
     margin-top: 10px;
@@ -69,6 +73,7 @@ export default createGlobalStyle`
     justify-content: center;
   }
 
+  {/* --------- Barra de Pesquisa --------- */}
   .search-bar {
     padding: 10px;
     background: #333;
@@ -89,6 +94,7 @@ export default createGlobalStyle`
     border-color: ${props => props.theme.colors.primaryLighter};
   }
 
+  {/* ----------------- MENU ---------------- */}
   .menu {
     padding: 20px;
     display: flex;
@@ -113,22 +119,62 @@ export default createGlobalStyle`
   a.carousel-control-prev, a.carousel-control-next, ol.carousel-indicators {
     visibility: hidden;
   }
+
+  {/* ------------------ SLIDER ------------------ */}
+  @media (max-width: 25em){
+    div .carousel-caption {
+      height: 20%;
+      font-size: 0.5rem;
+    }
+  }
+  @media (min-width: 25em) and (max-width:30em) {
+    div .carousel-caption {
+      height: 0.4rem;
+      font-size: 0.6rem;
+    }
+  }
+  @media (min-width:30em) and (max-width:40em) {
+    div .carousel-caption {
+      height: 0.625rem;
+      font-size: 0.775rem;
+    }
+  }
+
+  @media (min-width:40em) and (max-width:52em) {
+    div .carousel-caption {
+      height: 0.75rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (min-width:52em) and (max-width:64em) {
+    div .carousel-caption {
+      height: 1.0rem;
+      font-size: 1.15rem;
+    }
+  }
+
+  @media (min-width:64em) {
+    div .carousel-caption {
+      height: 1.25rem;
+      font-size: 1.4rem;
+    }
+  }
   div .carousel-caption {
     display: flex;
-    font-size: 1.4rem;
     align-items: center;
     justify-content: center;
     bottom 0px;
     left: 0%;
     width: 100%;
-    height: 10%;
     background: ${props => props.theme.colors.transparentPrimary};
   }
   .carousel-caption carousel-text{
-    font-size: 2.5em;
     font-weight: 800;
     text-align: center;
   }
+
+  {/* ------------------ CARDS ------------------ */}
   .img-card, .img-text-card {
     text-align: center;
     padding: 5px;
@@ -149,6 +195,8 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.primary};
     padding-bottom: 20px;
   }
+
+  {/* ------------------ ESTILO DA PAGINA ------------------ */}
   .red-main{
     background: ${props => props.theme.colors.primary};
     border: 3px solid ${props => props.theme.colors.primary};
