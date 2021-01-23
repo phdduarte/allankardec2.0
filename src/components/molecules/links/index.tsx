@@ -12,7 +12,7 @@ const Links = ({ listLinks }: Props) => (
             {listLinks.childrenListLinks.map((linkItem, index) => (
                 // eslint-disable-next-line react/jsx-key
                 <li key={index}>
-                    <Link label={linkItem.link.url} url={linkItem.link.label} />
+                    <Link url={linkItem.link.url} label={linkItem.link.label} />
                 </li>
             ))}
         </ul>
