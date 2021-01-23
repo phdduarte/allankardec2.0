@@ -18,53 +18,63 @@ export default createGlobalStyle`
 
   {/* ------------------ footer ------------------ */}
   footer {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     border: 0;
-    padding: 36px 0px;
+    padding: 36px 5px;
     margin: 0;
-    text-align: center;
-    color: white;
-    background: #333;
-  }
-  footer p {
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  footer a {
-    text-decoration: none;
-    color: white;
-    transition: all .5s;
-  }
-  footer a:hover {
-    text-decoration: underline;
+    color: ${props => props.theme.colors.textLighter};
+    a {
+      color: ${props => props.theme.colors.textLighter};
+      text-decoration: none;
+      transition: all .5s;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   {/* --------- Pagina de links --------- */}
   .link-linkPage{
-    padding: 20px;
+    padding: 12px 0;
+    font-size: 1.3rem;
     margin-top: 10px;
     margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
     background: ${props => props.theme.colors.primary};
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  .page-link{
+    padding: 0;
+    word-wrap: break-word;
+    h1 {
+      word-break: break-all;
+      @media (max-width: 20em){
+        font-size: 2rem;
+      }
+    }
+    .list{
+      text-align: left;
+    }
+    .list-links {
+      word-break: break-word;
+      display: block;
+      font-size : 1rem;
+      line-height: 2.0em;
+      line-width: 100%;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      list-style: square inside url("assets/img/pointer/pointing-right.png");
+    }
+    a:hover {
+        color: dark;
+    }
   }
 
-  .link-linkPage a {
-    text-decoration: none;
-    color: white;
-  }
-  .link-linkPage a:hover {
-    text-decoration: underline;
-  }
-
+  {/* ------------------------------------ */}
   .align-items-center {
     display: flex;
     flex-direction: row;
@@ -72,18 +82,27 @@ export default createGlobalStyle`
     flex-wrap: wrap;
     justify-content: center;
   }
+  .bg-grey {
+    background: ${props => props.theme.colors.grey};
+  }
+  .text-center {
+    text-align: center;
+  }
+
+  h2, h3, span.email, .word-wrap {
+    word-wrap: break-word;
+  }
 
   {/* --------- Barra de Pesquisa --------- */}
   .search-bar {
     padding: 10px;
-    background: #333;
-  }
-  .search-bar a {
-    color: white;
-    transition: all .5s;
-  }
-  .search-bar a:hover {
-    text-decoration: underline;
+    a {
+      color: white;
+      transition: all .5s;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   }
   .btn-primary, .btn-primary.disabled, .btn-primary:disabled, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
@@ -96,87 +115,43 @@ export default createGlobalStyle`
     box-shadow: 0 0 0 0.2rem ${props => props.theme.colors.transparentPrimary};
   }
   
-  .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-primary.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem 
-        ${props => props.theme.colors.transparentPrimary}; 
-    }
+  .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem 
+      ${props => props.theme.colors.transparentPrimary}; 
+  }
 
   {/* ----------------- MENU ---------------- */}
   .menu {
-    padding: 20px;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
+    font-size: 1.3rem;
     background: ${props => props.theme.colors.primary};
+    .navbar-nav {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .nav-link {
+        color: white;
+        transition: all .5s;
+        @media (max-width: 20em){
+          max-width: 130px;
+        }
+      }
+      .nav-link:hover {
+        text-decoration: underline;
+      }
+    }
   }
-  .menu .navbar-nav {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .menu .navbar-nav .nav-link {
-    color: white;
-    transition: all .5s;
-  }
-  .menu .navbar-nav .nav-link:hover {
-    text-decoration: underline;
-  }
+  
+  {/* ------------------ SLIDER ------------------ */}
   a.carousel-control-prev, a.carousel-control-next, ol.carousel-indicators {
     visibility: hidden;
   }
-
-  {/* ------------------ SLIDER ------------------ */}
-  @media (max-width: 20em){
-    div .carousel-caption {
-      height: 0.5rem;
-      font-size: 0.3rem;
-      padding: 5px;
-    }
-  }
-  @media (min-width: 20em) and (max-width: 25em){
-    div .carousel-caption {
-      height: 0.5rem;
-      font-size: 0.4rem;
-      padding: 5px;
-    }
-  }
-  @media (min-width: 25em) and (max-width:30em) {
-    div .carousel-caption {
-      height: 0.45rem;
-      font-size: 0.6rem;
-      padding: 5px;
-    }
-  }
-  @media (min-width:30em) and (max-width:40em) {
-    div .carousel-caption {
-      height: 0.625rem;
-      font-size: 0.775rem;
-    }
-  }
-
-  @media (min-width:40em) and (max-width:52em) {
-    div .carousel-caption {
-      height: 0.75rem;
-      font-size: 0.9rem;
-    }
-  }
-
-  @media (min-width:52em) and (max-width:64em) {
-    div .carousel-caption {
-      height: 1.0rem;
-      font-size: 1.15rem;
-    }
-  }
-
-  @media (min-width:64em) {
-    div .carousel-caption {
-      height: 1.25rem;
-      font-size: 1.4rem;
-    }
-  }
+  
   div .carousel-caption {
     display: flex;
     align-items: center;
@@ -185,11 +160,47 @@ export default createGlobalStyle`
     left: 0%;
     width: 100%;
     background: ${props => props.theme.colors.transparentPrimary};
+    carousel-text{
+      font-weight: 800;
+      text-align: center;
+    }
+    @media (max-width: 20em){
+      padding: 5px;
+      height: 0.5rem;
+      font-size: 0.3rem;
+    }
+    @media (min-width: 20em) and (max-width: 25em){
+      padding: 6px;
+      height: 0.5rem;
+      font-size: 0.4rem;
+    }
+    @media (min-width: 25em) and (max-width:30em) {
+      padding: 7px;
+      height: 0.45rem;
+      font-size: 0.6rem;
+    }
+    @media (min-width:30em) and (max-width:40em) {
+      padding: 8px;
+      height: 0.625rem;
+      font-size: 0.775rem;
+    }
+    @media (min-width:40em) and (max-width:52em) {
+      padding: 9px;
+      height: 0.75rem;
+      font-size: 0.9rem;
+    }
+    @media (min-width:52em) and (max-width:64em) {
+      padding: 10px;
+      height: 1.0rem;
+      font-size: 1.15rem;
+    }
+    @media (min-width:64em) {
+      padding: 11px;
+      height: 1.25rem;
+      font-size: 1.4rem;
+    }
   }
-  .carousel-caption carousel-text{
-    font-weight: 800;
-    text-align: center;
-  }
+  
 
   {/* ------------------ CARDS ------------------ */}
   .img-card, .img-text-card {
@@ -228,6 +239,7 @@ export default createGlobalStyle`
   }
   main .content{
     margin: 10px 30px;
+    
     padding: 20px;
     background: ${props => props.theme.colors.background};
     border-radius: 5px;
@@ -235,17 +247,12 @@ export default createGlobalStyle`
   .content-text {
     display: block;
     color: ${props => props.theme.colors.text};
-    padding: 10px;
+    padding: 5px;
     text-align: center;
-    margin-top: -20px;
-  }
-  .content-text .justify-text {
-    text-align: justify;
     margin: 20px 25px;
   }
-
-  h2, h3, span.email {
-    word-wrap: break-word;
+  .justify-text, .content-text {
+    text-align: justify;
   }
   span.email {
     margin-left: 4px;

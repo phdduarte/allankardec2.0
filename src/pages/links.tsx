@@ -4,8 +4,6 @@ import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
 import Links from '../components/molecules/links'
 
-import AllLinksContainer from '../styles/pages/links'
-
 const PageLinks: React.FC = () => {
     const listLinks = {
         childrenListLinks: [
@@ -82,16 +80,18 @@ const PageLinks: React.FC = () => {
         ]
     }
     return (
-        <PageTemplate titlePage="Links" mainModel="red-main">
-            <AllLinksContainer>
-                <div className="d-flex justify-content-center text-uppercase">
-                    <Title label="Links de Interesse para os Pesquisadores de Espiritismo:" />
+        <div className="page-link">
+            <PageTemplate titlePage="Links" mainModel="red-main">
+                <div className="content-text">
+                    <div className="d-flex title justify-content-center text-uppercase">
+                        <Title label="Links de Interesse para os Pesquisadores de Espiritismo:" />
+                    </div>
+                    <div className="d-flex text-uppercase list">
+                        <Links listLinks={listLinks} />
+                    </div>
                 </div>
-                <div className="d-flex text-uppercase">
-                    <Links listLinks={listLinks} />
-                </div>
-            </AllLinksContainer>
-        </PageTemplate>
+            </PageTemplate>
+        </div>
     )
 }
 

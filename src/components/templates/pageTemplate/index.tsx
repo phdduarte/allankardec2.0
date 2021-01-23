@@ -105,7 +105,7 @@ const PageTemplate = ({
                     ) : (
                         <></>
                     )}
-                    <div className="search-bar">
+                    <div className="search-bar bg-grey">
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 col-md-8 col-xl-8 align-items-center">
@@ -130,8 +130,8 @@ const PageTemplate = ({
                     <div className="content">{children}</div>
                 </main>
             </section>
-            <section className="link-linkPage">
-                <div className="text-uppercase">
+            <section className="link-linkPage align-items-center text-center">
+                <div className="text-uppercase align-items-center">
                     <Link
                         label="Links de interesse para pesquisadores e estudiosos do Espiritismo"
                         url="/links"
@@ -141,7 +141,7 @@ const PageTemplate = ({
             <section className="menu text-uppercase">
                 <Menu listNavLinks={listNavLinks} />
             </section>
-            <footer>
+            <footer className="align-items-center bg-grey text-center">
                 <Footer
                     text={
                         '©Copyright ' +
