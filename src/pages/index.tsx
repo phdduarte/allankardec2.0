@@ -5,6 +5,16 @@ import Card from '../components/molecules/card'
 import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
 import Grid from '../components/organisms/grid'
+import { documentService, API_BASE_URL } from '../services/document.service'
+import { dynamicSort } from '../../public/util/index'
+import DocumentCard from '../components/organisms/document-card'
+
+const prepareDocument = (document) => ({
+    ...document,
+    file: { url: `${API_BASE_URL}${document.file.url}` },
+    cover: { url: `${API_BASE_URL}${document.cover.url}` },
+
+})
 
 const listSliderImages = {
     childrenListSliderImages: [
@@ -98,7 +108,9 @@ const museumEntries = [
     }
 ]
 
-const Home: React.FC = () => {
+const Home = (props) => {
+
+    const lastUpdated = props.lastUpdated
 
     return (
         <div>
@@ -130,9 +142,27 @@ const Home: React.FC = () => {
                     </Grid>
                    
                 </div>
+                <Title label="Últimos Adicionados" />
+                <div className="align-items-center">
+                    
+                <Grid>
+                    {lastUpdated.map(document => (
+                        <DocumentCard key={document.id} document={prepareDocument(document)}/>   
+                    ))}
+                </Grid>
+                   
+                </div>
             </PageTemplate>
         </div>
     )
+}
+
+
+
+Home.getInitialProps = async () => {
+    const documents = await documentService.getDocuments({ _limit: -1 })
+    let lastUpdated = documents.sort(dynamicSort('-createdAt')).slice(0,3)
+    return {lastUpdated}
 }
 
 export default Home
