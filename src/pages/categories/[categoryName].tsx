@@ -52,8 +52,8 @@ const Category = ({ documents, categoryName, page, category }) => {
                         previousLabel="Anterior"
                         nextLabel="Próxima"
                         breakLabel="..."
-                        pageRangeDisplayed={7}
-                        marginPagesDisplayed={5}
+                        marginPagesDisplayed={2}
+                        pageRangeDisplayed={5}
                     />
                 </div>
             </PageTemplate>
