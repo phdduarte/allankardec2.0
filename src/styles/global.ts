@@ -44,10 +44,11 @@ export default createGlobalStyle`
     padding: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
     justify-content: center;
     background: ${props => props.theme.colors.primary};
   }
@@ -82,13 +83,17 @@ export default createGlobalStyle`
 
   .menu {
     padding: 20px;
-    position: relative;
-    align-items: center;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     background: ${props => props.theme.colors.primary};
+  }
+  .menu .navbar-nav {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .menu .navbar-nav .nav-link {
     color: white;
