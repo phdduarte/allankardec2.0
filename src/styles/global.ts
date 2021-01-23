@@ -121,16 +121,25 @@ export default createGlobalStyle`
   }
 
   {/* ------------------ SLIDER ------------------ */}
-  @media (max-width: 25em){
+  @media (max-width: 20em){
     div .carousel-caption {
-      height: 20%;
-      font-size: 0.5rem;
+      height: 0.5rem;
+      font-size: 0.3rem;
+      padding: 5px;
+    }
+  }
+  @media (min-width: 20em) and (max-width: 25em){
+    div .carousel-caption {
+      height: 0.5rem;
+      font-size: 0.4rem;
+      padding: 5px;
     }
   }
   @media (min-width: 25em) and (max-width:30em) {
     div .carousel-caption {
-      height: 0.4rem;
+      height: 0.45rem;
       font-size: 0.6rem;
+      padding: 5px;
     }
   }
   @media (min-width:30em) and (max-width:40em) {
