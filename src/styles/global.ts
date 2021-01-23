@@ -257,4 +257,30 @@ export default createGlobalStyle`
   span.email {
     margin-left: 4px;
   }
+  .pagination {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      li {
+        background-color: ${props => props.theme.colors.primary};
+        border: solid 3px ${props => props.theme.colors.primary};
+        color: white;
+        margin: 4px;
+        padding: 4px;
+        transition: all .5s;
+      }
+      li.previous {
+        border-radius: 10px 0 0 10px;
+      }
+      li.next {
+        border-radius: 0 10px 10px 0;
+      }
+      li:hover {
+        background-color: ${props => props.theme.colors.primaryLighter};
+        border-color: ${props => props.theme.colors.primaryLighter};
+      }
+    }
+  }
 `
