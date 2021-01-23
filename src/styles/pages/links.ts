@@ -7,7 +7,6 @@ const LinksContainer = style.div`
     }
     div {
         display: block;
-        background-color: #fff;
         font-size : 30 px;
         line-height: 2.0em;
         
