@@ -1,10 +1,9 @@
 import React from 'react'
 
-// molecules
+import PageTemplate from '../components/templates/pageTemplate'
+import Title from '../components/atoms/title'
 import Links from '../components/molecules/links'
 
-import PageTemplate from '../components/templates/pageTemplate'
-// css links
 import AllLinksContainer from '../styles/pages/links'
 
 const PageLinks: React.FC = () => {
@@ -86,9 +85,7 @@ const PageLinks: React.FC = () => {
         <PageTemplate titlePage="Links" mainModel="red-main">
             <AllLinksContainer>
                 <div className="d-flex justify-content-center text-uppercase">
-                    <h3>
-                        Links de Interesse para os Pesquisadores de Espiritismo:
-                    </h3>
+                    <Title label="Links de Interesse para os Pesquisadores de Espiritismo:" />
                 </div>
                 <div className="d-flex text-uppercase">
                     <Links listLinks={listLinks} />
