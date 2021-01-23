@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 
 // molecules
 import Links from '../components/molecules/links'
@@ -85,22 +85,20 @@ const PageLinks: React.FC = () => {
         ]
     }
     return (
-        <PageTemplate titlePage="Links">
+        <PageTemplate titlePage="Links" mainModel="red-main">
             <AllLinksContainer>
-                <Container>
-                    <Row className="d-flex justify-content-center text-uppercase">
-                        <Col>
-                            <h3>
-                                Links de Interesse para os Pesquisadores de Espiritismo:
-                            </h3>
-                        </Col>
-                    </Row>
-                    <Row className="d-flex text-uppercase">
-                        <Col>
-                            <Links listLinks={listLinks} />
-                        </Col>
-                    </Row>
-                </Container>
+                <Row className="d-flex justify-content-center text-uppercase">
+                    <Col>
+                        <h3>
+                            Links de Interesse para os Pesquisadores de Espiritismo:
+                        </h3>
+                    </Col>
+                </Row>
+                <Row className="d-flex text-uppercase">
+                    <Col>
+                        <Links listLinks={listLinks} />
+                    </Col>
+                </Row>
             </AllLinksContainer>
         </PageTemplate>
     )

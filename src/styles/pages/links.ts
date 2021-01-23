@@ -6,7 +6,6 @@ const LinksContainer = style.div`
         color: ${props => props.theme.colors.text}; 
     }
     div {
-        border-style: solid;
         display: block;
         padding: 0.5rem 0.5rem;
         background-color: #fff;
