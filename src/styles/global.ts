@@ -98,7 +98,9 @@ export default createGlobalStyle`
   
   .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem ${props => props.theme.colors.transparentPrimary}; }
+      box-shadow: 0 0 0 0.2rem 
+        ${props => props.theme.colors.transparentPrimary}; 
+    }
 
   {/* ----------------- MENU ---------------- */}
   .menu {

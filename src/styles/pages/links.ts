@@ -18,6 +18,9 @@ const LinksContainer = style.div`
     a:hover {
         color: dark;
     }
+    .list-links {
+        list-style: square inside url("assets/img/pointer/pointing-right.png");
+    }
 `
 
 export default LinksContainer
