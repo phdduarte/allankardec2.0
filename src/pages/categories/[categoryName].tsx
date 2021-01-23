@@ -48,12 +48,13 @@ const Category = ({ documents, categoryName, page, category }) => {
                     <ReactPaginate
                         initialPage={page}
                         pageCount={pageCount}
+                        marginPagesDisplayed={2}
+                        pageRangeDisplayed={5}
                         onPageChange={handlePageChange}
                         previousLabel="Anterior"
                         nextLabel="Próxima"
                         breakLabel="..."
-                        marginPagesDisplayed={2}
-                        pageRangeDisplayed={5}
+                        containerClassName={'pagination'}
                     />
                 </div>
             </PageTemplate>

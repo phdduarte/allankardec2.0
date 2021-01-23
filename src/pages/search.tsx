@@ -40,13 +40,17 @@ const Search = ({ documents, page, title }) => {
                         <DocumentCard key={document.id} document={prepareDocument(document)}/>   
                     ))}
                 </Grid>
-                <ReactPaginate 
-                    initialPage={page} 
-                    pageCount={pageCount} 
-                    onPageChange={handlePageChange} 
+                <ReactPaginate
+                    initialPage={page}
+                    pageCount={pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    onPageChange={handlePageChange}
                     previousLabel="Anterior"
                     nextLabel="Próximo"
-                    breakLabel="..." />
+                    breakLabel="..."
+                    containerClassName={'pagination'}
+                />
             </PageTemplate>
         </div>
     )
