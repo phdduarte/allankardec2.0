@@ -138,7 +138,7 @@ const Home = props => {
                     </Grid>
                 </div>
                 <Title label="Últimos Adicionados" />
-                <div>
+                {/* <div>
                     <Grid>
                         {lastUpdated.map(document => (
                             <DocumentCard
@@ -147,17 +147,17 @@ const Home = props => {
                             />
                         ))}
                     </Grid>
-                </div>
+                </div> */}
             </PageTemplate>
         </div>
     )
 }
 
-Home.getInitialProps = async () => {
-    const documents = await documentService.getDocuments({ _limit: -1 })
-    // eslint-disable-next-line prefer-const
-    let lastUpdated = documents.sort(dynamicSort('-createdAt')).slice(0, 3)
-    return { lastUpdated }
-}
+// Home.getInitialProps = async () => {
+//     const documents = await documentService.getDocuments({ _limit: -1 })
+//     // eslint-disable-next-line prefer-const
+//     let lastUpdated = documents.sort(dynamicSort('-createdAt')).slice(0, 3)
+//     return { lastUpdated }
+// }
 
 export default Home

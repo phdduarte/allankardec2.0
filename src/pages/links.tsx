@@ -1,7 +1,6 @@
 import React from 'react'
 
 import PageTemplate from '../components/templates/pageTemplate'
-import Title from '../components/atoms/title'
 import Links from '../components/molecules/links'
 
 const PageLinks: React.FC = () => {
@@ -84,7 +83,7 @@ const PageLinks: React.FC = () => {
             <PageTemplate titlePage="Links" mainModel="red-main">
                 <div className="content-text">
                     <div className="d-flex title justify-content-center text-uppercase">
-                        <Title label="Links de Interesse para os Pesquisadores de Espiritismo:" />
+                        Links de Interesse para os Pesquisadores de Espiritismo:
                     </div>
                     <div className="d-flex text-uppercase list">
                         <Links listLinks={listLinks} />
