@@ -25,10 +25,10 @@ type Props = {
 
 const PageTemplate = ({
     titlePage,
-    urlLogo = '/assets/img/logos/logo.svg',
+    urlLogo = '/assets/img/logos/logo-akol.png',
     altLogo = 'Logo Allan Kardec',
-    widthLogo = '',
-    heightLogo = '',
+    widthLogo = '831',
+    heightLogo = '350',
     mainModel = '',
     children,
     hero = false,
