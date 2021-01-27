@@ -3,16 +3,20 @@ import { documentService, IRequestDocumentsParams } from '../services/document.s
 
 export const useDocumentPageCount = (search: IRequestDocumentsParams, documentsPerPage: number = 12) => {
     const [documentCount, setDocumentCount] = useState(0);
-    const [pageCount, setPageCount] = useState(0);
+    const [pageCount, setPageCount] = useState(1);
 
     useEffect(() => {
         (async () => setDocumentCount(await documentService.getCount(search)))()
     }, [search]);
 
     useEffect(() => {
-        if (documentCount == 0 || documentCount <= documentsPerPage) setPageCount(0);
+        (documentCount == 0 || documentCount <= documentsPerPage) ?
+            setPageCount(1) :
+            setPageCount(Math.floor(documentCount / documentsPerPage))
 
-        setPageCount((documentCount / documentsPerPage) + 1);
+        // if (documentCount == 0 || documentCount <= documentsPerPage) setPageCount(1);
+
+        // setPageCount((documentCount / documentsPerPage) + 1);
 
     }, [documentsPerPage, documentCount])
 

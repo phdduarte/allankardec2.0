@@ -16,7 +16,6 @@ const DocumentCard = ({ document }) => {
             imgLabel={document.cover.caption}
             width="480"
             height="280"
-            className="col-6 col-lg-4"
             key={document.id}
         >
             <ul>

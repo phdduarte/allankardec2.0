@@ -122,10 +122,6 @@ export default createGlobalStyle`
     -webkit-transform: scale(1.2); /* Safari 3-8 */
     transform: scale(1.2); 
   }
-  .cards {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
   .description-card {
     padding-left: 5px;
   }
@@ -143,8 +139,7 @@ export default createGlobalStyle`
     border: 3px solid ${props => props.theme.colors.primary};
   }
   main .content{
-    margin: 10px 30px;
-    padding: 20px;
+    padding: 20px 0;
     background: ${props => props.theme.colors.background};
     border-radius: 5px;
   }

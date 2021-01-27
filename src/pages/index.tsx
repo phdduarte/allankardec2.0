@@ -8,6 +8,7 @@ import Grid from '../components/organisms/grid'
 import { documentService, API_BASE_URL } from '../services/document.service'
 import { dynamicSort } from '../../public/util/index'
 import DocumentCard from '../components/organisms/document-card'
+import Link from '../components/atoms/link'
 
 const prepareDocument = (document) => ({
     ...document,
@@ -108,12 +109,10 @@ const museumEntries = [
     }
 ]
 
-const Home = (props) => {
-
-    const lastUpdated = props.lastUpdated
+const Home = () => {
 
     return (
-        <div>
+        <React.Fragment>
             <PageTemplate
                 titlePage="ALLAN KARDEC Online"
                 urlLogo="/assets/img/logos/logo.svg"
@@ -123,46 +122,29 @@ const Home = (props) => {
                 hero={true}
                 listSliderImages={listSliderImages}
             >
-                <Title label="O Museu" />
-                <div className="align-items-center">
-                    
-                    <Grid>
-                        {museumEntries.map((entry, index) => (
-                            <div key={index} className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Card
-                                    key={entry.url}
-                                    src={entry.image}
-                                    alt={entry.alt}
-                                    url={entry.url}
-                                    target=""
-                                    imgLabel={entry.imageLabel}
-                                />
-                            </div>
-                        ))}
-                    </Grid>
-                   
-                </div>
-                <Title label="Últimos Adicionados" />
-                <div className="align-items-center">
-                    
+            <Title label="O Museu" />
+            <div className="row align-items-center">
+                
                 <Grid>
-                    {lastUpdated.map(document => (
-                        <DocumentCard key={document.id} document={prepareDocument(document)}/>   
+                    {museumEntries.map((entry, index) => (
+                        <div key={index} className="col-lg-4 col-md-6 mb-4 align-center">
+                            <Card
+                                key={entry.url}
+                                src={entry.image}
+                                alt={entry.alt}
+                                url={entry.url}
+                                target=""
+                                imgLabel={entry.imageLabel}
+                            />
+                        </div>
                     ))}
                 </Grid>
-                   
-                </div>
+                
+            </div>
             </PageTemplate>
-        </div>
+        </React.Fragment>
+            
     )
-}
-
-
-
-Home.getInitialProps = async () => {
-    const documents = await documentService.getDocuments({ _limit: -1 })
-    let lastUpdated = documents.sort(dynamicSort('-createdAt')).slice(0,3)
-    return {lastUpdated}
 }
 
 export default Home

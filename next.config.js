@@ -17,7 +17,7 @@ module.exports = withPlugins(
   {
     esModule: true,
     images: {
-      domains: ['134.209.174.64']
+      domains: ['161.35.184.199']
     }
   }
 )
