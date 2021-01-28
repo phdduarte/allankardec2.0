@@ -14,6 +14,9 @@ export default createGlobalStyle`
     width: 100vw;
     overflow-x: hidden;
   }
+  .Logo {
+    padding: 0 14px 0 14px;
+  }
 
   footer {
     align-items: center;
