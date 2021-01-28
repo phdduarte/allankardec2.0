@@ -9,7 +9,7 @@ type Props = {
     target: string
     width?: string
     height?: string
-    layoyt?: string
+    layout?: string
     className?: string
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     children?: any
@@ -22,7 +22,7 @@ const Card = ({
     target,
     imgLabel = '',
     className = '',
-    layout= '',
+    layout = 'intrinsic',
     height = '310',
     width = '230',
     children
