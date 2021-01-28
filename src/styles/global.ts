@@ -49,18 +49,14 @@ export default createGlobalStyle`
     font-size: 1.3rem;
     margin-top: 10px;
     margin-bottom: 10px;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    text-align: center;
     background: ${props => props.theme.colors.primary};
   }
 /** Link Paginas Links e Pagina de links */
   .link-linkPage a {
-    margin-right: .3rem;
     text-decoration: none;
     color: white;
+    max-width: 80%;
   }
   .link-linkPage a:hover {
     text-decoration: underline;
