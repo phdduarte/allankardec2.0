@@ -9,7 +9,7 @@ type Props = {
     target: string
     width?: string
     height?: string
-    layout?: string
+    layout?: any
     className?: string
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     children?: any
