@@ -9,6 +9,7 @@ type Props = {
     target: string
     width?: string
     height?: string
+    layout?: any
     className?: string
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     children?: any
@@ -21,6 +22,7 @@ const Card = ({
     target,
     imgLabel = '',
     className = '',
+    layout = 'intrinsic',
     height = '310',
     width = '230',
     children
@@ -34,6 +36,7 @@ const Card = ({
                     alt={alt}
                     width={width}
                     height={height}
+                    layout={layout}
                 />
             </div>
         </a>

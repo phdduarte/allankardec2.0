@@ -11,16 +11,17 @@ type Props = {
 
 const Header = ({ urlLogo, altLogo, width = '', height = '' }: Props) => {
     return (
-        <>
+        <div className="Logo">
             <Row className="d-flex justify-content-center">
                 <Image
                     src={urlLogo}
                     alt={altLogo}
                     width={width}
                     height={height}
+                    layout="intrinsic"
                 />
             </Row>
-        </>
+        </div>
     )
 }
 

@@ -14,8 +14,7 @@ const DocumentCard = ({ document }) => {
             url={document.file.url}
             target="_blank"
             imgLabel={document.cover.caption}
-            width="480"
-            height="280"
+            layout="intrinsic"
             key={document.id}
         >
             <ul>

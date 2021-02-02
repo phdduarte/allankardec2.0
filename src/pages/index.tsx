@@ -115,10 +115,6 @@ const Home = () => {
         <React.Fragment>
             <PageTemplate
                 titlePage="ALLAN KARDEC Online"
-                urlLogo="/assets/img/logos/logo.svg"
-                altLogo="Logo Allan Kardec"
-                heightLogo=""
-                widthLogo=""
                 hero={true}
                 listSliderImages={listSliderImages}
             >
