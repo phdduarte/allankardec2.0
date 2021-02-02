@@ -19,10 +19,8 @@ const Paginate = ({ currentPage, documentsCount, queryLocation }: Props) => {
 
     const handlePageChange = ({ selected }) => {
         if (selected === currentPage) return;
-
         const categoryUrl = process.browser ? window.location.href.split('?')[0] : '';
         window.location.href = `${categoryUrl}?${location}page=${selected}`
-        
     }
 
     return (
