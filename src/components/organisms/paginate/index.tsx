@@ -3,13 +3,19 @@ import ReactPaginate from 'react-paginate'
 
 type Props = {
     currentPage: number
-    pages: number
+    documentsCount: number
     queryLocation?: string
 }
 
-const Paginate = ({ currentPage, pages, queryLocation }: Props) => {
+const Paginate = ({ currentPage, documentsCount, queryLocation }: Props) => {
 
     const location = queryLocation || ''
+
+    let pages
+
+    documentsCount <= 12 ?
+        pages = 1 :
+        pages = Math.floor(documentsCount / 12) + 2
 
     const handlePageChange = ({ selected }) => {
         if (selected === currentPage) return;
@@ -24,8 +30,8 @@ const Paginate = ({ currentPage, pages, queryLocation }: Props) => {
             initialPage={currentPage} 
             pageCount={pages} 
             onPageChange={handlePageChange} 
-            previousLabel="🡸"
-            nextLabel="🡺"
+            previousLabel="⏴"
+            nextLabel="⏵"
             breakLabel="..."
 
             marginPagesDisplayed={1}

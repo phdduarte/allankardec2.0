@@ -19,7 +19,7 @@ const prepareDocument = (document) => ({
 
 const Recents = ({ documents, currentPage, documentsCount }) => {
     // const pageCount = useDocumentPageCount({ type: category }, 12);
-    const pages = Math.floor(documentsCount / 12) + 2
+    // const pages = Math.floor(documentsCount / 12) + 2
     
     return (
         <PageTemplate titlePage="Últimos Documentos Adicionados" mainModel="red-main">
@@ -37,7 +37,7 @@ const Recents = ({ documents, currentPage, documentsCount }) => {
             <div className="row align-items-center">
                 <Paginate
                     currentPage={currentPage}
-                    pages={pages}
+                    documentsCount={documentsCount}
                 />
             </div>
         </PageTemplate>

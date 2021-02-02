@@ -20,7 +20,7 @@ const prepareDocument = (document) => ({
 
 const Search = ({ documents, currentPage, title, documentsCount }) => {
     // const pageCount = useDocumentPageCount({ title_contains: title}, 12)
-    const pages = Math.floor(documentsCount / 12) + 1
+    // const pages = Math.floor(documentsCount / 12) + 1
     const queryLocation = `title=${title}&`
 
     const pageTitle = `Pesquisando por '${title}'`
@@ -41,7 +41,7 @@ const Search = ({ documents, currentPage, title, documentsCount }) => {
             <div className="row align-items-center">
                 <Paginate
                     currentPage={currentPage}
-                    pages={pages}
+                    documentsCount={documentsCount}
                     queryLocation={queryLocation}
                 />
             </div>
