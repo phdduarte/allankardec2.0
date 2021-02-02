@@ -13,12 +13,13 @@ export enum DOCUMENT_TYPE {
 export interface IRequestDocumentsParams {
     _limit?: number;
     _start?: number;
+    _sort?: string;
     type?: DOCUMENT_TYPE;
     page?: number;
     title_contains?: string;
 }
 
-export const API_BASE_URL = 'http://134.209.174.64'
+export const API_BASE_URL = 'http://161.35.184.199'
 
 const api = axios.create({
     baseURL: API_BASE_URL
@@ -34,13 +35,15 @@ export const documentService = {
                 _start: Math.max(((page || 0) * 12) - 12, 0),
                 ...queryParams
             }
-        }).then(({ data }) => data)
+        })
+        .then(({ data }) => data)
         
     },
 
     getCount(params: IRequestDocumentsParams = {}) {
         return api.get('/documents/count', { params })
             .then(({ data }) => data)
+            .catch(err => console.log("AQUI! Erro de requisição anônima (desativar adblocks): " + err))
     },
 
     getDocument(documentId: string) {
@@ -50,6 +53,11 @@ export const documentService = {
 
     search({ title }) {
         return documentService.getDocuments({ title_contains: title })
+            .then(({ data }) => data)
+    },
+
+    getAllDocuments() {
+        return documentService.getDocuments({ _limit: -1 })
             .then(({ data }) => data)
     }
 

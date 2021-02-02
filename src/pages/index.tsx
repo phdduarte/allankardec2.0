@@ -5,6 +5,17 @@ import Card from '../components/molecules/card'
 import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
 import Grid from '../components/organisms/grid'
+import { documentService, API_BASE_URL } from '../services/document.service'
+import { dynamicSort } from '../../public/util/index'
+import DocumentCard from '../components/organisms/document-card'
+import Link from '../components/atoms/link'
+
+const prepareDocument = (document) => ({
+    ...document,
+    file: { url: `${API_BASE_URL}${document.file.url}` },
+    cover: { url: `${API_BASE_URL}${document.cover.url}` },
+
+})
 
 const listSliderImages = {
     childrenListSliderImages: [
@@ -13,7 +24,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider1.jpg',
                 alt: 'Imagem Slider 1',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
             },
         },
         {
@@ -21,7 +32,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider2.jpg',
                 alt: 'Imagem Slider 2',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
             }
         },
         {
@@ -29,7 +40,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider3.jpg',
                 alt: 'Imagem Slider 3',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
             }
         },
         {
@@ -37,7 +48,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider4.jpg',
                 alt: 'Imagem Slider 4',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
             }
         },
         {
@@ -45,7 +56,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider5.jpg',
                 alt: 'Imagem Slider 5',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
             }
         },
         {
@@ -53,7 +64,7 @@ const listSliderImages = {
                 interval: 1500,
                 src: '/assets/img/slider/slider6.jpg',
                 alt: 'Imagem Slider 6',
-                text: 'allankardec.online - Museu Online do Espiritismo'
+                text: 'AKOL - allankardec.online - Museu Online do Espiritismo'
             }
         }
     ]
@@ -98,39 +109,37 @@ const museumEntries = [
     }
 ]
 
-const Home: React.FC = () => {
+const Home = () => {
 
     return (
-        <div>
+        <React.Fragment>
             <PageTemplate
                 titlePage="ALLAN KARDEC Online"
-                urlLogo="/assets/img/logos/logo.svg"
-                altLogo="Logo Allan Kardec"
-                heightLogo=""
-                widthLogo=""
                 hero={true}
                 listSliderImages={listSliderImages}
             >
-                <Title label="O Museu" />
-                <div className="align-items-center">
-                    
-                    <Grid>
-                        {museumEntries.map((entry) => (
-                            <div className="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <Card
-                                    key={entry.url}
-                                    src={entry.image}
-                                    alt={entry.alt}
-                                    url={entry.url}
-                                    imgLabel={entry.imageLabel}
-                                />
-                            </div>
-                        ))}
-                    </Grid>
-                   
-                </div>
+            <Title label="O Museu" />
+            <div className="row align-items-center">
+                
+                <Grid>
+                    {museumEntries.map((entry, index) => (
+                        <div key={index} className="col-lg-4 col-md-6 mb-4 align-center">
+                            <Card
+                                key={entry.url}
+                                src={entry.image}
+                                alt={entry.alt}
+                                url={entry.url}
+                                target=""
+                                imgLabel={entry.imageLabel}
+                            />
+                        </div>
+                    ))}
+                </Grid>
+                
+            </div>
             </PageTemplate>
-        </div>
+        </React.Fragment>
+            
     )
 }
 

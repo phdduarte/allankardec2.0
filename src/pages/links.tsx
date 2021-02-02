@@ -6,8 +6,6 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Links from '../components/molecules/links'
 
 import PageTemplate from '../components/templates/pageTemplate'
-// css links
-import AllLinksContainer from '../styles/pages/links'
 
 const PageLinks: React.FC = () => {
     const listLinks = {
@@ -20,15 +18,15 @@ const PageLinks: React.FC = () => {
             },
             {
                 link: {
-                    label:
-                        'CSI Imagens e Registros Históricos do Espiritismo',
+                    label: 'CSI Imagens e Registros Históricos do Espiritismo',
                     url: 'https://www.facebook.com/HistoriaDoEspiritismo/'
                 }
             },
             {
                 link: {
                     label: 'ECK – Espiritismo com Kardec',
-                    url: 'https://www.facebook.com/groups/Espiritismo.COM.Kardec/'
+                    url:
+                        'https://www.facebook.com/groups/Espiritismo.COM.Kardec/'
                 }
             },
             {
@@ -85,24 +83,27 @@ const PageLinks: React.FC = () => {
         ]
     }
     return (
-        <PageTemplate titlePage="Links">
-            <AllLinksContainer>
-                <Container>
-                    <Row className="d-flex justify-content-center text-uppercase">
+        <div className="page-link">
+            <PageTemplate titlePage="Links" mainModel="red-main">
+                <Container className="py-4">
+                    <Row className="text-center">
                         <Col>
-                            <h3>
-                                Links de Interesse para os Pesquisadores de Espiritismo:
-                            </h3>
+                            <h1>
+                                Links de Interesse para os Pesquisadores de
+                                Espiritismo:
+                            </h1>
                         </Col>
                     </Row>
-                    <Row className="d-flex text-uppercase">
+                    <Row>
                         <Col>
-                            <Links listLinks={listLinks} />
+                            <div className="list-links">
+                                <Links listLinks={listLinks} />
+                            </div>
                         </Col>
                     </Row>
                 </Container>
-            </AllLinksContainer>
-        </PageTemplate>
+            </PageTemplate>
+        </div>
     )
 }
 

@@ -27,11 +27,14 @@ const Search = ({ documents, page, title }) => {
         window.location.href = `${categoryUrl}?title=${title}&page=${selected}`
         
     }
+
+    const pageTitle = `Pesquisando por '${title}'`
     
     return (
         <div>
-            <PageTemplate titlePage={title} mainModel="red-main">
-                <Title label={title} />
+            <PageTemplate titlePage="Pesquisa" mainModel="red-main">
+
+                <Title label={pageTitle} />
                 <Grid>
                     {documents.map(document => (
                         <DocumentCard key={document.id} document={prepareDocument(document)}/>   

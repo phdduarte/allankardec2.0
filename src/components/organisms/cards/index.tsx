@@ -15,6 +15,7 @@ const Cards = ({ listCardItems }: Props) => (
                     src={cardItem.cover.url}
                     alt={cardItem.cover.alternativeText}
                     url={cardItem.cover.url}
+                    target=""
                     imgLabel={cardItem.cover.caption}
                     width={listCardItems.width}
                     height={listCardItems.height}

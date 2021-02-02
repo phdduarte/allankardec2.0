@@ -1,14 +1,14 @@
 import React from 'react'
 
-import PageTemplate from '../../components/templates/pageTemplate'
-import Title from '../../components/atoms/title'
-import Grid from '../../components/organisms/grid'
-import DocumentCard from '../../components/organisms/document-card'
+import PageTemplate from '../components/templates/pageTemplate'
+import Title from '../components/atoms/title'
+import Grid from '../components/organisms/grid'
+import DocumentCard from '../components/organisms/document-card'
 import ReactPaginate from 'react-paginate'
 
-import { useDocumentPageCount } from '../../hooks/useDocumentPageCount'
+import { useDocumentPageCount } from '../hooks/useDocumentPageCount'
 
-import { DOCUMENT_TYPE, documentService, API_BASE_URL } from '../../services/document.service'
+import {documentService, API_BASE_URL } from '../services/document.service'
 
 const prepareDocument = (document) => ({
     ...document,
@@ -17,7 +17,7 @@ const prepareDocument = (document) => ({
 
 })
 
-const Category = ({ documents, categoryName, page, category }) => {
+const Recents = ({ documents, page, category }) => {
     const pageCount = useDocumentPageCount({ type: category }, 12);
 
     const handlePageChange = ({ selected }) => {
@@ -29,14 +29,15 @@ const Category = ({ documents, categoryName, page, category }) => {
     }
     
     return (
-        <React.Fragment>            
-            <PageTemplate titlePage={categoryName} mainModel="red-main">
-                <Title label={categoryName} /> 
+        <div>
+            <PageTemplate titlePage="Últimos Documentos Adicionados" mainModel="red-main">
+                <Title label="Documentos recentes" />
+                
                 <div className="row align-items-center">
                     <Grid>
                         {documents.map(document => (
-                            <div key={document.id} className="col-lg-4 col-md-6 align-center px-5">
-                                <DocumentCard document={prepareDocument(document)}/>   
+                            <div key={document.index} className="col-lg-4 col-md-6 align-center px-5">
+                                <DocumentCard document={prepareDocument(document)}/> 
                             </div>  
                         ))}
                     </Grid>
@@ -62,37 +63,23 @@ const Category = ({ documents, categoryName, page, category }) => {
                         previousClassName="list-group-item"
                         
                         disabledClassName="list-group-item disabled"
-                        activeClassName="list-group-item active"
+                        activeClassName="active"
                     />
                 </div>
             </PageTemplate>
-        </React.Fragment>
+        </div>
     )
 }
 
-Category.getInitialProps = async ({ query }) => {
-    let { categoryName, page } = query || {};
+Recents.getInitialProps = async ({ query }) => {
+    const { page } = query || {};
 
-    const categoryNameMap = {
-        manuscritos: DOCUMENT_TYPE.MANUSCRIPT,
-        jornais: DOCUMENT_TYPE.NEWSPAPER,
-        revistas: DOCUMENT_TYPE.MAGAZINE,
-        cartas: DOCUMENT_TYPE.LETTER,
-        livros: DOCUMENT_TYPE.BOOK,
-        fotos: DOCUMENT_TYPE.PHOTO,
-        csi: DOCUMENT_TYPE.CSI
-    }
-
-    const category = categoryNameMap[categoryName]
-
-    const documents = await documentService.getDocuments({ type: category, page })
+    const documents = await documentService.getDocuments({ _sort: 'createdAt:DESC', page })
 
     return {
         documents,
-        categoryName,
-        category,
         page
     }
 }
 
-export default Category
+export default Recents

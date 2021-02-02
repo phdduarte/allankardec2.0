@@ -25,10 +25,10 @@ type Props = {
 
 const PageTemplate = ({
     titlePage,
-    urlLogo = '/assets/img/logos/logo.svg',
+    urlLogo = '/assets/img/logos/logo-akol.png',
     altLogo = 'Logo Allan Kardec',
-    widthLogo = '',
-    heightLogo = '',
+    widthLogo = '831',
+    heightLogo = '350',
     mainModel = '',
     children,
     hero = false,
@@ -109,16 +109,22 @@ const PageTemplate = ({
                     <div className="search-bar">
                         <Container>
                             <Row>
-                                <div className="col-12 col-md-8 col-xl-8">
+                                <div className="col-12 col-md-6 col-xl-6">
                                     <Search
                                         placeholder="Digite aqui sua pesquisa"
                                         buttonLabel="Pesquisar"
                                     />
                                 </div>
-                                <div className="col-12 col-md-4 col-xl-4 align-items-center">
+                                <div className="col-12 col-md-3 col-xl-3 align-items-center">
                                     <Link
                                         url="/jobs"
                                         label="Veja nosso acervo"
+                                    />
+                                </div>
+                                <div className="col-12 col-md-3 col-xl-3 align-items-center">
+                                    <Link
+                                        url="/recentes"
+                                        label="Últimos documentos adicionados"
                                     />
                                 </div>
                             </Row>
@@ -128,7 +134,7 @@ const PageTemplate = ({
             </div>
             <section>
                 <main className={mainModel}>
-                    <div className="content">{children}</div>
+                    <div className="content col-lg-12">{children}</div>
                 </main>
             </section>
             <section className="link-linkPage">

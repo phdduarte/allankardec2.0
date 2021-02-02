@@ -22,7 +22,9 @@ const Slider = ({ listSliderImages }: Props) => (
                         />
                         <div className="align-items-center text-uppercase">
                             <Carousel.Caption>
-                                {sliderImageItem.sliderItem.text}
+                                <div className="caption-text">
+                                    {sliderImageItem.sliderItem.text}
+                                </div>
                             </Carousel.Caption>
                         </div>
                     </Carousel.Item>

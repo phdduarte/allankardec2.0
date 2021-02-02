@@ -4,11 +4,9 @@ type Props = {
     children: JSX.Element | JSX.Element[]
 }
 const Grid = ({ children }: Props) => (
-    <div className="container cards">
-        <div className="row">
-            {children}
-        </div>
-    </div>
+    <React.Fragment>
+        {children}
+    </React.Fragment>
 )
 
 export default Grid
