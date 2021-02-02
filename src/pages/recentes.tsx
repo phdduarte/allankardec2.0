@@ -19,30 +19,28 @@ const prepareDocument = (document) => ({
 
 const Recents = ({ documents, currentPage, documentsCount }) => {
     // const pageCount = useDocumentPageCount({ type: category }, 12);
-    const pages = documentsCount = Math.floor(documentsCount / 12) + 2
+    const pages = Math.floor(documentsCount / 12) + 2
     
     return (
-        <div>
-            <PageTemplate titlePage="Últimos Documentos Adicionados" mainModel="red-main">
-                <Title label="Documentos recentes" />
-                
-                <div className="row align-items-center">
-                    <Grid>
-                        {documents.map(document => (
-                            <div key={document.id} className="col-lg-4 col-md-6 align-center px-5">
-                                <DocumentCard document={prepareDocument(document)}/> 
-                            </div>  
-                        ))}
-                    </Grid>
-                </div>
-                <div className="row align-items-center">
-                    <Paginate
-                        currentPage={currentPage}
-                        pages={pages}
-                    />
-                </div>
-            </PageTemplate>
-        </div>
+        <PageTemplate titlePage="Últimos Documentos Adicionados" mainModel="red-main">
+            <Title label="Documentos recentes" />
+            
+            <div className="row align-items-center">
+                <Grid>
+                    {documents.map(document => (
+                        <div key={document.id} className="col-lg-4 col-md-6 align-center px-5">
+                            <DocumentCard document={prepareDocument(document)}/> 
+                        </div>  
+                    ))}
+                </Grid>
+            </div>
+            <div className="row align-items-center">
+                <Paginate
+                    currentPage={currentPage}
+                    pages={pages}
+                />
+            </div>
+        </PageTemplate>
     )
 }
 

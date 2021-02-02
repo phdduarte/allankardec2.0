@@ -4,15 +4,18 @@ import ReactPaginate from 'react-paginate'
 type Props = {
     currentPage: number
     pages: number
+    queryLocation?: string
 }
 
-const Paginate = ({ currentPage, pages }: Props) => {
+const Paginate = ({ currentPage, pages, queryLocation }: Props) => {
+
+    const location = queryLocation || ''
 
     const handlePageChange = ({ selected }) => {
         if (selected === currentPage) return;
 
         const categoryUrl = process.browser ? window.location.href.split('?')[0] : '';
-        window.location.href = `${categoryUrl}?page=${selected}`
+        window.location.href = `${categoryUrl}?${location}page=${selected}`
         
     }
 
@@ -21,8 +24,8 @@ const Paginate = ({ currentPage, pages }: Props) => {
             initialPage={currentPage} 
             pageCount={pages} 
             onPageChange={handlePageChange} 
-            previousLabel="<"
-            nextLabel=">"
+            previousLabel="🡸"
+            nextLabel="🡺"
             breakLabel="..."
 
             marginPagesDisplayed={1}
@@ -30,13 +33,13 @@ const Paginate = ({ currentPage, pages }: Props) => {
 
             containerClassName="d-flex"
 
-            breakClassName="list-group-item"
-            pageClassName="list-group-item"
-            nextClassName="list-group-item"
-            previousClassName="list-group-item"
+            breakClassName="list-unstyled mt-3 px-1"
+            pageClassName="list-unstyled mt-3 px-1"
+            nextClassName="list-group-item px-2"
+            previousClassName="list-group-item px-2"
             
             disabledClassName="list-group-item disabled"
-            activeClassName="list-group-item active"
+            activeClassName="font-weight-bold active"
         />
     )
 }
