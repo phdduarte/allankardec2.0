@@ -6,9 +6,10 @@ import Grid from '../../components/organisms/grid'
 import DocumentCard from '../../components/organisms/document-card'
 import ReactPaginate from 'react-paginate'
 
-import { useDocumentPageCount } from '../../hooks/useDocumentPageCount'
+// import { useDocumentPageCount } from '../../hooks/useDocumentPageCount'
 
 import { DOCUMENT_TYPE, documentService, API_BASE_URL } from '../../services/document.service'
+import Paginate from '../../components/organisms/paginate'
 
 const prepareDocument = (document) => ({
     ...document,
@@ -17,16 +18,9 @@ const prepareDocument = (document) => ({
 
 })
 
-const Category = ({ documents, categoryName, page, category }) => {
-    const pageCount = useDocumentPageCount({ type: category }, 12);
-
-    const handlePageChange = ({ selected }) => {
-        if (selected === page) return;
-
-        const categoryUrl = process.browser ? window.location.href.split('?')[0] : '';
-        window.location.href = `${categoryUrl}?page=${selected}`
-        
-    }
+const Category = ({ documents, categoryName, currentPage, documentsCount}) => {
+    // const pageCount = useDocumentPageCount({ type: category }, 12);
+    const pages = documentsCount = Math.floor(documentsCount / 12) + 2
     
     return (
         <React.Fragment>            
@@ -42,27 +36,9 @@ const Category = ({ documents, categoryName, page, category }) => {
                     </Grid>
                 </div>
                 <div className="row align-items-center">
-
-                    <ReactPaginate 
-                        initialPage={page} 
-                        pageCount={pageCount} 
-                        onPageChange={handlePageChange} 
-                        previousLabel="<<"
-                        nextLabel=">>"
-                        breakLabel="..."
-
-                        marginPagesDisplayed={1}
-                        pageRangeDisplayed={0}
-
-                        containerClassName="d-flex"
-
-                        breakClassName="list-group-item"
-                        pageClassName="list-group-item"
-                        nextClassName="list-group-item"
-                        previousClassName="list-group-item"
-                        
-                        disabledClassName="list-group-item disabled"
-                        activeClassName="list-group-item active"
+                    <Paginate
+                        currentPage={currentPage}
+                        pages={pages}
                     />
                 </div>
             </PageTemplate>
@@ -71,7 +47,7 @@ const Category = ({ documents, categoryName, page, category }) => {
 }
 
 Category.getInitialProps = async ({ query }) => {
-    let { categoryName, page } = query || {};
+    const { categoryName, page } = query || {};
 
     const categoryNameMap = {
         manuscritos: DOCUMENT_TYPE.MANUSCRIPT,
@@ -85,13 +61,22 @@ Category.getInitialProps = async ({ query }) => {
 
     const category = categoryNameMap[categoryName]
 
+    // const documents = await documentService.getDocuments({ type: category, page })
+    
+    const documentsCount = await documentService.getCount({ type: category })
     const documents = await documentService.getDocuments({ type: category, page })
+
+    // const pageCount = useDocumentPageCount({ type: category }, 12)
+
+    const currentPage = parseInt(page)
 
     return {
         documents,
         categoryName,
         category,
-        page
+        currentPage,
+        documentsCount
+        // pageCount
     }
 }
 

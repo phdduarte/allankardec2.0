@@ -32,7 +32,7 @@ export const documentService = {
         return api.get('/documents', {
             params: {
                 _limit: 12,
-                _start: Math.max(((page || 0) * 12) - 12, 0),
+                _start: Math.max(((page || 1) * 12) - 12, 0),
                 ...queryParams
             }
         })
