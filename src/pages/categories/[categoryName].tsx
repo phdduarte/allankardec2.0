@@ -8,9 +8,13 @@ import ReactPaginate from 'react-paginate'
 
 import { useDocumentPageCount } from '../../hooks/useDocumentPageCount'
 
-import { DOCUMENT_TYPE, documentService, API_BASE_URL } from '../../services/document.service'
+import {
+    DOCUMENT_TYPE,
+    documentService,
+    API_BASE_URL
+} from '../../services/document.service'
 
-const prepareDocument = (document) => ({
+const prepareDocument = document => ({
     ...document,
     file: { url: `${API_BASE_URL}${document.file.url}` },
     cover: { url: `${API_BASE_URL}${document.cover.url}` },
@@ -23,27 +27,35 @@ const Category = ({ documents, categoryName, page, category }) => {
     const handlePageChange = ({ selected }) => {
         if (selected === page) return;
 
-        const categoryUrl = process.browser ? window.location.href.split('?')[0] : '';
+        const categoryUrl = process.browser
+            ? window.location.href.split('?')[0]
+            : ''
         window.location.href = `${categoryUrl}?page=${selected}`
-        
     }
-    
+
     return (
-        <React.Fragment>            
+        <React.Fragment>
             <PageTemplate titlePage={categoryName} mainModel="red-main">
                 <Title label={categoryName} /> 
                 <div className="row align-items-center">
                     <Grid>
+
                         {documents.map(document => (
-                            <div key={document.id} className="col-lg-4 col-md-6 align-center px-5">
-                                <DocumentCard document={prepareDocument(document)}/>   
-                            </div>  
+                            <div
+                                key={`div-${document.id}`}
+                                className="col-lg-4 col-md-6 align-center px-5"
+                            >
+                                <DocumentCard
+                                    key={`card-${document.id}`}
+                                    document={prepareDocument(document)}
+                                    href={`..${document.file.url}`}
+                                />
+                            </div>
                         ))}
                     </Grid>
                 </div>
                 <div className="row align-items-center">
-
-                    <ReactPaginate 
+                    <ReactPaginate
                         initialPage={page} 
                         pageCount={pageCount} 
                         onPageChange={handlePageChange} 
@@ -60,7 +72,7 @@ const Category = ({ documents, categoryName, page, category }) => {
                         pageClassName="list-group-item"
                         nextClassName="list-group-item"
                         previousClassName="list-group-item"
-                        
+
                         disabledClassName="list-group-item disabled"
                         activeClassName="list-group-item active"
                     />
@@ -85,7 +97,10 @@ Category.getInitialProps = async ({ query }) => {
 
     const category = categoryNameMap[categoryName]
 
-    const documents = await documentService.getDocuments({ type: category, page })
+    const documents = await documentService.getDocuments({
+        type: category,
+        page
+    })
 
     return {
         documents,

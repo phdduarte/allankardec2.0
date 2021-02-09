@@ -37,7 +37,11 @@ const Recents = ({ documents, page, category }) => {
                     <Grid>
                         {documents.map(document => (
                             <div key={document.index} className="col-lg-4 col-md-6 align-center px-5">
-                                <DocumentCard document={prepareDocument(document)}/> 
+                                <DocumentCard
+                                    key={`card-${document.id}`}
+                                    document={prepareDocument(document)}
+                                    href={`..${document.file.url}`}
+                                />
                             </div>  
                         ))}
                     </Grid>

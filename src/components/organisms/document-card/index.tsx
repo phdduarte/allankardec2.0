@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../../molecules/card'
 
-const DocumentCard = ({ document }) => {
+const DocumentCard = ({ document, href }) => {
     
     const formattedDate = new Date(document.updatedAt).toLocaleDateString("pt-Br")
 
@@ -11,7 +11,7 @@ const DocumentCard = ({ document }) => {
         <Card
             src={document.cover.url}
             alt={document.cover.alternativeText}
-            url={document.file.url}
+            url={href}
             target="_blank"
             imgLabel={document.cover.caption}
             layout="intrinsic"
@@ -24,7 +24,7 @@ const DocumentCard = ({ document }) => {
                 <li>Data: {formattedDate}</li>
                 <li>Páginas: {document.pageCount}</li>
                 <li>
-                    <a href={document.file.url} target="_blank">Abrir</a>
+                    <a href={href} target="_blank">Abrir</a>
                     {/* | <a target="_blank" href={document.file.url} download={document.title}>Download</a> */}
                 </li>
             </ul>

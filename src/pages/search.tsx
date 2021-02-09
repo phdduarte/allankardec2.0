@@ -37,7 +37,11 @@ const Search = ({ documents, page, title }) => {
                 <Title label={pageTitle} />
                 <Grid>
                     {documents.map(document => (
-                        <DocumentCard key={document.id} document={prepareDocument(document)}/>   
+                        <DocumentCard
+                            key={`card-${document.id}`}
+                            document={prepareDocument(document)}
+                            href={`..${document.file.url}`}
+                        />
                     ))}
                 </Grid>
                 <ReactPaginate 
