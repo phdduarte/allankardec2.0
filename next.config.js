@@ -7,18 +7,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
-module.exports = {
-  async redirects() {
-    return [
-      {
-        source: '/login',
-        destination: '161.35.184.199/admin',
-        permanent: true,
-      },
-    ]
-  },
-}
-
 module.exports = withPlugins(
   [
     withImages,
