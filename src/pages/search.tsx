@@ -9,6 +9,7 @@ import ReactPaginate from 'react-paginate'
 import { useDocumentPageCount } from '../hooks/useDocumentPageCount'
 
 import { DOCUMENT_TYPE, documentService, API_BASE_URL } from '../services/document.service'
+import Paginate from '../components/organisms/paginate'
 
 const prepareDocument = (document) => ({
     ...document,
@@ -17,50 +18,50 @@ const prepareDocument = (document) => ({
 
 })
 
-const Search = ({ documents, page, title }) => {
-    const pageCount = useDocumentPageCount({ title_contains: title}, 12);
-
-    const handlePageChange = ({ selected }) => {
-        if (selected === page) return;
-
-        const categoryUrl = process.browser ? window.location.href.split('?')[0] : '';
-        window.location.href = `${categoryUrl}?title=${title}&page=${selected}`
-        
-    }
+const Search = ({ documents, currentPage, title, documentsCount }) => {
+    // const pageCount = useDocumentPageCount({ title_contains: title}, 12)
+    // const pages = Math.floor(documentsCount / 12) + 1
+    const queryLocation = `title=${title}&`
 
     const pageTitle = `Pesquisando por '${title}'`
     
     return (
-        <div>
-            <PageTemplate titlePage="Pesquisa" mainModel="red-main">
+        <PageTemplate titlePage="Pesquisa" mainModel="red-main">
 
-                <Title label={pageTitle} />
+            <Title label={pageTitle} />
+            <div className="row align-items-center">
                 <Grid>
                     {documents.map(document => (
-                        <DocumentCard key={document.id} document={prepareDocument(document)}/>   
+                        <div key={document.id} className="col-lg-4 col-md-6 align-center px-5">
+                            <DocumentCard document={prepareDocument(document)}/>   
+                        </div> 
                     ))}
                 </Grid>
-                <ReactPaginate 
-                    initialPage={page} 
-                    pageCount={pageCount} 
-                    onPageChange={handlePageChange} 
-                    previousLabel="Anterior"
-                    nextLabel="Próximo"
-                    breakLabel="..." />
-            </PageTemplate>
-        </div>
+            </div>
+            <div className="row align-items-center">
+                <Paginate
+                    currentPage={currentPage}
+                    documentsCount={documentsCount}
+                    queryLocation={queryLocation}
+                />
+            </div>
+        </PageTemplate>
     )
 }
 
 Search.getInitialProps = async ({ query }) => {
     const { title, page } = query || {};
 
-    const documents = await documentService.getDocuments({ title_contains: title })
+    const documentsCount = await documentService.getCount({ title_contains: title })
+    const documents = await documentService.getDocuments({ title_contains: title, page })
+
+    const currentPage = parseInt(page)
 
     return {
         documents,
-        page,
-        title
+        currentPage,
+        title,
+        documentsCount
     }
 }
 

@@ -4,11 +4,11 @@ import PageTemplate from '../components/templates/pageTemplate'
 import Title from '../components/atoms/title'
 import Grid from '../components/organisms/grid'
 import DocumentCard from '../components/organisms/document-card'
-import ReactPaginate from 'react-paginate'
 
-import { useDocumentPageCount } from '../hooks/useDocumentPageCount'
+// import { useDocumentPageCount } from '../hooks/useDocumentPageCount'
 
 import {documentService, API_BASE_URL } from '../services/document.service'
+import Paginate from '../components/organisms/paginate'
 
 const prepareDocument = (document) => ({
     ...document,
@@ -17,68 +17,45 @@ const prepareDocument = (document) => ({
 
 })
 
-const Recents = ({ documents, page, category }) => {
-    const pageCount = useDocumentPageCount({ type: category }, 12);
-
-    const handlePageChange = ({ selected }) => {
-        if (selected === page) return;
-
-        const categoryUrl = process.browser ? window.location.href.split('?')[0] : '';
-        window.location.href = `${categoryUrl}?page=${selected}`
-        
-    }
+const Recents = ({ documents, currentPage, documentsCount }) => {
+    // const pageCount = useDocumentPageCount({ type: category }, 12);
+    // const pages = Math.floor(documentsCount / 12) + 2
     
     return (
-        <div>
-            <PageTemplate titlePage="Últimos Documentos Adicionados" mainModel="red-main">
-                <Title label="Documentos recentes" />
-                
-                <div className="row align-items-center">
-                    <Grid>
-                        {documents.map(document => (
-                            <div key={document.index} className="col-lg-4 col-md-6 align-center px-5">
-                                <DocumentCard document={prepareDocument(document)}/> 
-                            </div>  
-                        ))}
-                    </Grid>
-                </div>
-                <div className="row align-items-center">
-
-                    <ReactPaginate 
-                        initialPage={page} 
-                        pageCount={pageCount} 
-                        onPageChange={handlePageChange} 
-                        previousLabel="<<"
-                        nextLabel=">>"
-                        breakLabel="..."
-
-                        marginPagesDisplayed={1}
-                        pageRangeDisplayed={0}
-
-                        containerClassName="d-flex"
-
-                        breakClassName="list-group-item"
-                        pageClassName="list-group-item"
-                        nextClassName="list-group-item"
-                        previousClassName="list-group-item"
-                        
-                        disabledClassName="list-group-item disabled"
-                        activeClassName="active"
-                    />
-                </div>
-            </PageTemplate>
-        </div>
+        <PageTemplate titlePage="Últimos Documentos Adicionados" mainModel="red-main">
+            <Title label="Documentos recentes" />
+            
+            <div className="row align-items-center">
+                <Grid>
+                    {documents.map(document => (
+                        <div key={document.id} className="col-lg-4 col-md-6 align-center px-5">
+                            <DocumentCard document={prepareDocument(document)}/> 
+                        </div>  
+                    ))}
+                </Grid>
+            </div>
+            <div className="row align-items-center">
+                <Paginate
+                    currentPage={currentPage}
+                    documentsCount={documentsCount}
+                />
+            </div>
+        </PageTemplate>
     )
 }
 
 Recents.getInitialProps = async ({ query }) => {
-    const { page } = query || {};
 
-    const documents = await documentService.getDocuments({ _sort: 'createdAt:DESC', page })
+    const { page } = query || {}
+    const currentPage = parseInt(page)
+    
+    const documents = await documentService.getDocuments({ _sort: 'createdAt:DESC', page })    
+    const documentsCount = await documentService.getCount()
 
     return {
         documents,
-        page
+        currentPage,
+        documentsCount
     }
 }
 
