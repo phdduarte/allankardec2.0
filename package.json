@@ -1,6 +1,6 @@
 {
   "name": "allankardec2.0",
-  "version": "0.13.5",
+  "version": "0.13.6",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -20,6 +20,7 @@
     "jquery": "3.5.0",
     "next": "10.0.2",
     "next-images": "^1.6.2",
+    "nextjs-redirect": "^5.0.2",
     "node-sass": "^4.7.2",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
