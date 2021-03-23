@@ -89,6 +89,26 @@ const PageTemplate = ({
                     rel="stylesheet"
                     href="https://fonts.googleapis.com/icon?family=Material+Icons"
                 />
+
+                {/* Global site tag (gtag.js) - Google Analytics */}
+                <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=UA-160392302-1"
+                ></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `<!-- Global site tag (gtag.js) - Google Analytics -->
+                        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160392302-1"></script>
+                        <script>
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                        
+                            gtag('config', 'UA-160392302-1');
+                        </script>
+                        `,
+                    }}
+                />
             </Head>
             <div className="page">
                 <header>
@@ -150,7 +170,11 @@ const PageTemplate = ({
             </section>
             <footer>
                 <Footer
-                    text={"©Copyright " + (new Date()).getFullYear() + " AllanKardec.online / Designed by: "}
+                    text={
+                        '©Copyright ' +
+                        new Date().getFullYear() +
+                        ' AllanKardec.online / Designed by: '
+                    }
                     linkText="NeXTIME"
                     url="https://www.nextime.com.br/"
                 />
