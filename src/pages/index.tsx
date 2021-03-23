@@ -106,6 +106,18 @@ const museumEntries = [
         alt: 'CSI Espirita',
         url: '/categories/fotos',
         imageLabel: 'CSI do Espiritismo'
+    },
+    {
+        image: '/assets/img/type/obras.png',
+        alt: 'obras de Kardec',
+        url: '/categories/obras',
+        imageLabel: 'Obras de Kardec'
+    },
+    {
+        image: '/assets/img/type/pesquisaAKOL.jpg',
+        alt: 'Pesquisa AKOL',
+        url: '/categories/pesquisa-AKOL',
+        imageLabel: 'Pesquisa AKOL'
     }
 ]
 
