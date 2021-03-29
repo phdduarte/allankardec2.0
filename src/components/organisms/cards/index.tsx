@@ -29,7 +29,7 @@ const Cards = ({ listCardItems }: Props) => (
                             <li>ID: {cardItem.id}</li>
                             <li>Título: {cardItem.title}</li>
                             <li>Descrição: {cardItem.description}</li>
-                            <li>Data: {cardItem.updatedAt}</li>
+                            <li>Data: {cardItem.date}</li>
                             <li>Páginas: {cardItem.pageCount}</li>
                             <li>
                                 {' '}

@@ -2,9 +2,7 @@ import React from 'react'
 import Card from '../../molecules/card'
 
 const DocumentCard = ({ document }) => {
-    const formattedDate = new Date(document.updatedAt).toLocaleDateString(
-        'pt-Br'
-    )
+    const formattedDate = new Date(document.date).toLocaleDateString('pt-Br')
 
     return (
         <Card

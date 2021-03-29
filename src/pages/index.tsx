@@ -78,7 +78,11 @@ const Home = ({ types }) => {
                             >
                                 <Card
                                     key={entry.label}
-                                    src={`${API_BASE_URL}${entry.image.formats.small.url}`}
+                                    src={`${API_BASE_URL}${
+                                        entry.image.formats.small
+                                            ? entry.image.formats.small.url
+                                            : entry.image.url
+                                    }`}
                                     alt={entry.label}
                                     url={`/categories/${entry.slug}`}
                                     target=""
