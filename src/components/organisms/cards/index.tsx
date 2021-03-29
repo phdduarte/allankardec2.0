@@ -12,6 +12,7 @@ const Cards = ({ listCardItems }: Props) => (
         <div className="row">
             {listCardItems.childrenListCardItems.map(cardItem => (
                 <Card
+                    title={cardItem.title}
                     src={cardItem.cover.url}
                     alt={cardItem.cover.alternativeText}
                     url={cardItem.cover.url}
@@ -28,7 +29,7 @@ const Cards = ({ listCardItems }: Props) => (
                             <li>ID: {cardItem.id}</li>
                             <li>Título: {cardItem.title}</li>
                             <li>Descrição: {cardItem.description}</li>
-                            <li>Data: {cardItem.updatedAt}</li>
+                            <li>Data: {cardItem.date}</li>
                             <li>Páginas: {cardItem.pageCount}</li>
                             <li>
                                 {' '}

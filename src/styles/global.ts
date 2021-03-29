@@ -218,13 +218,43 @@ export default createGlobalStyle`
     text-align: center;
     padding: 5px;
   }
+  .img-card {
+    position: relative
+  }
+  .card-title-overlay {
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: transparent;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    h1 {
+      font-size: 1.4rem;
+      color: transparent;
+    }
+    
+  }
   .img-document-card {
     transition: transform .2s;
   }
-  .img-document-card:hover {
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2); 
+  .img-card:hover {
+    .img-document-card {
+      -ms-transform: scale(1.2); /* IE 9 */
+      -webkit-transform: scale(1.2); /* Safari 3-8 */
+      transform: scale(1.2); 
+    }
+
+    .card-title-overlay { 
+      background-color: rgba(0,0,0,0.7);
+      h1 {
+        color: #fff;
+      }
+    }
+    
   }
   .description-card {
     padding-left: 5px;

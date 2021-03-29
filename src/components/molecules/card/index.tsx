@@ -10,6 +10,7 @@ type Props = {
     width?: string
     height?: string
     layout?: any
+    title: string
     className?: string
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     children?: any
@@ -25,7 +26,8 @@ const Card = ({
     layout = 'intrinsic',
     height = '310',
     width = '230',
-    children
+    children,
+    title
 }: Props) => (
     <div className={className}>
         <a href={url} target={target}>
@@ -38,6 +40,12 @@ const Card = ({
                     height={height}
                     layout={layout}
                 />
+
+                {title && (
+                    <div className="card-title-overlay">
+                        <h1>{title}</h1>
+                    </div>
+                )}
             </div>
         </a>
         <div className="img-text-card">{imgLabel}</div>
